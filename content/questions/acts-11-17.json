@@ -1,0 +1,1432 @@
+[
+ {
+  "world": 1,
+  "ref": "11:17",
+  "prompt": "Peter asked, \"Who was I that I could withstand ___?\"",
+  "answer": "God",
+  "wrong": [
+   "the apostles",
+   "the Romans",
+   "Cornelius"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:17",
+  "prompt": "God gave the Gentiles the same ___ as He gave the apostles.",
+  "answer": "gift",
+  "wrong": [
+   "house",
+   "money",
+   "law"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:18",
+  "prompt": "What did the believers do after hearing Peter's report?",
+  "answer": "Became silent and glorified God",
+  "wrong": [
+   "Got angry",
+   "Left Jerusalem",
+   "Argued all night"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:18",
+  "prompt": "God has also granted to the Gentiles repentance to ___.",
+  "answer": "life",
+  "wrong": [
+   "riches",
+   "power",
+   "fear"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:19",
+  "prompt": "After whose persecution were the believers scattered?",
+  "answer": "Stephen's",
+  "wrong": [
+   "Peter's",
+   "James's",
+   "Philip's"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:19",
+  "prompt": "Which of these places did the scattered believers travel to?",
+  "answer": "Phoenicia, Cyprus, and Antioch",
+  "wrong": [
+   "Egypt, Rome, and Greece",
+   "Babylon and Persia",
+   "Ethiopia and Libya"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:19",
+  "prompt": "At first, to whom did they preach the word?",
+  "answer": "The Jews only",
+  "wrong": [
+   "The Romans only",
+   "Everyone",
+   "No one"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:20",
+  "prompt": "Men from Cyprus and which other place spoke to the Hellenists in Antioch?",
+  "answer": "Cyrene",
+  "wrong": [
+   "Crete",
+   "Corinth",
+   "Cana"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:21",
+  "prompt": "What was with the believers in Antioch?",
+  "answer": "The hand of the Lord",
+  "wrong": [
+   "A Roman army",
+   "Great riches",
+   "A golden temple"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:22",
+  "prompt": "Whom did the church in Jerusalem send to Antioch?",
+  "answer": "Barnabas",
+  "wrong": [
+   "Peter",
+   "Philip",
+   "John"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:23",
+  "prompt": "What did Barnabas see when he came to Antioch?",
+  "answer": "The grace of God",
+  "wrong": [
+   "A great storm",
+   "A new temple",
+   "An angel"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:23",
+  "prompt": "Barnabas encouraged them all to continue with the Lord with purpose of ___.",
+  "answer": "heart",
+  "wrong": [
+   "money",
+   "strength",
+   "words"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:24",
+  "prompt": "How is Barnabas described?",
+  "answer": "A good man, full of the Holy Spirit and of faith",
+  "wrong": [
+   "A rich man from Rome",
+   "A soldier",
+   "A priest of the temple"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:25",
+  "prompt": "Where did Barnabas go to seek Saul?",
+  "answer": "Tarsus",
+  "wrong": [
+   "Damascus",
+   "Jerusalem",
+   "Cyprus"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:26",
+  "prompt": "How long did Barnabas and Saul teach in Antioch?",
+  "answer": "A whole year",
+  "wrong": [
+   "A whole month",
+   "Three years",
+   "Forty days"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:26",
+  "prompt": "Where were the disciples first called Christians?",
+  "answer": "Antioch",
+  "wrong": [
+   "Jerusalem",
+   "Rome",
+   "Damascus"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:27",
+  "prompt": "Who came from Jerusalem to Antioch in these days?",
+  "answer": "Prophets",
+  "wrong": [
+   "Soldiers",
+   "Kings",
+   "Fishermen"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:28",
+  "prompt": "What was the name of the prophet who stood up?",
+  "answer": "Agabus",
+  "wrong": [
+   "Silas",
+   "Simeon",
+   "Lucius"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:28",
+  "prompt": "What did Agabus show by the Spirit?",
+  "answer": "A great famine throughout all the world",
+  "wrong": [
+   "A great flood",
+   "A war with Rome",
+   "An earthquake"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:28",
+  "prompt": "In the days of which Caesar did the famine happen?",
+  "answer": "Claudius",
+  "wrong": [
+   "Augustus",
+   "Nero",
+   "Tiberius"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:29",
+  "prompt": "How did each disciple decide to give relief?",
+  "answer": "According to his ability",
+  "wrong": [
+   "The same amount for all",
+   "Only the rich gave",
+   "Nobody gave"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:29",
+  "prompt": "To whom did the disciples send relief?",
+  "answer": "The brethren dwelling in Judea",
+  "wrong": [
+   "The Romans",
+   "The king",
+   "The people of Egypt"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "11:30",
+  "prompt": "By whose hands was the relief sent to the elders?",
+  "answer": "Barnabas and Saul",
+  "wrong": [
+   "Peter and John",
+   "Agabus and Silas",
+   "Philip and Stephen"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:1",
+  "prompt": "Which king stretched out his hand to harass the church?",
+  "answer": "Herod",
+  "wrong": [
+   "Pharaoh",
+   "Agrippa",
+   "Caesar"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:2",
+  "prompt": "Who did Herod kill with the sword?",
+  "answer": "James the brother of John",
+  "wrong": [
+   "Stephen",
+   "Peter",
+   "Andrew"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:3",
+  "prompt": "Why did Herod also seize Peter?",
+  "answer": "He saw that it pleased the Jews",
+  "wrong": [
+   "Peter was a thief",
+   "The Romans told him to",
+   "Peter insulted him"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:3",
+  "prompt": "During which days was Peter seized?",
+  "answer": "The Days of Unleavened Bread",
+  "wrong": [
+   "The Day of Pentecost",
+   "The Feast of Tabernacles",
+   "The Day of Atonement"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:4",
+  "prompt": "How many squads of soldiers guarded Peter?",
+  "answer": "Four",
+  "wrong": [
+   "Two",
+   "Twelve",
+   "Seven"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:4",
+  "prompt": "When did Herod plan to bring Peter before the people?",
+  "answer": "After Passover",
+  "wrong": [
+   "Before dawn",
+   "After the harvest",
+   "On the Sabbath"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:5",
+  "prompt": "What did the church do while Peter was in prison?",
+  "answer": "Offered constant prayer to God for him",
+  "wrong": [
+   "Attacked the prison",
+   "Ran away",
+   "Paid the guards"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:6",
+  "prompt": "How was Peter sleeping on the night before Herod's plan?",
+  "answer": "Bound with two chains between two soldiers",
+  "wrong": [
+   "In a soft bed",
+   "On the roof",
+   "In the temple"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:7",
+  "prompt": "What shone in the prison when the angel came?",
+  "answer": "A light",
+  "wrong": [
+   "A star",
+   "A torch",
+   "A fire"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:7",
+  "prompt": "What did the angel do to wake Peter?",
+  "answer": "Struck him on the side",
+  "wrong": [
+   "Poured water on him",
+   "Sang a song",
+   "Called his name loudly"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:7",
+  "prompt": "What happened to Peter's chains?",
+  "answer": "They fell off his hands",
+  "wrong": [
+   "They turned to gold",
+   "They broke the wall",
+   "They stayed on"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:8",
+  "prompt": "What did the angel tell Peter to tie on?",
+  "answer": "His sandals",
+  "wrong": [
+   "His belt of gold",
+   "His sword",
+   "His helmet"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:9",
+  "prompt": "What did Peter think was happening as he followed the angel?",
+  "answer": "He thought he was seeing a vision",
+  "wrong": [
+   "He thought it was a trick",
+   "He thought he was dead",
+   "He thought it was Herod"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:10",
+  "prompt": "What kind of gate opened to them of its own accord?",
+  "answer": "An iron gate",
+  "wrong": [
+   "A wooden gate",
+   "A golden gate",
+   "A stone gate"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:10",
+  "prompt": "How many guard posts did they pass?",
+  "answer": "The first and the second",
+  "wrong": [
+   "Only one",
+   "Seven",
+   "Twelve"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:11",
+  "prompt": "What did Peter say he knew for certain?",
+  "answer": "The Lord had sent His angel and delivered him",
+  "wrong": [
+   "He had a bad dream",
+   "The guards were his friends",
+   "Herod changed his mind"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:12",
+  "prompt": "To whose house did Peter go?",
+  "answer": "Mary, the mother of John Mark",
+  "wrong": [
+   "Simon the tanner",
+   "Cornelius",
+   "Lydia"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:12",
+  "prompt": "What were the many people doing at Mary's house?",
+  "answer": "Praying",
+  "wrong": [
+   "Eating",
+   "Sleeping",
+   "Singing"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:13",
+  "prompt": "Who came to answer when Peter knocked?",
+  "answer": "A girl named Rhoda",
+  "wrong": [
+   "Mary",
+   "John Mark",
+   "An angel"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:14",
+  "prompt": "Why didn't Rhoda open the gate?",
+  "answer": "Because of her gladness",
+  "wrong": [
+   "She was afraid",
+   "She had no key",
+   "She did not hear"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:15",
+  "prompt": "What did the people tell Rhoda?",
+  "answer": "\"You are beside yourself!\"",
+  "wrong": [
+   "\"Open the door!\"",
+   "\"Go to sleep.\"",
+   "\"Call the soldiers.\""
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:15",
+  "prompt": "When Rhoda kept insisting, what did they say?",
+  "answer": "\"It is his angel.\"",
+  "wrong": [
+   "\"It is Herod.\"",
+   "\"It is the wind.\"",
+   "\"It is a ghost.\""
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:16",
+  "prompt": "How did the people react when they saw Peter?",
+  "answer": "They were astonished",
+  "wrong": [
+   "They were angry",
+   "They laughed",
+   "They ran away"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:17",
+  "prompt": "To whom did Peter say, \"Go, tell these things\"?",
+  "answer": "James and the brethren",
+  "wrong": [
+   "Herod",
+   "The soldiers",
+   "Rhoda only"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:18",
+  "prompt": "What happened among the soldiers when it was day?",
+  "answer": "No small stir about what had become of Peter",
+  "wrong": [
+   "A big party",
+   "Nothing at all",
+   "They went home"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:19",
+  "prompt": "What did Herod command for the guards?",
+  "answer": "That they be put to death",
+  "wrong": [
+   "That they be rewarded",
+   "That they go to Rome",
+   "That they find Peter in a day"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "12:19",
+  "prompt": "Where did Herod go down to and stay?",
+  "answer": "Caesarea",
+  "wrong": [
+   "Joppa",
+   "Jerusalem",
+   "Tyre"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:20",
+  "prompt": "With the people of which cities was Herod very angry?",
+  "answer": "Tyre and Sidon",
+  "wrong": [
+   "Joppa and Lydda",
+   "Rome and Athens",
+   "Gaza and Azotus"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:20",
+  "prompt": "Who was the king's personal aide?",
+  "answer": "Blastus",
+  "wrong": [
+   "Agabus",
+   "Rhoda",
+   "Lucius"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:20",
+  "prompt": "Why did Tyre and Sidon ask for peace?",
+  "answer": "Their country was supplied with food by the king's country",
+  "wrong": [
+   "They feared his army",
+   "They wanted his gold",
+   "Herod was their brother"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:21",
+  "prompt": "What was Herod wearing when he gave an oration?",
+  "answer": "Royal apparel",
+  "wrong": [
+   "Sackcloth",
+   "Armor",
+   "White robes of a priest"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:22",
+  "prompt": "What did the people shout about Herod?",
+  "answer": "\"The voice of a god and not of a man!\"",
+  "wrong": [
+   "\"Long live the king!\"",
+   "\"Go away!\"",
+   "\"We want Peter!\""
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:23",
+  "prompt": "Why did an angel of the Lord strike Herod?",
+  "answer": "He did not give glory to God",
+  "wrong": [
+   "He killed James",
+   "He was too rich",
+   "He lost a war"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:23",
+  "prompt": "How did Herod die?",
+  "answer": "He was eaten by worms",
+  "wrong": [
+   "He fell off his throne",
+   "He drowned",
+   "He was struck by a sword"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:24",
+  "prompt": "What happened to the word of God?",
+  "answer": "It grew and multiplied",
+  "wrong": [
+   "It was forgotten",
+   "It was burned",
+   "It stayed the same"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "12:25",
+  "prompt": "Whom did Barnabas and Saul take with them from Jerusalem?",
+  "answer": "John whose surname was Mark",
+  "wrong": [
+   "Peter",
+   "Rhoda",
+   "Agabus"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:1",
+  "prompt": "In which church were the prophets and teachers named in verse 1?",
+  "answer": "Antioch",
+  "wrong": [
+   "Jerusalem",
+   "Damascus",
+   "Ephesus"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:1",
+  "prompt": "Which Simeon is named among the teachers?",
+  "answer": "Simeon who was called Niger",
+  "wrong": [
+   "Simeon the tanner",
+   "Simeon the old prophet",
+   "Simeon of Cyprus"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:1",
+  "prompt": "Where was Lucius from?",
+  "answer": "Cyrene",
+  "wrong": [
+   "Cyprus",
+   "Crete",
+   "Corinth"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:1",
+  "prompt": "Manaen had been brought up with whom?",
+  "answer": "Herod the tetrarch",
+  "wrong": [
+   "Caesar",
+   "Pilate",
+   "Gamaliel"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:2",
+  "prompt": "What were the teachers doing when the Holy Spirit spoke?",
+  "answer": "Ministering to the Lord and fasting",
+  "wrong": [
+   "Sleeping",
+   "Fishing",
+   "Eating a feast"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:2",
+  "prompt": "The Holy Spirit said, \"Separate to Me ___ for the work.\"",
+  "answer": "Barnabas and Saul",
+  "wrong": [
+   "Peter and John",
+   "Simeon and Lucius",
+   "Silas and Timothy"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:3",
+  "prompt": "What did they do before sending Barnabas and Saul away?",
+  "answer": "Fasted, prayed, and laid hands on them",
+  "wrong": [
+   "Gave them horses",
+   "Wrote a letter to Rome",
+   "Built a ship"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:4",
+  "prompt": "From Seleucia, where did they sail?",
+  "answer": "Cyprus",
+  "wrong": [
+   "Crete",
+   "Rome",
+   "Egypt"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:5",
+  "prompt": "In which city did they preach in the synagogues of the Jews?",
+  "answer": "Salamis",
+  "wrong": [
+   "Paphos",
+   "Perga",
+   "Tarsus"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:5",
+  "prompt": "Who was their assistant?",
+  "answer": "John",
+  "wrong": [
+   "Silas",
+   "Timothy",
+   "Luke"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:6",
+  "prompt": "What was the name of the sorcerer at Paphos?",
+  "answer": "Bar-Jesus",
+  "wrong": [
+   "Simon",
+   "Theudas",
+   "Blastus"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:7",
+  "prompt": "Who was the proconsul at Paphos?",
+  "answer": "Sergius Paulus",
+  "wrong": [
+   "Gallio",
+   "Felix",
+   "Festus"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:7",
+  "prompt": "How is Sergius Paulus described?",
+  "answer": "An intelligent man",
+  "wrong": [
+   "A cruel man",
+   "A sick man",
+   "A sorcerer"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:8",
+  "prompt": "What is the sorcerer's name translated as?",
+  "answer": "Elymas",
+  "wrong": [
+   "Simon",
+   "Barnabas",
+   "Niger"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:8",
+  "prompt": "What was Elymas trying to do?",
+  "answer": "Turn the proconsul away from the faith",
+  "wrong": [
+   "Heal the proconsul",
+   "Become an apostle",
+   "Leave the island"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:9",
+  "prompt": "Saul is also called by what name?",
+  "answer": "Paul",
+  "wrong": [
+   "Peter",
+   "Silas",
+   "Mark"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:10",
+  "prompt": "Paul called Elymas a son of the ___.",
+  "answer": "devil",
+  "wrong": [
+   "king",
+   "prophet",
+   "sea"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:11",
+  "prompt": "What did Paul say would happen to Elymas?",
+  "answer": "He would be blind for a time",
+  "wrong": [
+   "He would be rich",
+   "He would die at once",
+   "He would lose his voice"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:11",
+  "prompt": "What fell on Elymas?",
+  "answer": "A dark mist",
+  "wrong": [
+   "A heavy stone",
+   "Fire from heaven",
+   "Rain"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "13:12",
+  "prompt": "Why did the proconsul believe?",
+  "answer": "He saw what had been done and was astonished at the teaching",
+  "wrong": [
+   "He was afraid of Paul",
+   "Elymas told him to",
+   "He wanted gold"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:13",
+  "prompt": "Where did Paul and his party go after sailing from Paphos?",
+  "answer": "Perga in Pamphylia",
+  "wrong": [
+   "Rome",
+   "Athens",
+   "Joppa"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:13",
+  "prompt": "Who left them and returned to Jerusalem?",
+  "answer": "John",
+  "wrong": [
+   "Barnabas",
+   "Silas",
+   "Lucius"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:14",
+  "prompt": "Which Antioch did they come to from Perga?",
+  "answer": "Antioch in Pisidia",
+  "wrong": [
+   "Antioch in Syria",
+   "Antioch in Egypt",
+   "Antioch in Galilee"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:14",
+  "prompt": "On what day did they go into the synagogue?",
+  "answer": "The Sabbath day",
+  "wrong": [
+   "The first day of the week",
+   "Passover",
+   "The Day of Pentecost"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:15",
+  "prompt": "What was read in the synagogue before Paul spoke?",
+  "answer": "The Law and the Prophets",
+  "wrong": [
+   "The letters of Paul",
+   "The Psalms only",
+   "The Roman law"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:16",
+  "prompt": "How did Paul get attention when he stood up?",
+  "answer": "He motioned with his hand",
+  "wrong": [
+   "He blew a trumpet",
+   "He clapped",
+   "He shouted loudly"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:17",
+  "prompt": "With what did God bring Israel out of Egypt?",
+  "answer": "An uplifted arm",
+  "wrong": [
+   "A great ship",
+   "A golden chariot",
+   "An army of Romans"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:18",
+  "prompt": "For about how many years did God put up with their ways in the wilderness?",
+  "answer": "Forty",
+  "wrong": [
+   "Seven",
+   "Four hundred",
+   "Seventy"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:19",
+  "prompt": "How many nations did God destroy in the land of Canaan?",
+  "answer": "Seven",
+  "wrong": [
+   "Twelve",
+   "Three",
+   "Ten"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:20",
+  "prompt": "For about how many years did God give Israel judges?",
+  "answer": "Four hundred and fifty",
+  "wrong": [
+   "Forty",
+   "One hundred",
+   "Seventy"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:20",
+  "prompt": "The judges lasted until which prophet?",
+  "answer": "Samuel",
+  "wrong": [
+   "Elijah",
+   "Isaiah",
+   "Moses"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:21",
+  "prompt": "Who was the first king God gave Israel?",
+  "answer": "Saul the son of Kish",
+  "wrong": [
+   "David",
+   "Solomon",
+   "Samuel"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:21",
+  "prompt": "King Saul was from which tribe?",
+  "answer": "Benjamin",
+  "wrong": [
+   "Judah",
+   "Levi",
+   "Dan"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:22",
+  "prompt": "God called David a man after My own ___.",
+  "answer": "heart",
+  "wrong": [
+   "house",
+   "name",
+   "kingdom"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:22",
+  "prompt": "David was the son of whom?",
+  "answer": "Jesse",
+  "wrong": [
+   "Kish",
+   "Saul",
+   "Samuel"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:23",
+  "prompt": "From David's seed God raised up a Savior for Israel. Who?",
+  "answer": "Jesus",
+  "wrong": [
+   "Solomon",
+   "John",
+   "Samuel"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:24",
+  "prompt": "What did John preach before Jesus came?",
+  "answer": "The baptism of repentance",
+  "wrong": [
+   "The law of Moses",
+   "War against Rome",
+   "Building a temple"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:25",
+  "prompt": "John said he was not worthy to loose the ___ of the One coming after him.",
+  "answer": "sandals",
+  "wrong": [
+   "belt",
+   "coat",
+   "crown"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:27",
+  "prompt": "What did the people of Jerusalem not know, though it was read every Sabbath?",
+  "answer": "The voices of the Prophets",
+  "wrong": [
+   "The name of the king",
+   "The way to Galilee",
+   "The Roman law"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:28",
+  "prompt": "Whom did they ask to put Jesus to death?",
+  "answer": "Pilate",
+  "wrong": [
+   "Herod",
+   "Caesar",
+   "Caiaphas"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:29",
+  "prompt": "Where was Jesus laid after being taken down from the tree?",
+  "answer": "In a tomb",
+  "wrong": [
+   "In the temple",
+   "In a field",
+   "In a boat"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:30",
+  "prompt": "What did God do after Jesus was laid in the tomb?",
+  "answer": "Raised Him from the dead",
+  "wrong": [
+   "Sent an army",
+   "Closed the tomb forever",
+   "Took Him to Egypt"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:31",
+  "prompt": "From where did the witnesses come up with Jesus to Jerusalem?",
+  "answer": "Galilee",
+  "wrong": [
+   "Egypt",
+   "Samaria",
+   "Rome"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:33",
+  "prompt": "Which Psalm says, \"You are My Son, Today I have begotten You\"?",
+  "answer": "The second Psalm",
+  "wrong": [
+   "The first Psalm",
+   "The twenty-third Psalm",
+   "The last Psalm"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:34",
+  "prompt": "\"I will give you the sure mercies of ___.\"",
+  "answer": "David",
+  "wrong": [
+   "Moses",
+   "Abraham",
+   "Israel"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:36",
+  "prompt": "After serving his generation, what happened to David?",
+  "answer": "He fell asleep and saw corruption",
+  "wrong": [
+   "He went to heaven alive",
+   "He became a priest",
+   "He went to Egypt"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:38",
+  "prompt": "What is preached through Jesus?",
+  "answer": "The forgiveness of sins",
+  "wrong": [
+   "The law of Rome",
+   "A new temple",
+   "A war"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:39",
+  "prompt": "Through Jesus, everyone who believes is justified from things the law of ___ could not.",
+  "answer": "Moses",
+  "wrong": [
+   "Rome",
+   "David",
+   "the Pharisees"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "13:41",
+  "prompt": "Paul warned, \"Behold, you despisers, marvel and ___!\"",
+  "answer": "perish",
+  "wrong": [
+   "sing",
+   "sleep",
+   "eat"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:42",
+  "prompt": "What did the Gentiles beg Paul and Barnabas?",
+  "answer": "That these words be preached to them the next Sabbath",
+  "wrong": [
+   "That they leave the city",
+   "That they give them money",
+   "That they stay quiet"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:43",
+  "prompt": "Paul and Barnabas persuaded them to continue in the ___ of God.",
+  "answer": "grace",
+  "wrong": [
+   "house",
+   "law",
+   "city"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:44",
+  "prompt": "Who came together on the next Sabbath to hear the word?",
+  "answer": "Almost the whole city",
+  "wrong": [
+   "Only the Gentiles",
+   "Only the rulers",
+   "Only ten people"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:45",
+  "prompt": "How did the Jews feel when they saw the multitudes?",
+  "answer": "Filled with envy",
+  "wrong": [
+   "Filled with joy",
+   "Very sleepy",
+   "Thankful"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:46",
+  "prompt": "Paul and Barnabas said, \"Behold, we turn to the ___.\"",
+  "answer": "Gentiles",
+  "wrong": [
+   "Romans",
+   "sea",
+   "Jews of Jerusalem"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:47",
+  "prompt": "\"I have set you as a light to the ___.\"",
+  "answer": "Gentiles",
+  "wrong": [
+   "kings",
+   "temple",
+   "night"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:48",
+  "prompt": "How did the Gentiles react when they heard this?",
+  "answer": "They were glad and glorified the word of the Lord",
+  "wrong": [
+   "They were angry",
+   "They left",
+   "They laughed"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:49",
+  "prompt": "Where was the word of the Lord being spread?",
+  "answer": "Throughout all the region",
+  "wrong": [
+   "Only in the synagogue",
+   "Only in Jerusalem",
+   "Nowhere"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:50",
+  "prompt": "Whom did the Jews stir up against Paul and Barnabas?",
+  "answer": "The devout and prominent women and the chief men",
+  "wrong": [
+   "The Roman army",
+   "The children",
+   "The apostles"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:51",
+  "prompt": "What did Paul and Barnabas shake off against them?",
+  "answer": "The dust from their feet",
+  "wrong": [
+   "Their coats",
+   "Their chains",
+   "Their bags"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:51",
+  "prompt": "To which city did Paul and Barnabas go next?",
+  "answer": "Iconium",
+  "wrong": [
+   "Lystra",
+   "Derbe",
+   "Perga"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "13:52",
+  "prompt": "The disciples were filled with joy and with ___.",
+  "answer": "the Holy Spirit",
+  "wrong": [
+   "fear",
+   "bread",
+   "sadness"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:1",
+  "prompt": "In which city did a great multitude of Jews and Greeks believe?",
+  "answer": "Iconium",
+  "wrong": [
+   "Lystra",
+   "Derbe",
+   "Antioch"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:2",
+  "prompt": "What did the unbelieving Jews do to the Gentiles' minds?",
+  "answer": "Poisoned their minds against the brethren",
+  "wrong": [
+   "Opened their minds",
+   "Taught them the law",
+   "Gave them gifts"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:3",
+  "prompt": "How did Paul and Barnabas speak during their long stay?",
+  "answer": "Boldly in the Lord",
+  "wrong": [
+   "Quietly in secret",
+   "Only at night",
+   "In Latin"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:3",
+  "prompt": "What did the Lord grant to be done by their hands?",
+  "answer": "Signs and wonders",
+  "wrong": [
+   "Great buildings",
+   "Big boats",
+   "Swords"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:4",
+  "prompt": "What happened to the multitude of the city?",
+  "answer": "It was divided",
+  "wrong": [
+   "It all believed",
+   "It all left",
+   "It made Paul king"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:5",
+  "prompt": "What did the Gentiles and Jews try to do to Paul and Barnabas?",
+  "answer": "Abuse and stone them",
+  "wrong": [
+   "Crown them",
+   "Give them gold",
+   "Make them rulers"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:6",
+  "prompt": "To which cities of Lycaonia did they flee?",
+  "answer": "Lystra and Derbe",
+  "wrong": [
+   "Perga and Attalia",
+   "Tyre and Sidon",
+   "Joppa and Lydda"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:7",
+  "prompt": "What were they doing in Lystra and Derbe?",
+  "answer": "Preaching the gospel",
+  "wrong": [
+   "Hiding",
+   "Building tents",
+   "Fishing"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:8",
+  "prompt": "What was wrong with the man sitting in Lystra?",
+  "answer": "He was a cripple from birth who had never walked",
+  "wrong": [
+   "He was blind",
+   "He could not hear",
+   "He had a fever"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "14:9",
+  "prompt": "What did Paul see in the crippled man?",
+  "answer": "That he had faith to be healed",
+  "wrong": [
+   "That he was rich",
+   "That he was a Roman",
+   "That he was sleeping"
+  ]
+ }
+]

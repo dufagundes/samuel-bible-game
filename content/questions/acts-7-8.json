@@ -1,0 +1,1454 @@
+[
+ {
+  "world": 1,
+  "ref": "7:8",
+  "prompt": "What covenant did God give Abraham?",
+  "answer": "The covenant of circumcision",
+  "wrong": [
+   "The covenant of the rainbow",
+   "The covenant of the law",
+   "The covenant of the temple"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:8",
+  "prompt": "On what day was Isaac circumcised?",
+  "answer": "The eighth day",
+  "wrong": [
+   "The seventh day",
+   "The first day",
+   "The fortieth day"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:8",
+  "prompt": "Who did Abraham beget?",
+  "answer": "Isaac",
+  "wrong": [
+   "Ishmael only",
+   "Jacob",
+   "Joseph"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:8",
+  "prompt": "Jacob begot how many patriarchs?",
+  "answer": "Twelve",
+  "wrong": [
+   "Seven",
+   "Ten",
+   "Three"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:9",
+  "prompt": "Why did the patriarchs sell Joseph into Egypt?",
+  "answer": "They were envious",
+  "wrong": [
+   "They needed money",
+   "Pharaoh asked for him",
+   "Joseph wanted to go"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:9",
+  "prompt": "Into which land was Joseph sold?",
+  "answer": "Egypt",
+  "wrong": [
+   "Canaan",
+   "Babylon",
+   "Midian"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:9",
+  "prompt": "Who was with Joseph in Egypt?",
+  "answer": "God",
+  "wrong": [
+   "His father",
+   "His mother",
+   "Benjamin"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:10",
+  "prompt": "What did God give Joseph in the presence of Pharaoh?",
+  "answer": "Favor and wisdom",
+  "wrong": [
+   "Gold and silver",
+   "A sword",
+   "A ship"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:10",
+  "prompt": "What did Pharaoh make Joseph?",
+  "answer": "Governor over Egypt and all his house",
+  "wrong": [
+   "A shepherd",
+   "A soldier",
+   "A baker"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:11",
+  "prompt": "What came over all the land of Egypt and Canaan?",
+  "answer": "A famine and great trouble",
+  "wrong": [
+   "A flood",
+   "A war",
+   "A great fire"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:12",
+  "prompt": "What did Jacob hear was in Egypt?",
+  "answer": "Grain",
+  "wrong": [
+   "Gold",
+   "Water",
+   "Joseph's coat"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:13",
+  "prompt": "When was Joseph made known to his brothers?",
+  "answer": "The second time",
+  "wrong": [
+   "The first time",
+   "The third time",
+   "Never"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:14",
+  "prompt": "How many relatives did Joseph call to Egypt?",
+  "answer": "Seventy-five people",
+  "wrong": [
+   "Twelve people",
+   "Forty people",
+   "Three hundred people"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:15",
+  "prompt": "Where did Jacob and the fathers die?",
+  "answer": "In Egypt",
+  "wrong": [
+   "In Canaan",
+   "In Haran",
+   "In Shechem"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:16",
+  "prompt": "Where were the fathers carried back and buried?",
+  "answer": "Shechem",
+  "wrong": [
+   "Bethlehem",
+   "Jerusalem",
+   "Hebron"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "7:16",
+  "prompt": "From whom had Abraham bought the tomb?",
+  "answer": "The sons of Hamor",
+  "wrong": [
+   "Pharaoh",
+   "The Philistines",
+   "Lot"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:17",
+  "prompt": "What happened to the people in Egypt as the time of the promise drew near?",
+  "answer": "They grew and multiplied",
+  "wrong": [
+   "They became fewer",
+   "They all left",
+   "They became Egyptians"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:18",
+  "prompt": "What was different about the new king who arose?",
+  "answer": "He did not know Joseph",
+  "wrong": [
+   "He was Joseph's son",
+   "He loved Israel",
+   "He was from Canaan"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:19",
+  "prompt": "How did the new king treat the people?",
+  "answer": "He dealt treacherously and oppressed them",
+  "wrong": [
+   "He gave them land",
+   "He made them rich",
+   "He set them free"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:19",
+  "prompt": "What did the king make the people do to their babies?",
+  "answer": "Expose them so they might not live",
+  "wrong": [
+   "Name them after him",
+   "Send them to school",
+   "Bring them to the palace"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:20",
+  "prompt": "How long was baby Moses brought up in his father's house?",
+  "answer": "Three months",
+  "wrong": [
+   "Three years",
+   "Three weeks",
+   "Thirty days"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:20",
+  "prompt": "Moses was well pleasing to whom?",
+  "answer": "God",
+  "wrong": [
+   "Pharaoh",
+   "the soldiers",
+   "his brothers"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:21",
+  "prompt": "Who took Moses and brought him up as her own son?",
+  "answer": "Pharaoh's daughter",
+  "wrong": [
+   "Pharaoh's wife",
+   "A Hebrew nurse",
+   "Miriam"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:22",
+  "prompt": "In what was Moses learned?",
+  "answer": "All the wisdom of the Egyptians",
+  "wrong": [
+   "Fishing",
+   "The Roman law",
+   "Building ships"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:22",
+  "prompt": "Moses was mighty in words and ___.",
+  "answer": "deeds",
+  "wrong": [
+   "songs",
+   "battles",
+   "riches"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:23",
+  "prompt": "How old was Moses when he decided to visit his brethren?",
+  "answer": "Forty years old",
+  "wrong": [
+   "Twenty years old",
+   "Eighty years old",
+   "Twelve years old"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:24",
+  "prompt": "What did Moses do when he saw one of his people suffer wrong?",
+  "answer": "He defended him and struck down the Egyptian",
+  "wrong": [
+   "He ran away",
+   "He called the guards",
+   "He told Pharaoh"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:25",
+  "prompt": "What did Moses think his brethren would understand?",
+  "answer": "That God would deliver them by his hand",
+  "wrong": [
+   "That he was a prince",
+   "That he was rich",
+   "That he was leaving Egypt"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:26",
+  "prompt": "What did Moses say to the two men who were fighting?",
+  "answer": "\"Men, you are brethren; why do you wrong one another?\"",
+  "wrong": [
+   "\"Stop or I will call Pharaoh!\"",
+   "\"Who is stronger?\"",
+   "\"Go home now.\""
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:27",
+  "prompt": "What did the man who did wrong say to Moses?",
+  "answer": "\"Who made you a ruler and a judge over us?\"",
+  "wrong": [
+   "\"Thank you, Moses.\"",
+   "\"Are you the king?\"",
+   "\"Help me, Moses.\""
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:28",
+  "prompt": "The man asked if Moses wanted to kill him as he did whom?",
+  "answer": "The Egyptian yesterday",
+  "wrong": [
+   "Pharaoh",
+   "A lion",
+   "A soldier"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:29",
+  "prompt": "Where did Moses flee?",
+  "answer": "The land of Midian",
+  "wrong": [
+   "Canaan",
+   "Babylon",
+   "Ethiopia"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "7:29",
+  "prompt": "How many sons did Moses have in Midian?",
+  "answer": "Two",
+  "wrong": [
+   "One",
+   "Three",
+   "Twelve"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:30",
+  "prompt": "How many years passed before the Angel appeared to Moses?",
+  "answer": "Forty",
+  "wrong": [
+   "Seven",
+   "Ten",
+   "Eighty"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:30",
+  "prompt": "How did the Angel of the Lord appear to Moses?",
+  "answer": "In a flame of fire in a bush",
+  "wrong": [
+   "In a cloud",
+   "In a dream",
+   "On a white horse"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:30",
+  "prompt": "In the wilderness of which mountain did this happen?",
+  "answer": "Mount Sinai",
+  "wrong": [
+   "Mount Olivet",
+   "Mount Carmel",
+   "Mount Zion"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:32",
+  "prompt": "God said He was the God of Abraham, Isaac, and ___.",
+  "answer": "Jacob",
+  "wrong": [
+   "Joseph",
+   "Moses",
+   "David"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:32",
+  "prompt": "How did Moses react when God spoke?",
+  "answer": "He trembled and dared not look",
+  "wrong": [
+   "He laughed",
+   "He ran to Egypt",
+   "He fell asleep"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:33",
+  "prompt": "What did God tell Moses to take off?",
+  "answer": "His sandals",
+  "wrong": [
+   "His coat",
+   "His hat",
+   "His ring"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:33",
+  "prompt": "Why did Moses have to take off his sandals?",
+  "answer": "The place where he stood was holy ground",
+  "wrong": [
+   "The ground was hot",
+   "They were broken",
+   "It was the Sabbath"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:34",
+  "prompt": "God said He had heard the ___ of His people in Egypt.",
+  "answer": "groaning",
+  "wrong": [
+   "singing",
+   "laughing",
+   "praying"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:34",
+  "prompt": "Where did God say He would send Moses?",
+  "answer": "Egypt",
+  "wrong": [
+   "Canaan",
+   "Babylon",
+   "Midian"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:35",
+  "prompt": "God sent Moses to be a ruler and a ___.",
+  "answer": "deliverer",
+  "wrong": [
+   "priest",
+   "soldier",
+   "farmer"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:36",
+  "prompt": "Where did Moses show wonders and signs?",
+  "answer": "In Egypt, in the Red Sea, and in the wilderness",
+  "wrong": [
+   "Only in Canaan",
+   "In Rome",
+   "In Babylon"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:36",
+  "prompt": "How long were the people in the wilderness?",
+  "answer": "Forty years",
+  "wrong": [
+   "Seven years",
+   "Four hundred years",
+   "Forty days"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:37",
+  "prompt": "Moses said God would raise up a ___ like him from their brethren.",
+  "answer": "Prophet",
+  "wrong": [
+   "King",
+   "Soldier",
+   "Judge"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:38",
+  "prompt": "What did Moses receive on Mount Sinai to give to the people?",
+  "answer": "The living oracles",
+  "wrong": [
+   "A golden crown",
+   "A sword",
+   "A map"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:39",
+  "prompt": "In their hearts, where did the fathers turn back to?",
+  "answer": "Egypt",
+  "wrong": [
+   "Haran",
+   "Babylon",
+   "Midian"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:40",
+  "prompt": "To whom did the people say, \"Make us gods to go before us\"?",
+  "answer": "Aaron",
+  "wrong": [
+   "Moses",
+   "Joshua",
+   "Miriam"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:41",
+  "prompt": "What idol did the people make?",
+  "answer": "A calf",
+  "wrong": [
+   "A snake",
+   "A lion",
+   "A tower"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:42",
+  "prompt": "God gave them up to worship what?",
+  "answer": "The host of heaven",
+  "wrong": [
+   "The sea",
+   "The kings",
+   "The angels"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:43",
+  "prompt": "Whose tabernacle did the people take up?",
+  "answer": "Moloch's",
+  "wrong": [
+   "David's",
+   "Moses'",
+   "Abraham's"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "7:43",
+  "prompt": "Beyond which place would God carry them away?",
+  "answer": "Babylon",
+  "wrong": [
+   "Egypt",
+   "Assyria",
+   "Rome"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:44",
+  "prompt": "What did the fathers have in the wilderness?",
+  "answer": "The tabernacle of witness",
+  "wrong": [
+   "A great temple",
+   "A golden city",
+   "A palace"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:44",
+  "prompt": "How did Moses make the tabernacle?",
+  "answer": "According to the pattern he had seen",
+  "wrong": [
+   "However he liked",
+   "With Egyptian help",
+   "In one day"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:45",
+  "prompt": "With whom did the fathers bring the tabernacle into the land?",
+  "answer": "Joshua",
+  "wrong": [
+   "Aaron",
+   "Samuel",
+   "Caleb"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:46",
+  "prompt": "Who found favor before God and asked to find a dwelling for Him?",
+  "answer": "David",
+  "wrong": [
+   "Saul",
+   "Solomon",
+   "Joshua"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:47",
+  "prompt": "Who built God a house?",
+  "answer": "Solomon",
+  "wrong": [
+   "David",
+   "Moses",
+   "Herod"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:48",
+  "prompt": "The Most High does not dwell in temples made with ___.",
+  "answer": "hands",
+  "wrong": [
+   "gold",
+   "stone",
+   "wood"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:49",
+  "prompt": "\"Heaven is My throne, and earth is My ___.\"",
+  "answer": "footstool",
+  "wrong": [
+   "house",
+   "garden",
+   "crown"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:51",
+  "prompt": "Stephen said the people always resist whom?",
+  "answer": "The Holy Spirit",
+  "wrong": [
+   "The Romans",
+   "The angels",
+   "Moses"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:51",
+  "prompt": "Stephen called the people \"stiff-___.\"",
+  "answer": "necked",
+  "wrong": [
+   "hearted",
+   "handed",
+   "footed"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:52",
+  "prompt": "Stephen asked which of the prophets their fathers did not ___.",
+  "answer": "persecute",
+  "wrong": [
+   "love",
+   "follow",
+   "feed"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:53",
+  "prompt": "How did they receive the law, according to Stephen?",
+  "answer": "By the direction of angels",
+  "wrong": [
+   "By a letter from Rome",
+   "From the high priest",
+   "In a dream"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:54",
+  "prompt": "How did the council react to Stephen's words?",
+  "answer": "They were cut to the heart and gnashed their teeth",
+  "wrong": [
+   "They cheered",
+   "They cried and repented",
+   "They fell asleep"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:55",
+  "prompt": "What did Stephen see when he gazed into heaven?",
+  "answer": "The glory of God and Jesus standing at His right hand",
+  "wrong": [
+   "A golden city",
+   "Angels singing",
+   "Moses and Elijah"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:56",
+  "prompt": "Stephen said, \"I see the heavens opened and the Son of Man ___.\"",
+  "answer": "standing at the right hand of God",
+  "wrong": [
+   "sitting on a cloud",
+   "coming on a horse",
+   "walking on water"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:57",
+  "prompt": "What did the council do when Stephen spoke?",
+  "answer": "Cried out, stopped their ears, and ran at him",
+  "wrong": [
+   "Bowed down",
+   "Left quietly",
+   "Asked him to pray"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:58",
+  "prompt": "What did the council do to Stephen outside the city?",
+  "answer": "Stoned him",
+  "wrong": [
+   "Crowned him",
+   "Sent him away",
+   "Let him go"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:58",
+  "prompt": "At whose feet did the witnesses lay their clothes?",
+  "answer": "A young man named Saul",
+  "wrong": [
+   "Peter",
+   "The high priest",
+   "Gamaliel"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:59",
+  "prompt": "What did Stephen pray as they stoned him?",
+  "answer": "\"Lord Jesus, receive my spirit.\"",
+  "wrong": [
+   "\"Lord, punish them.\"",
+   "\"Save me now!\"",
+   "\"Why me, Lord?\""
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:60",
+  "prompt": "What did Stephen cry out as he knelt down?",
+  "answer": "\"Lord, do not charge them with this sin.\"",
+  "wrong": [
+   "\"I will see you in heaven.\"",
+   "\"Run away, my friends!\"",
+   "\"Help me, Peter!\""
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "7:60",
+  "prompt": "After praying for his enemies, Stephen fell ___.",
+  "answer": "asleep",
+  "wrong": [
+   "down the hill",
+   "silent",
+   "into the river"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "8:1",
+  "prompt": "How did Saul feel about Stephen's death?",
+  "answer": "He was consenting to it",
+  "wrong": [
+   "He was very sad",
+   "He tried to stop it",
+   "He did not know about it"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "8:1",
+  "prompt": "Who were NOT scattered from Jerusalem?",
+  "answer": "The apostles",
+  "wrong": [
+   "The widows",
+   "The deacons",
+   "The children"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "8:2",
+  "prompt": "Who carried Stephen to his burial?",
+  "answer": "Devout men",
+  "wrong": [
+   "The soldiers",
+   "The apostles",
+   "His family"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "8:3",
+  "prompt": "What did Saul do to the church?",
+  "answer": "Made havoc, dragging men and women to prison",
+  "wrong": [
+   "Gave it money",
+   "Joined it",
+   "Built it a house"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:4",
+  "prompt": "What did the scattered believers do everywhere they went?",
+  "answer": "Preached the word",
+  "wrong": [
+   "Hid in caves",
+   "Went fishing",
+   "Built temples"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:5",
+  "prompt": "To which city did Philip go down?",
+  "answer": "The city of Samaria",
+  "wrong": [
+   "Damascus",
+   "Joppa",
+   "Gaza"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:5",
+  "prompt": "What did Philip preach in Samaria?",
+  "answer": "Christ",
+  "wrong": [
+   "The law of Moses",
+   "The Roman law",
+   "About the temple"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:6",
+  "prompt": "Why did the multitudes heed Philip?",
+  "answer": "They heard and saw the miracles he did",
+  "wrong": [
+   "He paid them",
+   "He was a king",
+   "He was very tall"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:7",
+  "prompt": "Who were healed in Samaria?",
+  "answer": "Many who were paralyzed and lame",
+  "wrong": [
+   "Only Philip",
+   "Only the rich",
+   "No one"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:8",
+  "prompt": "What was in that city after Philip preached?",
+  "answer": "Great joy",
+  "wrong": [
+   "Great fear",
+   "A great storm",
+   "A great war"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:9",
+  "prompt": "What did Simon practice before Philip came?",
+  "answer": "Sorcery",
+  "wrong": [
+   "Medicine",
+   "Fishing",
+   "Farming"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:10",
+  "prompt": "What did the people say about Simon?",
+  "answer": "\"This man is the great power of God.\"",
+  "wrong": [
+   "\"This man is a liar.\"",
+   "\"This man is a fisherman.\"",
+   "\"This man is a king.\""
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:12",
+  "prompt": "What happened when the people believed Philip?",
+  "answer": "Both men and women were baptized",
+  "wrong": [
+   "They chased him away",
+   "They made him king",
+   "They went to Jerusalem"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:13",
+  "prompt": "What did Simon do after he was baptized?",
+  "answer": "He continued with Philip and was amazed",
+  "wrong": [
+   "He left Samaria",
+   "He became a priest",
+   "He wrote a book"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:14",
+  "prompt": "Whom did the apostles send to Samaria?",
+  "answer": "Peter and John",
+  "wrong": [
+   "Paul and Silas",
+   "James and Andrew",
+   "Barnabas and Mark"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:15",
+  "prompt": "What did Peter and John pray for the Samaritans to receive?",
+  "answer": "The Holy Spirit",
+  "wrong": [
+   "Money",
+   "Food",
+   "A new temple"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:16",
+  "prompt": "In whose name had the Samaritans only been baptized?",
+  "answer": "The Lord Jesus",
+  "wrong": [
+   "Philip",
+   "Moses",
+   "John"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:17",
+  "prompt": "What did Peter and John do so the people received the Holy Spirit?",
+  "answer": "Laid hands on them",
+  "wrong": [
+   "Poured oil on them",
+   "Gave them bread",
+   "Sang a hymn"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:18",
+  "prompt": "What did Simon offer the apostles?",
+  "answer": "Money",
+  "wrong": [
+   "His house",
+   "His sorcery books",
+   "A horse"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:19",
+  "prompt": "What did Simon want to buy?",
+  "answer": "The power to give the Holy Spirit by laying on hands",
+  "wrong": [
+   "A place in the temple",
+   "Peter's coat",
+   "A new name"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:20",
+  "prompt": "Peter said Simon thought the gift of God could be purchased with what?",
+  "answer": "Money",
+  "wrong": [
+   "Prayer",
+   "Good works",
+   "Sacrifices"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:21",
+  "prompt": "Peter told Simon his heart was not right in the sight of ___.",
+  "answer": "God",
+  "wrong": [
+   "the people",
+   "the apostles",
+   "Philip"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:23",
+  "prompt": "Peter said Simon was poisoned by ___ and bound by iniquity.",
+  "answer": "bitterness",
+  "wrong": [
+   "fear",
+   "money",
+   "pride"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:24",
+  "prompt": "What did Simon ask Peter to do?",
+  "answer": "Pray to the Lord for him",
+  "wrong": [
+   "Give back his money",
+   "Baptize him again",
+   "Leave Samaria"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "8:25",
+  "prompt": "Where did Peter and John preach on their way back to Jerusalem?",
+  "answer": "In many villages of the Samaritans",
+  "wrong": [
+   "In Damascus",
+   "In Egypt",
+   "In Rome"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:26",
+  "prompt": "Who told Philip to go toward the south?",
+  "answer": "An angel of the Lord",
+  "wrong": [
+   "Peter",
+   "The Ethiopian",
+   "Simon"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:26",
+  "prompt": "The road Philip was told to take went from Jerusalem to ___.",
+  "answer": "Gaza",
+  "wrong": [
+   "Joppa",
+   "Damascus",
+   "Jericho"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:27",
+  "prompt": "What country was the eunuch from?",
+  "answer": "Ethiopia",
+  "wrong": [
+   "Egypt",
+   "Persia",
+   "Greece"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:27",
+  "prompt": "What was the name of the queen the eunuch served?",
+  "answer": "Candace",
+  "wrong": [
+   "Esther",
+   "Sheba",
+   "Jezebel"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:27",
+  "prompt": "What was the eunuch in charge of?",
+  "answer": "All the queen's treasury",
+  "wrong": [
+   "The queen's army",
+   "The queen's horses",
+   "The queen's kitchen"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:27",
+  "prompt": "Why had the eunuch gone to Jerusalem?",
+  "answer": "To worship",
+  "wrong": [
+   "To buy horses",
+   "To fight",
+   "To visit family"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:28",
+  "prompt": "What was the eunuch doing in his chariot?",
+  "answer": "Reading Isaiah the prophet",
+  "wrong": [
+   "Sleeping",
+   "Counting money",
+   "Eating"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:29",
+  "prompt": "Who told Philip, \"Go near and overtake this chariot\"?",
+  "answer": "The Spirit",
+  "wrong": [
+   "The eunuch",
+   "An angel",
+   "Peter"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:30",
+  "prompt": "What did Philip ask the eunuch?",
+  "answer": "\"Do you understand what you are reading?\"",
+  "wrong": [
+   "\"Where are you going?\"",
+   "\"Can I have a ride?\"",
+   "\"Who is your queen?\""
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:31",
+  "prompt": "What did the eunuch answer?",
+  "answer": "\"How can I, unless someone guides me?\"",
+  "wrong": [
+   "\"Yes, I understand it all.\"",
+   "\"Leave me alone.\"",
+   "\"I cannot read.\""
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:32",
+  "prompt": "The Scripture said He was led as a ___ to the slaughter.",
+  "answer": "sheep",
+  "wrong": [
+   "lion",
+   "king",
+   "soldier"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:32",
+  "prompt": "\"As a lamb before its shearer is silent, so He opened not His ___.\"",
+  "answer": "mouth",
+  "wrong": [
+   "eyes",
+   "hands",
+   "heart"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:34",
+  "prompt": "What did the eunuch ask about the prophet?",
+  "answer": "Whether he spoke of himself or of some other man",
+  "wrong": [
+   "Where the prophet lived",
+   "When the prophet died",
+   "Who wrote the book"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:35",
+  "prompt": "Whom did Philip preach to the eunuch, beginning at that Scripture?",
+  "answer": "Jesus",
+  "wrong": [
+   "Moses",
+   "Isaiah",
+   "Candace"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:36",
+  "prompt": "What did the eunuch see along the road?",
+  "answer": "Some water",
+  "wrong": [
+   "A lion",
+   "A temple",
+   "An angel"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:36",
+  "prompt": "The eunuch asked, \"What hinders me from being ___?\"",
+  "answer": "baptized",
+  "wrong": [
+   "healed",
+   "crowned",
+   "forgiven"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:37",
+  "prompt": "What did the eunuch say he believed?",
+  "answer": "That Jesus Christ is the Son of God",
+  "wrong": [
+   "That Philip was an angel",
+   "That Isaiah was alive",
+   "That he would be king"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:38",
+  "prompt": "Who went down into the water?",
+  "answer": "Both Philip and the eunuch",
+  "wrong": [
+   "Only the eunuch",
+   "Only Philip",
+   "The whole army"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:39",
+  "prompt": "What happened to Philip when they came up out of the water?",
+  "answer": "The Spirit of the Lord caught him away",
+  "wrong": [
+   "He fell asleep",
+   "He rode in the chariot",
+   "He swam away"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:39",
+  "prompt": "How did the eunuch go on his way?",
+  "answer": "Rejoicing",
+  "wrong": [
+   "Crying",
+   "Angry",
+   "Confused"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:40",
+  "prompt": "Where was Philip found after he was caught away?",
+  "answer": "Azotus",
+  "wrong": [
+   "Gaza",
+   "Samaria",
+   "Jerusalem"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "8:40",
+  "prompt": "Philip preached in all the cities till he came to which city?",
+  "answer": "Caesarea",
+  "wrong": [
+   "Joppa",
+   "Damascus",
+   "Antioch"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:1",
+  "prompt": "Saul was still breathing threats and ___ against the disciples.",
+  "answer": "murder",
+  "wrong": [
+   "lies",
+   "songs",
+   "prayers"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:2",
+  "prompt": "What did Saul ask the high priest for?",
+  "answer": "Letters to the synagogues of Damascus",
+  "wrong": [
+   "Soldiers and horses",
+   "Money",
+   "A new house"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:2",
+  "prompt": "What were followers of Jesus called in verse 2?",
+  "answer": "The Way",
+  "wrong": [
+   "The Church",
+   "Christians",
+   "The Twelve"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:2",
+  "prompt": "Where did Saul want to bring the believers bound?",
+  "answer": "Jerusalem",
+  "wrong": [
+   "Rome",
+   "Damascus",
+   "Tarsus"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:3",
+  "prompt": "What shone around Saul near Damascus?",
+  "answer": "A light from heaven",
+  "wrong": [
+   "A fire",
+   "The sun",
+   "A star"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:4",
+  "prompt": "What did the voice say to Saul?",
+  "answer": "\"Saul, Saul, why are you persecuting Me?\"",
+  "wrong": [
+   "\"Saul, go home.\"",
+   "\"Saul, you are forgiven.\"",
+   "\"Saul, where are you?\""
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:5",
+  "prompt": "What did Saul ask the voice?",
+  "answer": "\"Who are You, Lord?\"",
+  "wrong": [
+   "\"Where are You?\"",
+   "\"What time is it?\"",
+   "\"Why me?\""
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:5",
+  "prompt": "The Lord said it was hard for Saul to kick against the ___.",
+  "answer": "goads",
+  "wrong": [
+   "walls",
+   "gates",
+   "stones"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:6",
+  "prompt": "How did Saul feel when he asked, \"What do You want me to do?\"",
+  "answer": "Trembling and astonished",
+  "wrong": [
+   "Happy and calm",
+   "Angry",
+   "Sleepy"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:6",
+  "prompt": "Where was Saul told to go?",
+  "answer": "Into the city",
+  "wrong": [
+   "Back to Jerusalem",
+   "To the desert",
+   "Home to Tarsus"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:7",
+  "prompt": "What did the men traveling with Saul hear and see?",
+  "answer": "They heard a voice but saw no one",
+  "wrong": [
+   "They saw an angel",
+   "They saw Jesus",
+   "They heard nothing"
+  ]
+ },
+ {
+  "world": 7,
+  "ref": "9:7",
+  "prompt": "How did the men with Saul stand?",
+  "answer": "Speechless",
+  "wrong": [
+   "Laughing",
+   "Singing",
+   "Fighting"
+  ]
+ }
+]

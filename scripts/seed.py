@@ -41,12 +41,15 @@ def main():
         index = {cv: i for i, cv in enumerate(order)}
 
     out = ["begin;"]
-    out.append("delete from public.questions; delete from public.worlds; delete from public.passages;")
+    # Player profiles reference passages, so passages are upserted (never deleted).
+    out.append("delete from public.questions; delete from public.worlds;")
     for p in data["passages"]:
         (sc, sv), (ec, ev) = p["range"]
         vids = {k: v for k, v in data["videos"].items() if sc <= int(k) <= ec}
         out.append(
-            "insert into public.passages (id,title,start_c,start_v,end_c,end_v,sort,videos) values (%s,%s,%d,%d,%d,%d,%d,%s::jsonb);"
+            "insert into public.passages (id,title,start_c,start_v,end_c,end_v,sort,videos) values (%s,%s,%d,%d,%d,%d,%d,%s::jsonb)"
+            " on conflict (id) do update set title=excluded.title, start_c=excluded.start_c, start_v=excluded.start_v,"
+            " end_c=excluded.end_c, end_v=excluded.end_v, sort=excluded.sort, videos=excluded.videos;"
             % (q(p["id"]), q(p["title"]), sc, sv, ec, ev, p["sort"], q(json.dumps(vids)))
         )
         prev_end = None
@@ -75,10 +78,9 @@ def main():
                     % (q(p["id"]), item["world"], q(item["ref"]), q(item["prompt"]), q(item["answer"]), arr(item["wrong"]))
                 )
     if verses:
-        out.append("delete from public.verses where book = 'Acts';")
         rows = ["('Acts',%d,%d,%s)" % (c, v, q(verses["%d:%d" % (c, v)])) for c, v in order]
         for i in range(0, len(rows), 200):
-            out.append("insert into public.verses (book,c,v,text) values " + ",".join(rows[i:i + 200]) + ";")
+            out.append("insert into public.verses (book,c,v,text) values " + ",".join(rows[i:i + 200]) + " on conflict (book,c,v) do update set text=excluded.text;")
     out.append("commit;")
     print("\n".join(out))
 

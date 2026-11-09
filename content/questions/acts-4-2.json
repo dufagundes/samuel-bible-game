@@ -1,0 +1,1278 @@
+[
+ {
+  "world": 1,
+  "ref": "4:2",
+  "prompt": "Why were the priests and Sadducees greatly disturbed?",
+  "answer": "The apostles preached the resurrection from the dead in Jesus",
+  "wrong": [
+   "The apostles were selling food",
+   "The apostles broke the Sabbath",
+   "The apostles were singing loudly"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:3",
+  "prompt": "Why were Peter and John kept in custody until the next day?",
+  "answer": "It was already evening",
+  "wrong": [
+   "The jail was full",
+   "They were sick",
+   "It was the Sabbath"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:4",
+  "prompt": "About how many men believed after hearing the word?",
+  "answer": "Five thousand",
+  "wrong": [
+   "Three thousand",
+   "Five hundred",
+   "One hundred twenty"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:6",
+  "prompt": "Who was the high priest named in verse 6?",
+  "answer": "Annas",
+  "wrong": [
+   "Caiaphas",
+   "Gamaliel",
+   "Alexander"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:6",
+  "prompt": "Which of these men was gathered with the high priest's family?",
+  "answer": "Caiaphas",
+  "wrong": [
+   "Barnabas",
+   "Stephen",
+   "Philip"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:7",
+  "prompt": "What did the rulers ask Peter and John?",
+  "answer": "\"By what power or by what name have you done this?\"",
+  "wrong": [
+   "\"Where are you from?\"",
+   "\"Who is your father?\"",
+   "\"Why are you hungry?\""
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:8",
+  "prompt": "Peter was filled with whom when he answered the rulers?",
+  "answer": "The Holy Spirit",
+  "wrong": [
+   "Fear",
+   "Anger",
+   "An angel"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:9",
+  "prompt": "Peter said they were judged for a good deed done to whom?",
+  "answer": "A helpless man",
+  "wrong": [
+   "A rich ruler",
+   "A Roman soldier",
+   "A small child"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:10",
+  "prompt": "By whose name did the man stand before them whole?",
+  "answer": "Jesus Christ of Nazareth",
+  "wrong": [
+   "Moses",
+   "Peter",
+   "Abraham"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:11",
+  "prompt": "Jesus is the stone rejected by the builders that has become the chief ___.",
+  "answer": "cornerstone",
+  "wrong": [
+   "tower",
+   "gate",
+   "wall"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:12",
+  "prompt": "Peter said there is no other ___ under heaven by which we must be saved.",
+  "answer": "name",
+  "wrong": [
+   "city",
+   "temple",
+   "king"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:13",
+  "prompt": "What did the rulers see in Peter and John?",
+  "answer": "Boldness",
+  "wrong": [
+   "Fear",
+   "Riches",
+   "Weakness"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:13",
+  "prompt": "The rulers perceived that Peter and John were what kind of men?",
+  "answer": "Uneducated and untrained",
+  "wrong": [
+   "Rich and famous",
+   "Priests and scribes",
+   "Roman citizens"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:13",
+  "prompt": "What did the rulers realize about Peter and John?",
+  "answer": "They had been with Jesus",
+  "wrong": [
+   "They were from Rome",
+   "They were brothers",
+   "They were soldiers"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:14",
+  "prompt": "Why could the rulers say nothing against them?",
+  "answer": "The healed man was standing with them",
+  "wrong": [
+   "The soldiers were absent",
+   "They were too tired",
+   "It was night"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:15",
+  "prompt": "Where were Peter and John told to go while the council talked?",
+  "answer": "Aside, out of the council",
+  "wrong": [
+   "Back to prison",
+   "To the temple roof",
+   "Home to Galilee"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:16",
+  "prompt": "The rulers said a notable ___ had been done that they could not deny.",
+  "answer": "miracle",
+  "wrong": [
+   "mistake",
+   "crime",
+   "song"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:17",
+  "prompt": "What did the rulers decide so that the news spread no further?",
+  "answer": "To severely threaten them",
+  "wrong": [
+   "To reward them",
+   "To make them priests",
+   "To send them to Rome"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:18",
+  "prompt": "What were Peter and John commanded not to do?",
+  "answer": "Speak or teach in the name of Jesus",
+  "wrong": [
+   "Eat in the temple",
+   "Go to Galilee",
+   "Pray at night"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:19",
+  "prompt": "Peter and John asked if it was right to listen to the rulers more than to whom?",
+  "answer": "God",
+  "wrong": [
+   "Moses",
+   "Caesar",
+   "their parents"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:20",
+  "prompt": "\"We cannot but speak the things which we have seen and ___.\"",
+  "answer": "heard",
+  "wrong": [
+   "written",
+   "eaten",
+   "built"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:21",
+  "prompt": "Why could the rulers find no way of punishing them?",
+  "answer": "Because of the people, who glorified God",
+  "wrong": [
+   "They had no jail",
+   "Pilate stopped them",
+   "The apostles ran away"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "4:22",
+  "prompt": "How old was the man who was healed?",
+  "answer": "Over forty years old",
+  "wrong": [
+   "Twelve years old",
+   "Thirty years old",
+   "Over eighty years old"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:23",
+  "prompt": "After being let go, where did Peter and John go?",
+  "answer": "To their own companions",
+  "wrong": [
+   "To the high priest's house",
+   "To the sea",
+   "To Rome"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:24",
+  "prompt": "How did the believers raise their voice to God?",
+  "answer": "With one accord",
+  "wrong": [
+   "With trumpets",
+   "One at a time",
+   "In whispers"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:24",
+  "prompt": "The believers prayed to God, who made heaven, earth, and the ___.",
+  "answer": "sea",
+  "wrong": [
+   "temple",
+   "city",
+   "kings"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:25",
+  "prompt": "Through the mouth of which servant had God asked, \"Why did the nations rage?\"",
+  "answer": "David",
+  "wrong": [
+   "Moses",
+   "Solomon",
+   "Isaiah"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:27",
+  "prompt": "Which two rulers gathered against Jesus?",
+  "answer": "Herod and Pontius Pilate",
+  "wrong": [
+   "Caesar and Felix",
+   "Annas and Gamaliel",
+   "Pharaoh and Saul"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:29",
+  "prompt": "What did the believers ask God to grant His servants?",
+  "answer": "To speak His word with all boldness",
+  "wrong": [
+   "To become rich",
+   "To be kings",
+   "To leave Jerusalem"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:30",
+  "prompt": "The believers asked God to stretch out His hand to ___.",
+  "answer": "heal",
+  "wrong": [
+   "fight",
+   "build",
+   "punish"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:31",
+  "prompt": "What happened to the place where they prayed?",
+  "answer": "It was shaken",
+  "wrong": [
+   "It caught fire",
+   "It filled with water",
+   "It became dark"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:31",
+  "prompt": "After praying, they were all filled with the Holy Spirit and spoke the word with what?",
+  "answer": "Boldness",
+  "wrong": [
+   "Fear",
+   "Tears",
+   "Silence"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:32",
+  "prompt": "The multitude of believers were of one heart and one ___.",
+  "answer": "soul",
+  "wrong": [
+   "house",
+   "city",
+   "family"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:32",
+  "prompt": "What did the believers have in common?",
+  "answer": "All things",
+  "wrong": [
+   "Only food",
+   "Only clothes",
+   "Nothing"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:33",
+  "prompt": "To what did the apostles give witness with great power?",
+  "answer": "The resurrection of the Lord Jesus",
+  "wrong": [
+   "The building of the temple",
+   "The law of Moses",
+   "The Roman army"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:33",
+  "prompt": "What was upon them all?",
+  "answer": "Great grace",
+  "wrong": [
+   "Great fear",
+   "Great sadness",
+   "Great sickness"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:34",
+  "prompt": "Was anyone among the believers in need?",
+  "answer": "No, no one lacked",
+  "wrong": [
+   "Yes, many",
+   "Only the widows",
+   "Only the apostles"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:35",
+  "prompt": "Where were the proceeds of the sales laid?",
+  "answer": "At the apostles' feet",
+  "wrong": [
+   "On the altar",
+   "In the treasury",
+   "In a box at the gate"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:36",
+  "prompt": "What name did the apostles give to Joses?",
+  "answer": "Barnabas",
+  "wrong": [
+   "Silas",
+   "Stephen",
+   "Mark"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:36",
+  "prompt": "What does the name Barnabas mean?",
+  "answer": "Son of Encouragement",
+  "wrong": [
+   "Son of Thunder",
+   "Gift of God",
+   "Rock"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:36",
+  "prompt": "Barnabas was a Levite from which country?",
+  "answer": "Cyprus",
+  "wrong": [
+   "Egypt",
+   "Greece",
+   "Syria"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "4:37",
+  "prompt": "What did Barnabas sell?",
+  "answer": "His land",
+  "wrong": [
+   "His boat",
+   "His donkey",
+   "His house in Jerusalem"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:1",
+  "prompt": "What was the name of Ananias's wife?",
+  "answer": "Sapphira",
+  "wrong": [
+   "Tabitha",
+   "Lydia",
+   "Mary"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:2",
+  "prompt": "What did Ananias keep back?",
+  "answer": "Part of the proceeds",
+  "wrong": [
+   "His sword",
+   "His robe",
+   "The land papers"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:2",
+  "prompt": "Did Sapphira know that Ananias kept back part of the money?",
+  "answer": "Yes, she was aware of it",
+  "wrong": [
+   "No, she did not know",
+   "She was not married to him",
+   "She was away in Rome"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:3",
+  "prompt": "Peter asked why Satan had filled Ananias's heart to lie to whom?",
+  "answer": "The Holy Spirit",
+  "wrong": [
+   "Peter",
+   "The Romans",
+   "His wife"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:4",
+  "prompt": "Peter said Ananias had not lied to men but to ___.",
+  "answer": "God",
+  "wrong": [
+   "the priests",
+   "the people",
+   "himself"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:5",
+  "prompt": "What happened when Ananias heard Peter's words?",
+  "answer": "He fell down and breathed his last",
+  "wrong": [
+   "He ran away",
+   "He laughed",
+   "He gave back the money"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:5",
+  "prompt": "What came upon all who heard these things?",
+  "answer": "Great fear",
+  "wrong": [
+   "Great joy",
+   "Great sleep",
+   "Great hunger"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:6",
+  "prompt": "Who carried Ananias out and buried him?",
+  "answer": "The young men",
+  "wrong": [
+   "The apostles",
+   "The priests",
+   "His wife"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:7",
+  "prompt": "About how long after did Sapphira come in?",
+  "answer": "About three hours later",
+  "wrong": [
+   "The next day",
+   "A week later",
+   "Three days later"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:8",
+  "prompt": "What did Peter ask Sapphira?",
+  "answer": "Whether they sold the land for so much",
+  "wrong": [
+   "Where her husband was",
+   "If she was hungry",
+   "Who her father was"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:9",
+  "prompt": "Peter said Ananias and Sapphira agreed together to test whom?",
+  "answer": "The Spirit of the Lord",
+  "wrong": [
+   "The apostles",
+   "The Romans",
+   "The poor"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:9",
+  "prompt": "Peter said whose feet were at the door?",
+  "answer": "Those who had buried her husband",
+  "wrong": [
+   "The Roman soldiers",
+   "The high priest",
+   "The angels"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:10",
+  "prompt": "Where was Sapphira buried?",
+  "answer": "By her husband",
+  "wrong": [
+   "In the temple",
+   "In Cyprus",
+   "By the sea"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:11",
+  "prompt": "Great fear came upon whom?",
+  "answer": "All the church and all who heard",
+  "wrong": [
+   "Only Peter",
+   "Only the Romans",
+   "No one"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:12",
+  "prompt": "Where were the believers all with one accord?",
+  "answer": "Solomon's Porch",
+  "wrong": [
+   "The Beautiful Gate",
+   "The upper room",
+   "Mount Olivet"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:12",
+  "prompt": "What was done through the hands of the apostles?",
+  "answer": "Many signs and wonders",
+  "wrong": [
+   "Many buildings",
+   "Many battles",
+   "Many songs"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:13",
+  "prompt": "How did the people think of the believers?",
+  "answer": "They esteemed them highly",
+  "wrong": [
+   "They hated them",
+   "They laughed at them",
+   "They ignored them"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:14",
+  "prompt": "Who were added to the Lord?",
+  "answer": "Multitudes of both men and women",
+  "wrong": [
+   "Only men",
+   "Only priests",
+   "Only children"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:15",
+  "prompt": "What did people hope would fall on the sick?",
+  "answer": "At least the shadow of Peter",
+  "wrong": [
+   "Rain from heaven",
+   "Oil from the temple",
+   "Peter's coat"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:15",
+  "prompt": "Where did they bring the sick?",
+  "answer": "Out into the streets, on beds and couches",
+  "wrong": [
+   "Into the temple",
+   "Down to the sea",
+   "To Bethlehem"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "5:16",
+  "prompt": "What happened to the sick and those tormented by unclean spirits?",
+  "answer": "They were all healed",
+  "wrong": [
+   "Some were healed",
+   "They were sent home",
+   "They were put in prison"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:17",
+  "prompt": "Which sect was with the high priest?",
+  "answer": "The Sadducees",
+  "wrong": [
+   "The Pharisees",
+   "The Zealots",
+   "The Essenes"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:17",
+  "prompt": "How did the high priest and the Sadducees feel?",
+  "answer": "Filled with indignation",
+  "wrong": [
+   "Full of joy",
+   "Very sleepy",
+   "Afraid of the apostles"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:18",
+  "prompt": "Where did they put the apostles?",
+  "answer": "In the common prison",
+  "wrong": [
+   "In a pit",
+   "In the temple",
+   "On a ship"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:19",
+  "prompt": "Who opened the prison doors at night?",
+  "answer": "An angel of the Lord",
+  "wrong": [
+   "Peter",
+   "A guard",
+   "An earthquake"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:20",
+  "prompt": "Where did the angel tell the apostles to stand and speak?",
+  "answer": "In the temple",
+  "wrong": [
+   "In the prison yard",
+   "In the market",
+   "In Galilee"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:20",
+  "prompt": "The angel said to speak to the people \"all the words of this ___.\"",
+  "answer": "life",
+  "wrong": [
+   "city",
+   "law",
+   "night"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:21",
+  "prompt": "When did the apostles enter the temple and teach?",
+  "answer": "Early in the morning",
+  "wrong": [
+   "At midnight",
+   "At noon",
+   "In the evening"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:23",
+  "prompt": "What did the officers find when they opened the prison?",
+  "answer": "No one inside",
+  "wrong": [
+   "The apostles asleep",
+   "An angel",
+   "A broken wall"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:23",
+  "prompt": "What did the officers say about the prison?",
+  "answer": "It was shut securely with guards at the doors",
+  "wrong": [
+   "The doors were broken",
+   "The guards were gone",
+   "The roof was open"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:25",
+  "prompt": "Where did someone say the apostles were standing?",
+  "answer": "In the temple teaching the people",
+  "wrong": [
+   "In the market",
+   "At the city gate",
+   "In the upper room"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:26",
+  "prompt": "Why did the captain bring the apostles without violence?",
+  "answer": "They feared the people would stone them",
+  "wrong": [
+   "The apostles were too strong",
+   "It was the Sabbath",
+   "The angel told them"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:28",
+  "prompt": "The high priest said the apostles had filled Jerusalem with what?",
+  "answer": "Their doctrine",
+  "wrong": [
+   "Their friends",
+   "Their money",
+   "Their songs"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:29",
+  "prompt": "\"We ought to obey God rather than ___.\"",
+  "answer": "men",
+  "wrong": [
+   "kings",
+   "priests",
+   "angels"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:30",
+  "prompt": "Peter said Jesus was murdered by hanging on a ___.",
+  "answer": "tree",
+  "wrong": [
+   "cross of gold",
+   "gate",
+   "wall"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:31",
+  "prompt": "God exalted Jesus to His right hand to be Prince and ___.",
+  "answer": "Savior",
+  "wrong": [
+   "Judge",
+   "Priest",
+   "King of Rome"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:32",
+  "prompt": "Who are witnesses of these things along with the apostles?",
+  "answer": "The Holy Spirit",
+  "wrong": [
+   "The Romans",
+   "The angels",
+   "The soldiers"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:33",
+  "prompt": "What did the council plot after hearing Peter?",
+  "answer": "To kill them",
+  "wrong": [
+   "To free them",
+   "To make them priests",
+   "To send them to Egypt"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:34",
+  "prompt": "What was the name of the Pharisee who stood up in the council?",
+  "answer": "Gamaliel",
+  "wrong": [
+   "Nicodemus",
+   "Annas",
+   "Theudas"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:34",
+  "prompt": "What was Gamaliel?",
+  "answer": "A teacher of the law respected by all the people",
+  "wrong": [
+   "A Roman soldier",
+   "A fisherman",
+   "A tax collector"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:36",
+  "prompt": "About how many men joined Theudas?",
+  "answer": "Four hundred",
+  "wrong": [
+   "Four thousand",
+   "Forty",
+   "Seven hundred"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:37",
+  "prompt": "Which Judas rose up in the days of the census?",
+  "answer": "Judas of Galilee",
+  "wrong": [
+   "Judas Iscariot",
+   "Judas of Damascus",
+   "Judas the son of James"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:38",
+  "prompt": "Gamaliel said if this work is of men, it will ___.",
+  "answer": "come to nothing",
+  "wrong": [
+   "last forever",
+   "win the war",
+   "become rich"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:39",
+  "prompt": "Gamaliel warned they might be found to fight against whom?",
+  "answer": "God",
+  "wrong": [
+   "Rome",
+   "the people",
+   "the angels"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:40",
+  "prompt": "What did the council do to the apostles before letting them go?",
+  "answer": "Beat them",
+  "wrong": [
+   "Feed them",
+   "Give them money",
+   "Make them priests"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:41",
+  "prompt": "Why were the apostles rejoicing?",
+  "answer": "They were counted worthy to suffer shame for His name",
+  "wrong": [
+   "They were set free with gold",
+   "They became rich",
+   "They were going home"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "5:42",
+  "prompt": "Where did the apostles keep teaching and preaching daily?",
+  "answer": "In the temple and in every house",
+  "wrong": [
+   "Only in Galilee",
+   "Only at night",
+   "Only in the synagogue"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:1",
+  "prompt": "Who complained against the Hebrews?",
+  "answer": "The Hellenists",
+  "wrong": [
+   "The Romans",
+   "The Samaritans",
+   "The Pharisees"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:1",
+  "prompt": "Why did the Hellenists complain?",
+  "answer": "Their widows were neglected in the daily distribution",
+  "wrong": [
+   "They had no temple",
+   "They were not baptized",
+   "Their houses were sold"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:2",
+  "prompt": "The twelve said it was not desirable to leave the word of God and serve ___.",
+  "answer": "tables",
+  "wrong": [
+   "soldiers",
+   "kings",
+   "in the temple"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:3",
+  "prompt": "How many men were the believers told to seek out?",
+  "answer": "Seven",
+  "wrong": [
+   "Twelve",
+   "Three",
+   "Seventy"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:3",
+  "prompt": "The seven men had to be full of the Holy Spirit and ___.",
+  "answer": "wisdom",
+  "wrong": [
+   "money",
+   "strength",
+   "years"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:4",
+  "prompt": "To what would the apostles give themselves continually?",
+  "answer": "Prayer and the ministry of the word",
+  "wrong": [
+   "Serving food",
+   "Fishing",
+   "Building houses"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:5",
+  "prompt": "Who was chosen first and described as full of faith and the Holy Spirit?",
+  "answer": "Stephen",
+  "wrong": [
+   "Philip",
+   "Nicolas",
+   "Timon"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:5",
+  "prompt": "Nicolas was a proselyte from which city?",
+  "answer": "Antioch",
+  "wrong": [
+   "Alexandria",
+   "Rome",
+   "Cyrene"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:5",
+  "prompt": "Which of these men was among the seven?",
+  "answer": "Prochorus",
+  "wrong": [
+   "Barnabas",
+   "Matthias",
+   "Gamaliel"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:6",
+  "prompt": "What did the apostles do after praying over the seven?",
+  "answer": "Laid hands on them",
+  "wrong": [
+   "Gave them swords",
+   "Sent them away",
+   "Washed their feet"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:7",
+  "prompt": "Who became obedient to the faith?",
+  "answer": "A great many of the priests",
+  "wrong": [
+   "All the Romans",
+   "King Herod",
+   "The Sadducees"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:8",
+  "prompt": "Stephen was full of faith and ___.",
+  "answer": "power",
+  "wrong": [
+   "money",
+   "fear",
+   "anger"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:9",
+  "prompt": "Which synagogue disputed with Stephen?",
+  "answer": "The Synagogue of the Freedmen",
+  "wrong": [
+   "The Synagogue of Galilee",
+   "The Synagogue of Rome",
+   "The Synagogue of the Levites"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:10",
+  "prompt": "What could the men not resist?",
+  "answer": "The wisdom and the Spirit by which Stephen spoke",
+  "wrong": [
+   "Stephen's strength",
+   "Stephen's money",
+   "Stephen's soldiers"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:11",
+  "prompt": "They falsely said Stephen spoke blasphemous words against Moses and ___.",
+  "answer": "God",
+  "wrong": [
+   "Rome",
+   "the king",
+   "the people"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:13",
+  "prompt": "What kind of witnesses did they set up against Stephen?",
+  "answer": "False witnesses",
+  "wrong": [
+   "Roman witnesses",
+   "Angel witnesses",
+   "Child witnesses"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:14",
+  "prompt": "They said Jesus would destroy this place and change the customs of whom?",
+  "answer": "Moses",
+  "wrong": [
+   "Abraham",
+   "David",
+   "the Romans"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "6:15",
+  "prompt": "What did the council see when they looked at Stephen?",
+  "answer": "His face was like the face of an angel",
+  "wrong": [
+   "His face was red with anger",
+   "He was crying",
+   "He was asleep"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:1",
+  "prompt": "Who asked Stephen, \"Are these things so?\"",
+  "answer": "The high priest",
+  "wrong": [
+   "Pilate",
+   "Gamaliel",
+   "Herod"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:2",
+  "prompt": "Who appeared to Abraham when he was in Mesopotamia?",
+  "answer": "The God of glory",
+  "wrong": [
+   "An angel with a sword",
+   "Moses",
+   "A king"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:2",
+  "prompt": "Where was Abraham when God appeared to him?",
+  "answer": "Mesopotamia",
+  "wrong": [
+   "Egypt",
+   "Canaan",
+   "Haran"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:3",
+  "prompt": "What did God tell Abraham to do?",
+  "answer": "Get out of his country and go to a land God would show him",
+  "wrong": [
+   "Build an ark",
+   "Go back to Egypt",
+   "Become a king"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:4",
+  "prompt": "Abraham came out of the land of the ___.",
+  "answer": "Chaldeans",
+  "wrong": [
+   "Egyptians",
+   "Philistines",
+   "Romans"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:4",
+  "prompt": "In which place did Abraham dwell until his father died?",
+  "answer": "Haran",
+  "wrong": [
+   "Bethel",
+   "Egypt",
+   "Jerusalem"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:5",
+  "prompt": "How much inheritance did God give Abraham in the land?",
+  "answer": "Not even enough to set his foot on",
+  "wrong": [
+   "The whole land",
+   "A great city",
+   "A large farm"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:6",
+  "prompt": "For how many years would Abraham's descendants be in bondage?",
+  "answer": "Four hundred",
+  "wrong": [
+   "Forty",
+   "Seventy",
+   "One hundred"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "7:7",
+  "prompt": "After God judged the nation, what would Abraham's descendants do?",
+  "answer": "Come out and serve God in this place",
+  "wrong": [
+   "Stay in Egypt",
+   "Become Romans",
+   "Build a tower"
+  ]
+ }
+]

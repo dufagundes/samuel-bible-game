@@ -1,0 +1,1289 @@
+[
+ {
+  "world": 1,
+  "ref": "1:1",
+  "prompt": "To whom did Luke write the \"former account\"?",
+  "answer": "Theophilus",
+  "wrong": [
+   "Timothy",
+   "Titus",
+   "Barnabas"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:1",
+  "prompt": "The former account was about all that Jesus began both to do and ___.",
+  "answer": "teach",
+  "wrong": [
+   "build",
+   "write",
+   "sing"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:2",
+  "prompt": "Through whom did Jesus give commandments to the apostles?",
+  "answer": "The Holy Spirit",
+  "wrong": [
+   "An angel",
+   "Moses",
+   "Peter"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:3",
+  "prompt": "For how many days was Jesus seen by the apostles after His suffering?",
+  "answer": "Forty",
+  "wrong": [
+   "Seven",
+   "Twelve",
+   "Three"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:3",
+  "prompt": "How did Jesus show Himself alive after His suffering?",
+  "answer": "By many infallible proofs",
+  "wrong": [
+   "By writing a letter",
+   "Through a dream only",
+   "By sending an angel"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:3",
+  "prompt": "What did Jesus speak about during those forty days?",
+  "answer": "The kingdom of God",
+  "wrong": [
+   "The Roman army",
+   "The temple's gold",
+   "The weather"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:4",
+  "prompt": "From which city were the apostles told not to depart?",
+  "answer": "Jerusalem",
+  "wrong": [
+   "Galilee",
+   "Bethany",
+   "Nazareth"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:4",
+  "prompt": "What were the apostles told to wait for?",
+  "answer": "The Promise of the Father",
+  "wrong": [
+   "A new king",
+   "A letter from Rome",
+   "A ship"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:5",
+  "prompt": "\"John truly baptized with water, but you shall be baptized with ___.\"",
+  "answer": "the Holy Spirit",
+  "wrong": [
+   "fire only",
+   "oil",
+   "the sea"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:5",
+  "prompt": "When would the apostles be baptized with the Holy Spirit?",
+  "answer": "Not many days from now",
+  "wrong": [
+   "In forty years",
+   "Never",
+   "After a hundred days"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:6",
+  "prompt": "What did the apostles ask Jesus about?",
+  "answer": "If He would restore the kingdom to Israel at this time",
+  "wrong": [
+   "If they could go fishing",
+   "Where to build a church",
+   "When to eat"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:7",
+  "prompt": "Jesus said it was not for them to know what?",
+  "answer": "Times or seasons",
+  "wrong": [
+   "The names of the angels",
+   "How to pray",
+   "The way to Galilee"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:8",
+  "prompt": "What would the apostles receive when the Holy Spirit came upon them?",
+  "answer": "Power",
+  "wrong": [
+   "Gold",
+   "A crown",
+   "A new name"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:8",
+  "prompt": "Where would the apostles be witnesses?",
+  "answer": "Jerusalem, Judea, Samaria, and the end of the earth",
+  "wrong": [
+   "Only in Jerusalem",
+   "Only in Rome",
+   "Only in Galilee"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:9",
+  "prompt": "What received Jesus out of their sight?",
+  "answer": "A cloud",
+  "wrong": [
+   "A chariot of fire",
+   "A flock of birds",
+   "A great wind"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:10",
+  "prompt": "How many men in white apparel stood by them?",
+  "answer": "Two",
+  "wrong": [
+   "One",
+   "Three",
+   "Twelve"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:10",
+  "prompt": "What color was the clothing of the men who stood by them?",
+  "answer": "White",
+  "wrong": [
+   "Purple",
+   "Gold",
+   "Red"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:11",
+  "prompt": "What did the two men call the apostles?",
+  "answer": "Men of Galilee",
+  "wrong": [
+   "Men of Judea",
+   "Men of Israel",
+   "Men of Rome"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:11",
+  "prompt": "What did the men in white say about Jesus?",
+  "answer": "He will come in like manner as you saw Him go",
+  "wrong": [
+   "He will never return",
+   "He went to Egypt",
+   "He will come back tomorrow"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "1:11",
+  "prompt": "The men asked, \"Why do you stand gazing up into ___?\"",
+  "answer": "heaven",
+  "wrong": [
+   "the sea",
+   "the temple",
+   "the hills"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:12",
+  "prompt": "From which mount did they return to Jerusalem?",
+  "answer": "Olivet",
+  "wrong": [
+   "Sinai",
+   "Carmel",
+   "Zion"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:12",
+  "prompt": "How far was Olivet from Jerusalem?",
+  "answer": "A Sabbath day's journey",
+  "wrong": [
+   "Forty miles",
+   "Three days' journey",
+   "A boat ride"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:13",
+  "prompt": "Where did the apostles go when they entered Jerusalem?",
+  "answer": "The upper room",
+  "wrong": [
+   "The temple court",
+   "The synagogue",
+   "The market"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:13",
+  "prompt": "Which Simon is named among the apostles in the upper room?",
+  "answer": "Simon the Zealot",
+  "wrong": [
+   "Simon the tanner",
+   "Simon the sorcerer",
+   "Simon of Cyrene"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:13",
+  "prompt": "Which apostle is called \"the son of Alphaeus\"?",
+  "answer": "James",
+  "wrong": [
+   "John",
+   "Andrew",
+   "Thomas"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:14",
+  "prompt": "How did they all continue in prayer and supplication?",
+  "answer": "With one accord",
+  "wrong": [
+   "In secret",
+   "Alone",
+   "In silence only"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:14",
+  "prompt": "Which woman is named among those praying with the apostles?",
+  "answer": "Mary the mother of Jesus",
+  "wrong": [
+   "Martha",
+   "Dorcas",
+   "Lydia"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:15",
+  "prompt": "About how many names were together when Peter stood up?",
+  "answer": "A hundred and twenty",
+  "wrong": [
+   "Twelve",
+   "Five thousand",
+   "Seventy"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:16",
+  "prompt": "Through whose mouth had the Holy Spirit spoken about Judas?",
+  "answer": "David",
+  "wrong": [
+   "Moses",
+   "Isaiah",
+   "Elijah"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:16",
+  "prompt": "What did Judas become to those who arrested Jesus?",
+  "answer": "A guide",
+  "wrong": [
+   "A judge",
+   "A soldier",
+   "A priest"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:18",
+  "prompt": "What did Judas purchase with the wages of iniquity?",
+  "answer": "A field",
+  "wrong": [
+   "A house",
+   "A boat",
+   "A donkey"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:19",
+  "prompt": "What does \"Akel Dama\" mean?",
+  "answer": "Field of Blood",
+  "wrong": [
+   "Field of Gold",
+   "House of Bread",
+   "Hill of Tears"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:20",
+  "prompt": "In which book is it written, \"Let another take his office\"?",
+  "answer": "The Book of Psalms",
+  "wrong": [
+   "Genesis",
+   "Isaiah",
+   "Proverbs"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:22",
+  "prompt": "The new apostle had to become a witness of what?",
+  "answer": "His resurrection",
+  "wrong": [
+   "His birth only",
+   "His miracles in Egypt",
+   "The building of the temple"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:22",
+  "prompt": "The new apostle must have been with them from the baptism of whom?",
+  "answer": "John",
+  "wrong": [
+   "Peter",
+   "Andrew",
+   "Philip"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:23",
+  "prompt": "What was the surname of Joseph called Barsabas?",
+  "answer": "Justus",
+  "wrong": [
+   "Thomas",
+   "Mark",
+   "Silas"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:23",
+  "prompt": "How many men did they propose to replace Judas?",
+  "answer": "Two",
+  "wrong": [
+   "Three",
+   "Twelve",
+   "One"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:24",
+  "prompt": "They prayed to the Lord, who knows what of all?",
+  "answer": "The hearts",
+  "wrong": [
+   "The names",
+   "The houses",
+   "The roads"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:26",
+  "prompt": "How did they choose between the two men?",
+  "answer": "They cast lots",
+  "wrong": [
+   "They voted",
+   "They had a race",
+   "Peter chose alone"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:26",
+  "prompt": "On whom did the lot fall?",
+  "answer": "Matthias",
+  "wrong": [
+   "Joseph Barsabas",
+   "Barnabas",
+   "Stephen"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "1:26",
+  "prompt": "Matthias was numbered with how many apostles?",
+  "answer": "The eleven",
+  "wrong": [
+   "The seven",
+   "The seventy",
+   "The twelve tribes"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:1",
+  "prompt": "Which day had fully come when they were all together in one place?",
+  "answer": "The Day of Pentecost",
+  "wrong": [
+   "The Passover",
+   "The Sabbath",
+   "The Day of Atonement"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:2",
+  "prompt": "What sound came from heaven?",
+  "answer": "A rushing mighty wind",
+  "wrong": [
+   "Thunder",
+   "A trumpet",
+   "A roaring lion"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:2",
+  "prompt": "What did the sound fill?",
+  "answer": "The whole house where they were sitting",
+  "wrong": [
+   "The temple",
+   "The whole city",
+   "The upper room's roof only"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:3",
+  "prompt": "What appeared and sat upon each of them?",
+  "answer": "Divided tongues, as of fire",
+  "wrong": [
+   "Doves",
+   "Crowns of gold",
+   "Bright stars"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:4",
+  "prompt": "What did they begin to do when they were filled with the Holy Spirit?",
+  "answer": "Speak with other tongues",
+  "wrong": [
+   "Sing in the temple",
+   "Sleep deeply",
+   "Write letters"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:5",
+  "prompt": "Who was dwelling in Jerusalem at this time?",
+  "answer": "Devout Jews from every nation under heaven",
+  "wrong": [
+   "Only Romans",
+   "Only Galileans",
+   "Only priests"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:6",
+  "prompt": "Why was the multitude confused?",
+  "answer": "Everyone heard them speak in his own language",
+  "wrong": [
+   "It was too dark",
+   "The house fell down",
+   "They could not hear anything"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:7",
+  "prompt": "The crowd asked, \"Are not all these who speak ___?\"",
+  "answer": "Galileans",
+  "wrong": [
+   "Romans",
+   "Egyptians",
+   "Samaritans"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:9",
+  "prompt": "Which of these groups is named among those who heard?",
+  "answer": "Parthians and Medes",
+  "wrong": [
+   "Vikings and Celts",
+   "Chinese and Indians",
+   "Spartans and Trojans"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:10",
+  "prompt": "Visitors from which great city were there?",
+  "answer": "Rome",
+  "wrong": [
+   "Athens",
+   "Babylon",
+   "Corinth"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:11",
+  "prompt": "What did the visitors hear the disciples speaking about?",
+  "answer": "The wonderful works of God",
+  "wrong": [
+   "The price of bread",
+   "The Roman law",
+   "The weather"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:11",
+  "prompt": "Which two groups are named in verse 11?",
+  "answer": "Cretans and Arabs",
+  "wrong": [
+   "Greeks and Persians",
+   "Egyptians and Libyans",
+   "Romans and Jews"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:12",
+  "prompt": "What did they ask one another?",
+  "answer": "\"Whatever could this mean?\"",
+  "wrong": [
+   "\"Who is hungry?\"",
+   "\"Where is Peter?\"",
+   "\"When is the feast?\""
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "2:13",
+  "prompt": "What did the mockers say?",
+  "answer": "\"They are full of new wine.\"",
+  "wrong": [
+   "\"They are sick.\"",
+   "\"They are angels.\"",
+   "\"They are Romans.\""
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:14",
+  "prompt": "Who stood up with Peter when he raised his voice?",
+  "answer": "The eleven",
+  "wrong": [
+   "The seventy",
+   "The Pharisees",
+   "The soldiers"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:15",
+  "prompt": "What hour of the day was it, according to Peter?",
+  "answer": "The third hour",
+  "wrong": [
+   "The ninth hour",
+   "The sixth hour",
+   "Midnight"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:15",
+  "prompt": "Why did Peter say the disciples were not drunk?",
+  "answer": "It was only the third hour of the day",
+  "wrong": [
+   "They had no money",
+   "They were fasting for a year",
+   "It was the Sabbath"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:16",
+  "prompt": "Which prophet had spoken about this day?",
+  "answer": "Joel",
+  "wrong": [
+   "Jonah",
+   "Daniel",
+   "Malachi"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:17",
+  "prompt": "God said He would pour out His Spirit on whom?",
+  "answer": "All flesh",
+  "wrong": [
+   "Only the priests",
+   "Only the kings",
+   "Only the angels"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:17",
+  "prompt": "In Joel's prophecy, what would the old men do?",
+  "answer": "Dream dreams",
+  "wrong": [
+   "Build houses",
+   "See visions",
+   "Go to war"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:17",
+  "prompt": "In Joel's prophecy, what would the young men see?",
+  "answer": "Visions",
+  "wrong": [
+   "Angels",
+   "Gold",
+   "Armies"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:20",
+  "prompt": "What would the moon be turned into?",
+  "answer": "Blood",
+  "wrong": [
+   "Gold",
+   "Darkness",
+   "Fire"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:21",
+  "prompt": "Who shall be saved?",
+  "answer": "Whoever calls on the name of the Lord",
+  "wrong": [
+   "Only the rich",
+   "Only the priests",
+   "Only the strong"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:22",
+  "prompt": "God attested Jesus of Nazareth by miracles, wonders, and ___.",
+  "answer": "signs",
+  "wrong": [
+   "songs",
+   "swords",
+   "scrolls"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:24",
+  "prompt": "Why could death not hold Jesus?",
+  "answer": "It was not possible that He should be held by it",
+  "wrong": [
+   "The tomb was open",
+   "The soldiers fell asleep",
+   "He was not really dead"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:27",
+  "prompt": "God would not leave His soul in ___.",
+  "answer": "Hades",
+  "wrong": [
+   "Egypt",
+   "Babylon",
+   "the sea"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:29",
+  "prompt": "What did Peter say about David?",
+  "answer": "He is dead and buried, and his tomb is still with us",
+  "wrong": [
+   "He went up to heaven",
+   "He lives in Bethlehem",
+   "He was never king"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:30",
+  "prompt": "God swore with an oath to David that the Christ would sit on what?",
+  "answer": "His throne",
+  "wrong": [
+   "A mountain",
+   "A ship",
+   "A golden chair in Rome"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:32",
+  "prompt": "Peter said, \"This Jesus God has raised up, of which we are all ___.\"",
+  "answer": "witnesses",
+  "wrong": [
+   "priests",
+   "kings",
+   "servants"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:33",
+  "prompt": "Where was Jesus exalted?",
+  "answer": "To the right hand of God",
+  "wrong": [
+   "To the throne of Rome",
+   "To the top of the temple",
+   "To Mount Sinai"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:34",
+  "prompt": "The Lord said to my Lord, \"Sit at My ___ hand.\"",
+  "answer": "right",
+  "wrong": [
+   "left",
+   "open",
+   "strong"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:35",
+  "prompt": "\"Till I make Your enemies Your ___.\"",
+  "answer": "footstool",
+  "wrong": [
+   "servants",
+   "friends",
+   "crown"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "2:36",
+  "prompt": "God made Jesus, whom they crucified, both Lord and ___.",
+  "answer": "Christ",
+  "wrong": [
+   "King of Rome",
+   "High Priest",
+   "Prophet"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:37",
+  "prompt": "How did the people feel when they heard Peter's sermon?",
+  "answer": "Cut to the heart",
+  "wrong": [
+   "Very angry",
+   "Happy and proud",
+   "Sleepy"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:37",
+  "prompt": "What did the people ask Peter and the apostles?",
+  "answer": "\"Men and brethren, what shall we do?\"",
+  "wrong": [
+   "\"Where is Jesus?\"",
+   "\"Who are you?\"",
+   "\"Can we go home?\""
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:38",
+  "prompt": "What did Peter tell the people to do first?",
+  "answer": "Repent",
+  "wrong": [
+   "Run away",
+   "Build an altar",
+   "Pay money"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:38",
+  "prompt": "In whose name should they be baptized?",
+  "answer": "Jesus Christ",
+  "wrong": [
+   "Moses",
+   "Peter",
+   "David"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:38",
+  "prompt": "After repenting and being baptized, what gift would they receive?",
+  "answer": "The gift of the Holy Spirit",
+  "wrong": [
+   "A gold coin",
+   "A new house",
+   "A sword"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:39",
+  "prompt": "To whom is the promise?",
+  "answer": "To you, your children, and all who are afar off",
+  "wrong": [
+   "Only to the apostles",
+   "Only to the Romans",
+   "Only to the old"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:40",
+  "prompt": "Peter said, \"Be saved from this perverse ___.\"",
+  "answer": "generation",
+  "wrong": [
+   "city",
+   "king",
+   "temple"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:41",
+  "prompt": "About how many souls were added that day?",
+  "answer": "Three thousand",
+  "wrong": [
+   "Five thousand",
+   "Five hundred",
+   "One hundred twenty"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:42",
+  "prompt": "In what did the believers continue steadfastly?",
+  "answer": "The apostles' doctrine, fellowship, breaking of bread, and prayers",
+  "wrong": [
+   "Fishing and sailing",
+   "Fighting the Romans",
+   "Building towers"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:43",
+  "prompt": "What came upon every soul?",
+  "answer": "Fear",
+  "wrong": [
+   "Sleep",
+   "Anger",
+   "Sickness"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:44",
+  "prompt": "What did all who believed have in common?",
+  "answer": "All things",
+  "wrong": [
+   "Only food",
+   "Only their houses",
+   "Nothing"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:45",
+  "prompt": "What did the believers sell?",
+  "answer": "Their possessions and goods",
+  "wrong": [
+   "Their Bibles",
+   "Their children",
+   "The temple"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:46",
+  "prompt": "Where did they continue daily with one accord?",
+  "answer": "In the temple",
+  "wrong": [
+   "In the market",
+   "On the sea",
+   "In the desert"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:46",
+  "prompt": "Where did they break bread?",
+  "answer": "From house to house",
+  "wrong": [
+   "Only in the temple",
+   "On the mountain",
+   "In the synagogue only"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:46",
+  "prompt": "How did they eat their food?",
+  "answer": "With gladness and simplicity of heart",
+  "wrong": [
+   "In secret and fear",
+   "Very quickly",
+   "Only once a week"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:47",
+  "prompt": "Who added to the church daily those who were being saved?",
+  "answer": "The Lord",
+  "wrong": [
+   "Peter",
+   "The high priest",
+   "The Romans"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "2:47",
+  "prompt": "With whom did the believers have favor?",
+  "answer": "All the people",
+  "wrong": [
+   "Only the priests",
+   "Only the Romans",
+   "No one"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:1",
+  "prompt": "Who went up together to the temple at the hour of prayer?",
+  "answer": "Peter and John",
+  "wrong": [
+   "Peter and James",
+   "Paul and Silas",
+   "John and Andrew"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:1",
+  "prompt": "At what hour did Peter and John go to the temple?",
+  "answer": "The ninth hour",
+  "wrong": [
+   "The third hour",
+   "The sixth hour",
+   "The first hour"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:2",
+  "prompt": "How long had the man been lame?",
+  "answer": "From his mother's womb",
+  "wrong": [
+   "For eight years",
+   "For two days",
+   "Since he was ten"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:2",
+  "prompt": "What was the name of the temple gate where the lame man was laid?",
+  "answer": "Beautiful",
+  "wrong": [
+   "Golden",
+   "Sheep",
+   "Water"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:2",
+  "prompt": "What did the lame man ask from people entering the temple?",
+  "answer": "Alms",
+  "wrong": [
+   "Water",
+   "A doctor",
+   "A ride home"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:4",
+  "prompt": "What did Peter say to the lame man?",
+  "answer": "\"Look at us.\"",
+  "wrong": [
+   "\"Go away.\"",
+   "\"Come with us.\"",
+   "\"Be quiet.\""
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:5",
+  "prompt": "What did the lame man expect?",
+  "answer": "To receive something from them",
+  "wrong": [
+   "To be arrested",
+   "To be carried home",
+   "To hear a song"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:6",
+  "prompt": "What did Peter say he did not have?",
+  "answer": "Silver and gold",
+  "wrong": [
+   "Bread and fish",
+   "A cup of water",
+   "A donkey"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:6",
+  "prompt": "In whose name did Peter tell the man to rise up and walk?",
+  "answer": "Jesus Christ of Nazareth",
+  "wrong": [
+   "Moses",
+   "David",
+   "John the Baptist"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:7",
+  "prompt": "By which hand did Peter take the lame man?",
+  "answer": "The right hand",
+  "wrong": [
+   "The left hand",
+   "Both feet",
+   "His shoulder"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:7",
+  "prompt": "What received strength immediately?",
+  "answer": "His feet and ankle bones",
+  "wrong": [
+   "His eyes",
+   "His voice",
+   "His hands"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:8",
+  "prompt": "What did the healed man do as he entered the temple?",
+  "answer": "Walked, leaped, and praised God",
+  "wrong": [
+   "Sat down quietly",
+   "Ran away",
+   "Asked for more money"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:10",
+  "prompt": "How did the people feel when they knew who he was?",
+  "answer": "Filled with wonder and amazement",
+  "wrong": [
+   "Angry",
+   "Afraid to come in",
+   "Bored"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:11",
+  "prompt": "In which porch did the people run together?",
+  "answer": "Solomon's",
+  "wrong": [
+   "David's",
+   "Herod's",
+   "Moses'"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:12",
+  "prompt": "Peter asked if they thought the man walked by whose power?",
+  "answer": "Peter and John's own power or godliness",
+  "wrong": [
+   "The Romans' power",
+   "The temple's gold",
+   "The sun's power"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:13",
+  "prompt": "In whose presence did the people deny Jesus?",
+  "answer": "Pilate",
+  "wrong": [
+   "Herod",
+   "Caesar",
+   "Caiaphas"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:14",
+  "prompt": "What did the people ask to be granted to them instead of Jesus?",
+  "answer": "A murderer",
+  "wrong": [
+   "A king",
+   "A prophet",
+   "A soldier"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:15",
+  "prompt": "Peter called Jesus the Prince of ___.",
+  "answer": "life",
+  "wrong": [
+   "peace",
+   "Israel",
+   "the temple"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:16",
+  "prompt": "What made the lame man strong?",
+  "answer": "His name, through faith in His name",
+  "wrong": [
+   "Medicine",
+   "Rest and food",
+   "Peter's strength"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:17",
+  "prompt": "Peter said the people and rulers did it in ___.",
+  "answer": "ignorance",
+  "wrong": [
+   "secret",
+   "anger",
+   "the night"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:19",
+  "prompt": "Why should the people repent and be converted?",
+  "answer": "That their sins may be blotted out",
+  "wrong": [
+   "To become rich",
+   "To please the Romans",
+   "To build a temple"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:22",
+  "prompt": "Who said, \"The Lord your God will raise up for you a Prophet like me\"?",
+  "answer": "Moses",
+  "wrong": [
+   "David",
+   "Samuel",
+   "Elijah"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:24",
+  "prompt": "From which prophet onward did all the prophets foretell these days?",
+  "answer": "Samuel",
+  "wrong": [
+   "Jonah",
+   "Daniel",
+   "Ezra"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:25",
+  "prompt": "What did God say to Abraham?",
+  "answer": "In your seed all the families of the earth shall be blessed",
+  "wrong": [
+   "You will be a king",
+   "Build a great ship",
+   "Go back to Egypt"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "3:26",
+  "prompt": "God sent His Servant Jesus to bless you by turning you away from your ___.",
+  "answer": "iniquities",
+  "wrong": [
+   "families",
+   "houses",
+   "friends"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "4:1",
+  "prompt": "Who came upon Peter and John as they spoke to the people?",
+  "answer": "The priests, the captain of the temple, and the Sadducees",
+  "wrong": [
+   "Roman soldiers only",
+   "The Galileans",
+   "The apostles"
+  ]
+ }
+]
