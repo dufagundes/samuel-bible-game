@@ -1,0 +1,1916 @@
+[
+ {
+  "world": 1,
+  "ref": "9:8",
+  "prompt": "When Saul arose from the earth and his eyes were opened, what did he see?",
+  "answer": "No one / nothing",
+  "wrong": [
+   "A bright light",
+   "Jesus standing",
+   "Ananias"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:8",
+  "prompt": "How did Saul get into Damascus?",
+  "answer": "They led him by the hand",
+  "wrong": [
+   "He rode a horse",
+   "He was carried on a bed",
+   "He walked alone"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:8",
+  "prompt": "Into which city was Saul brought?",
+  "answer": "Damascus",
+  "wrong": [
+   "Jerusalem",
+   "Tarsus",
+   "Joppa"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:9",
+  "prompt": "How many days was Saul without sight?",
+  "answer": "Three",
+  "wrong": [
+   "Seven",
+   "Two",
+   "Forty"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:9",
+  "prompt": "What did Saul eat and drink during his days without sight?",
+  "answer": "He did not eat or drink",
+  "wrong": [
+   "Only bread",
+   "Only water",
+   "Bread and fish"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:10",
+  "prompt": "What was the name of the disciple at Damascus to whom the Lord spoke?",
+  "answer": "Ananias",
+  "wrong": [
+   "Barnabas",
+   "Judas",
+   "Simon"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:10",
+  "prompt": "How did the Lord speak to Ananias?",
+  "answer": "In a vision",
+  "wrong": [
+   "Through a letter",
+   "Through a prophet",
+   "With a loud trumpet"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:10",
+  "prompt": "What did Ananias answer when the Lord called his name?",
+  "answer": "“I am here, Lord.”",
+  "wrong": [
+   "“Who are You, Lord?”",
+   "“Please send someone else.”",
+   "“I am afraid, Lord.”"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:11",
+  "prompt": "What was the name of the street where Saul was staying?",
+  "answer": "Straight",
+  "wrong": [
+   "Narrow",
+   "Broad",
+   "Temple Street"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:11",
+  "prompt": "In whose house was Saul staying?",
+  "answer": "Judas",
+  "wrong": [
+   "Simon",
+   "Ananias",
+   "Barnabas"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:11",
+  "prompt": "Saul was from which city?",
+  "answer": "Tarsus",
+  "wrong": [
+   "Damascus",
+   "Joppa",
+   "Caesarea"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:11",
+  "prompt": "What did the Lord tell Ananias that Saul was doing?",
+  "answer": "Praying",
+  "wrong": [
+   "Sleeping",
+   "Eating",
+   "Preaching"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:12",
+  "prompt": "In Saul's vision, what did the man named Ananias do?",
+  "answer": "Came in and put his hand on him",
+  "wrong": [
+   "Brought him food",
+   "Read him a scroll",
+   "Took him to the river"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:12",
+  "prompt": "Why did Ananias put his hand on Saul in the vision?",
+  "answer": "So that he might receive his sight",
+  "wrong": [
+   "To arrest him",
+   "To make him king",
+   "To give him money"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:13",
+  "prompt": "Ananias had heard that Saul did much harm to the saints in which city?",
+  "answer": "Jerusalem",
+  "wrong": [
+   "Damascus",
+   "Joppa",
+   "Lydda"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:14",
+  "prompt": "From whom did Saul have authority to bind all who call on the Lord's name?",
+  "answer": "The chief priests",
+  "wrong": [
+   "The Roman governor",
+   "King Herod",
+   "The soldiers of Damascus"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:13-14",
+  "prompt": "Why was Ananias worried about going to Saul?",
+  "answer": "He had heard how much harm Saul had done to the saints",
+  "wrong": [
+   "Saul was a Roman soldier",
+   "Saul was very sick",
+   "Saul did not speak his language"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:15",
+  "prompt": "The Lord said Saul was a chosen ___ to Him.",
+  "answer": "vessel",
+  "wrong": [
+   "soldier",
+   "shepherd",
+   "fisherman"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:15",
+  "prompt": "Before whom would Saul bear the Lord's name?",
+  "answer": "Gentiles, kings, and the children of Israel",
+  "wrong": [
+   "Only the Jews",
+   "Only the Romans",
+   "Only the priests"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:16",
+  "prompt": "What did the Lord say He would show Saul?",
+  "answer": "How many things he must suffer for His name's sake",
+  "wrong": [
+   "Where to build a temple",
+   "How to become rich",
+   "The day of his death"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:17",
+  "prompt": "What did Ananias call Saul when he put his hands on him?",
+  "answer": "Brother Saul",
+  "wrong": [
+   "Friend Saul",
+   "Saul of Tarsus",
+   "My son"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:17",
+  "prompt": "Who did Ananias say had sent him to Saul?",
+  "answer": "The Lord Jesus, who appeared to Saul on the road",
+  "wrong": [
+   "The chief priests",
+   "The apostles in Jerusalem",
+   "The people of Damascus"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:17",
+  "prompt": "Ananias came so that Saul would receive his sight and be filled with what?",
+  "answer": "The Holy Spirit (Holy Ghost)",
+  "wrong": [
+   "Great joy",
+   "Wisdom",
+   "Courage"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:17",
+  "prompt": "What did Ananias put on Saul?",
+  "answer": "His hands",
+  "wrong": [
+   "Oil",
+   "A new robe",
+   "Mud"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:18",
+  "prompt": "What fell from Saul's eyes?",
+  "answer": "Something like scales",
+  "wrong": [
+   "Tears",
+   "Dust",
+   "Mud"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:18",
+  "prompt": "What did Saul do right after he received his sight?",
+  "answer": "He arose and was baptized",
+  "wrong": [
+   "He went to sleep",
+   "He went back to Jerusalem",
+   "He wrote a letter"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:19",
+  "prompt": "What happened after Saul received food?",
+  "answer": "He was strengthened",
+  "wrong": [
+   "He fell asleep",
+   "He became sick again",
+   "He left the city"
+  ]
+ },
+ {
+  "world": 1,
+  "ref": "9:19",
+  "prompt": "With whom did Saul spend some days at Damascus?",
+  "answer": "The disciples",
+  "wrong": [
+   "The chief priests",
+   "Roman soldiers",
+   "His family"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:20",
+  "prompt": "Where did Saul immediately preach Christ?",
+  "answer": "In the synagogues",
+  "wrong": [
+   "In the marketplace",
+   "On a mountain",
+   "By the sea"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:20",
+  "prompt": "What did Saul preach about Jesus?",
+  "answer": "That He is the Son of God",
+  "wrong": [
+   "That He was only a teacher",
+   "That He was a king of Rome",
+   "That He was Elijah"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:21",
+  "prompt": "How did the people who heard Saul preach react?",
+  "answer": "They were amazed",
+  "wrong": [
+   "They laughed",
+   "They fell asleep",
+   "They threw stones"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:21",
+  "prompt": "The people said Saul had destroyed those who called on this name in which city?",
+  "answer": "Jerusalem",
+  "wrong": [
+   "Damascus",
+   "Tarsus",
+   "Galilee"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:21",
+  "prompt": "Why had Saul first come to Damascus?",
+  "answer": "To bring believers bound to the chief priests",
+  "wrong": [
+   "To visit his family",
+   "To sell tents",
+   "To find Barnabas"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:22",
+  "prompt": "What happened to Saul's strength?",
+  "answer": "He increased more and more in strength",
+  "wrong": [
+   "He became weak",
+   "He lost his voice",
+   "He became blind again"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:22",
+  "prompt": "Saul confounded the Jews at Damascus by proving that Jesus is the ___.",
+  "answer": "Christ",
+  "wrong": [
+   "High Priest",
+   "Prophet Elijah",
+   "King of Rome"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:23",
+  "prompt": "After many days, what did the Jews plot to do to Saul?",
+  "answer": "Kill him",
+  "wrong": [
+   "Make him a leader",
+   "Send him home",
+   "Give him a reward"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:24",
+  "prompt": "What did the Jews watch day and night to kill Saul?",
+  "answer": "The gates",
+  "wrong": [
+   "The synagogue",
+   "The house of Judas",
+   "The river"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:24",
+  "prompt": "Who found out about the plot to kill Saul?",
+  "answer": "Saul",
+  "wrong": [
+   "Barnabas",
+   "Peter",
+   "The governor"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:25",
+  "prompt": "How did Saul escape from Damascus?",
+  "answer": "He was let down through the wall in a basket",
+  "wrong": [
+   "He hid in a cart",
+   "He dressed as a soldier",
+   "He ran through a tunnel"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:25",
+  "prompt": "When did the disciples help Saul escape?",
+  "answer": "At night",
+  "wrong": [
+   "At noon",
+   "At sunrise",
+   "On the Sabbath morning"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:26",
+  "prompt": "When Saul came to Jerusalem, what did he try to do?",
+  "answer": "Join the disciples",
+  "wrong": [
+   "Meet the high priest",
+   "Become a soldier",
+   "Go back to Tarsus"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:26",
+  "prompt": "How did the disciples in Jerusalem feel about Saul?",
+  "answer": "They were all afraid of him",
+  "wrong": [
+   "They were happy",
+   "They were jealous",
+   "They didn't know him"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:27",
+  "prompt": "Who took Saul and brought him to the apostles?",
+  "answer": "Barnabas",
+  "wrong": [
+   "Peter",
+   "Ananias",
+   "John"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:27",
+  "prompt": "What did Barnabas tell the apostles?",
+  "answer": "Saul had seen the Lord on the road and had preached boldly",
+  "wrong": [
+   "Saul was a rich man",
+   "Saul was sent by the chief priests",
+   "Saul wanted to be a priest"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:27",
+  "prompt": "Barnabas said that Saul had preached boldly in which city?",
+  "answer": "Damascus",
+  "wrong": [
+   "Tarsus",
+   "Joppa",
+   "Caesarea"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:28",
+  "prompt": "Where was Saul with the apostles, coming in and going out?",
+  "answer": "Jerusalem",
+  "wrong": [
+   "Damascus",
+   "Antioch",
+   "Tarsus"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:29",
+  "prompt": "In whose name did Saul speak boldly in Jerusalem?",
+  "answer": "The Lord Jesus",
+  "wrong": [
+   "Moses",
+   "Abraham",
+   "Caesar"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:29",
+  "prompt": "Against whom did Saul dispute (argue)?",
+  "answer": "The Hellenists (Grecians)",
+  "wrong": [
+   "The Romans",
+   "The Samaritans",
+   "The Egyptians"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:29",
+  "prompt": "What did the Hellenists try to do to Saul?",
+  "answer": "Kill him",
+  "wrong": [
+   "Hire him",
+   "Teach him",
+   "Make him their king"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:30",
+  "prompt": "When the brethren knew of the danger, where did they bring Saul down to?",
+  "answer": "Caesarea",
+  "wrong": [
+   "Joppa",
+   "Lydda",
+   "Damascus"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:30",
+  "prompt": "Where did the brethren send Saul?",
+  "answer": "Tarsus",
+  "wrong": [
+   "Rome",
+   "Antioch",
+   "Egypt"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:31",
+  "prompt": "The churches had peace (rest) throughout which regions?",
+  "answer": "Judea, Galilee, and Samaria",
+  "wrong": [
+   "Egypt, Rome, and Greece",
+   "Syria and Asia",
+   "Only Jerusalem"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:31",
+  "prompt": "The churches walked in the fear of the Lord and in the comfort of whom?",
+  "answer": "The Holy Spirit (Holy Ghost)",
+  "wrong": [
+   "The apostles",
+   "The Romans",
+   "The angels"
+  ]
+ },
+ {
+  "world": 2,
+  "ref": "9:31",
+  "prompt": "What happened to the churches?",
+  "answer": "They were multiplied",
+  "wrong": [
+   "They became smaller",
+   "They were scattered",
+   "They were closed"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:32",
+  "prompt": "Peter came down to the saints who lived in which town?",
+  "answer": "Lydda",
+  "wrong": [
+   "Joppa",
+   "Caesarea",
+   "Damascus"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:33",
+  "prompt": "What was the name of the man Peter found at Lydda?",
+  "answer": "Aeneas",
+  "wrong": [
+   "Tabitha",
+   "Cornelius",
+   "Simon"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:33",
+  "prompt": "How many years had Aeneas been in bed?",
+  "answer": "Eight",
+  "wrong": [
+   "Twelve",
+   "Three",
+   "Thirty-eight"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:33",
+  "prompt": "What was wrong with Aeneas?",
+  "answer": "He was paralyzed (sick of the palsy)",
+  "wrong": [
+   "He was blind",
+   "He had leprosy",
+   "He could not speak"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:34",
+  "prompt": "Peter said, “Aeneas, ___ heals you (makes you whole).”",
+  "answer": "Jesus Christ",
+  "wrong": [
+   "Peter",
+   "The temple",
+   "Your bed"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:34",
+  "prompt": "What did Peter tell Aeneas to do?",
+  "answer": "Arise and make his bed",
+  "wrong": [
+   "Wash in a pool",
+   "Go to the temple",
+   "Sell his bed"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:34",
+  "prompt": "When did Aeneas get up?",
+  "answer": "Immediately",
+  "wrong": [
+   "Three days later",
+   "The next morning",
+   "After a week"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:35",
+  "prompt": "Who saw Aeneas and turned to the Lord?",
+  "answer": "All who lived at Lydda and Sharon (Saron)",
+  "wrong": [
+   "Only his family",
+   "The Roman soldiers",
+   "Nobody"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:36",
+  "prompt": "In which city did Tabitha live?",
+  "answer": "Joppa",
+  "wrong": [
+   "Lydda",
+   "Caesarea",
+   "Jerusalem"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:36",
+  "prompt": "Tabitha's name, by interpretation (in Greek), is...",
+  "answer": "Dorcas",
+  "wrong": [
+   "Mary",
+   "Lydia",
+   "Martha"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:36",
+  "prompt": "Dorcas was full of what?",
+  "answer": "Good works and charitable deeds (almsdeeds)",
+  "wrong": [
+   "Riches and gold",
+   "Sadness",
+   "Questions"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:37",
+  "prompt": "What happened to Dorcas?",
+  "answer": "She became sick and died",
+  "wrong": [
+   "She moved away",
+   "She was put in prison",
+   "She became blind"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:37",
+  "prompt": "After they washed her, where did they lay Dorcas?",
+  "answer": "In an upper room (chamber)",
+  "wrong": [
+   "In a tomb",
+   "In the synagogue",
+   "By the sea"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:38",
+  "prompt": "Why did the disciples send for Peter?",
+  "answer": "Lydda was near Joppa, and they heard Peter was there",
+  "wrong": [
+   "Peter was Dorcas's brother",
+   "An angel told them to",
+   "Peter lived next door"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:38",
+  "prompt": "How many men did the disciples send to Peter?",
+  "answer": "Two",
+  "wrong": [
+   "Three",
+   "Six",
+   "Twelve"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:38",
+  "prompt": "What did the two men ask Peter?",
+  "answer": "Not to delay in coming to them",
+  "wrong": [
+   "To bring food",
+   "To write a letter",
+   "To pray from far away"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:39",
+  "prompt": "Who stood by Peter weeping in the upper room?",
+  "answer": "All the widows",
+  "wrong": [
+   "The soldiers",
+   "The priests",
+   "The children"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:39",
+  "prompt": "What did the widows show Peter?",
+  "answer": "The tunics (coats) and garments Dorcas had made",
+  "wrong": [
+   "Her money",
+   "Her letters",
+   "Her sandals"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:40",
+  "prompt": "What did Peter do before he knelt down and prayed?",
+  "answer": "Put them all out of the room",
+  "wrong": [
+   "Sang a song",
+   "Ate some bread",
+   "Washed his hands"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:40",
+  "prompt": "What did Peter do after putting everyone out?",
+  "answer": "Knelt down and prayed",
+  "wrong": [
+   "Went to sleep",
+   "Left the house",
+   "Called a doctor"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:40",
+  "prompt": "What did Peter say to the body?",
+  "answer": "“Tabitha, arise.”",
+  "wrong": [
+   "“Dorcas, wake up.”",
+   "“Lazarus, come forth.”",
+   "“Little girl, sleep.”"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:40",
+  "prompt": "When Tabitha opened her eyes and saw Peter, what did she do?",
+  "answer": "She sat up",
+  "wrong": [
+   "She screamed",
+   "She ran away",
+   "She fainted"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:41",
+  "prompt": "What did Peter do after Tabitha sat up?",
+  "answer": "Gave her his hand, lifted her up, and presented her alive",
+  "wrong": [
+   "Left the city",
+   "Baptized her in the sea",
+   "Scolded the widows"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:41",
+  "prompt": "To whom did Peter present Tabitha alive?",
+  "answer": "The saints and widows",
+  "wrong": [
+   "The Roman soldiers",
+   "The chief priests",
+   "Her husband"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:42",
+  "prompt": "What happened when the miracle became known throughout all Joppa?",
+  "answer": "Many believed in the Lord",
+  "wrong": [
+   "People became angry",
+   "Peter was arrested",
+   "Nothing changed"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:43",
+  "prompt": "With whom did Peter stay many days in Joppa?",
+  "answer": "Simon, a tanner",
+  "wrong": [
+   "Simon the fisherman",
+   "Cornelius",
+   "Barnabas"
+  ]
+ },
+ {
+  "world": 3,
+  "ref": "9:43",
+  "prompt": "What was the job of the Simon Peter stayed with in Joppa?",
+  "answer": "Tanner",
+  "wrong": [
+   "Fisherman",
+   "Carpenter",
+   "Tentmaker"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:1",
+  "prompt": "In which city did Cornelius live?",
+  "answer": "Caesarea",
+  "wrong": [
+   "Joppa",
+   "Jerusalem",
+   "Rome"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:1",
+  "prompt": "What was Cornelius's job?",
+  "answer": "A centurion",
+  "wrong": [
+   "A fisherman",
+   "A tax collector",
+   "A priest"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:1",
+  "prompt": "Cornelius belonged to which regiment (band)?",
+  "answer": "The Italian",
+  "wrong": [
+   "The Egyptian",
+   "The Greek",
+   "The Syrian"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:2",
+  "prompt": "How does the Bible describe Cornelius?",
+  "answer": "A devout man who feared God with all his household",
+  "wrong": [
+   "A proud and rich man",
+   "A cruel soldier",
+   "A sick old man"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:2",
+  "prompt": "What did Cornelius give generously to the people?",
+  "answer": "Alms",
+  "wrong": [
+   "Swords",
+   "Land",
+   "Horses"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:2",
+  "prompt": "How often did Cornelius pray to God?",
+  "answer": "Always",
+  "wrong": [
+   "Once a year",
+   "Only on feast days",
+   "Never"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:3",
+  "prompt": "About what hour of the day did Cornelius see the vision?",
+  "answer": "The ninth hour",
+  "wrong": [
+   "The sixth hour",
+   "The third hour",
+   "Midnight"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:3",
+  "prompt": "Who came to Cornelius in the vision?",
+  "answer": "An angel of God",
+  "wrong": [
+   "Peter",
+   "Moses",
+   "His captain"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:4",
+  "prompt": "How did Cornelius feel when he looked at the angel?",
+  "answer": "Afraid",
+  "wrong": [
+   "Happy",
+   "Angry",
+   "Sleepy"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:4",
+  "prompt": "What did Cornelius say to the angel?",
+  "answer": "“What is it, Lord?”",
+  "wrong": [
+   "“Who are you?”",
+   "“Go away!”",
+   "“I am ready.”"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:4",
+  "prompt": "What had come up for a memorial before God?",
+  "answer": "Cornelius's prayers and alms",
+  "wrong": [
+   "His sacrifices",
+   "His songs",
+   "His armor"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:5",
+  "prompt": "To which city was Cornelius told to send men?",
+  "answer": "Joppa",
+  "wrong": [
+   "Jerusalem",
+   "Lydda",
+   "Damascus"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:5",
+  "prompt": "Whom was Cornelius told to send for?",
+  "answer": "Simon, whose surname is Peter",
+  "wrong": [
+   "Saul of Tarsus",
+   "Barnabas",
+   "Ananias"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:6",
+  "prompt": "Peter was lodging with Simon the tanner. Where was his house?",
+  "answer": "By the sea",
+  "wrong": [
+   "On a mountain",
+   "Next to the temple",
+   "In the desert"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:6",
+  "prompt": "The angel said Peter would tell Cornelius what?",
+  "answer": "What he ought to do",
+  "wrong": [
+   "When he would die",
+   "Where to find gold",
+   "How to win a battle"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:7",
+  "prompt": "Whom did Cornelius send to Joppa?",
+  "answer": "Two household servants and a devout soldier",
+  "wrong": [
+   "Three soldiers and a horse",
+   "His whole family",
+   "Twelve men"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:9",
+  "prompt": "Where did Peter go up to pray?",
+  "answer": "On the housetop",
+  "wrong": [
+   "To the temple",
+   "Up a mountain",
+   "Into a boat"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:9",
+  "prompt": "About what hour did Peter go up to pray?",
+  "answer": "The sixth hour",
+  "wrong": [
+   "The ninth hour",
+   "The third hour",
+   "The first hour"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:10",
+  "prompt": "How did Peter feel before he fell into a trance?",
+  "answer": "Very hungry",
+  "wrong": [
+   "Very tired",
+   "Very sad",
+   "Very afraid"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:10",
+  "prompt": "What happened to Peter while they were preparing food?",
+  "answer": "He fell into a trance",
+  "wrong": [
+   "He fell asleep",
+   "He went fishing",
+   "He walked to the sea"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:11",
+  "prompt": "What did Peter see coming down from heaven?",
+  "answer": "An object like a great sheet bound at the four corners",
+  "wrong": [
+   "A golden ladder",
+   "A chariot of fire",
+   "A big fish"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:12",
+  "prompt": "What was inside the great sheet?",
+  "answer": "Four-footed animals, wild beasts, creeping things, and birds",
+  "wrong": [
+   "Fish of the sea",
+   "Bread and wine",
+   "Gold and silver"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:13",
+  "prompt": "What did the voice tell Peter?",
+  "answer": "“Rise, Peter; kill and eat.”",
+  "wrong": [
+   "“Go to Rome.”",
+   "“Feed My sheep.”",
+   "“Build an altar.”"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:14",
+  "prompt": "Why did Peter say “Not so, Lord”?",
+  "answer": "He had never eaten anything common or unclean",
+  "wrong": [
+   "He was not hungry anymore",
+   "The animals were too big",
+   "It was the Sabbath"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:15",
+  "prompt": "What did the voice say the second time?",
+  "answer": "“What God has cleansed you must not call common.”",
+  "wrong": [
+   "“Then do not eat.”",
+   "“Go and wash yourself.”",
+   "“Sleep, Peter.”"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:16",
+  "prompt": "How many times did this happen?",
+  "answer": "Three times",
+  "wrong": [
+   "Once",
+   "Seven times",
+   "Two times"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:16",
+  "prompt": "What happened to the vessel (sheet) at the end?",
+  "answer": "It was taken up again into heaven",
+  "wrong": [
+   "It burned",
+   "It fell into the sea",
+   "Peter folded it"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:17",
+  "prompt": "Where were Cornelius's men standing when they found Simon's house?",
+  "answer": "Before the gate",
+  "wrong": [
+   "On the roof",
+   "In the synagogue",
+   "On the street called Straight"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:19",
+  "prompt": "Who told Peter that three men were looking for him?",
+  "answer": "The Spirit",
+  "wrong": [
+   "An angel",
+   "Simon the tanner",
+   "A servant girl"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:19",
+  "prompt": "How many men were seeking Peter?",
+  "answer": "Three",
+  "wrong": [
+   "Two",
+   "Six",
+   "Twelve"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:20",
+  "prompt": "The Spirit told Peter to go with the men doing what?",
+  "answer": "Doubting nothing",
+  "wrong": [
+   "Carrying a sword",
+   "Fasting",
+   "Singing"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:21",
+  "prompt": "What did Peter say when he went down to the men?",
+  "answer": "“I am he whom you seek.”",
+  "wrong": [
+   "“Go away!”",
+   "“Who sent you?” and then he hid",
+   "“I am not Peter.”"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:22",
+  "prompt": "The men said Cornelius had a good reputation among whom?",
+  "answer": "All the nation of the Jews",
+  "wrong": [
+   "Only the Romans",
+   "The kings of the earth",
+   "The Greeks"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:22",
+  "prompt": "Who told Cornelius to send for Peter?",
+  "answer": "A holy angel",
+  "wrong": [
+   "His wife",
+   "The emperor",
+   "A soldier"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:23",
+  "prompt": "What did Peter do with the men who came for him?",
+  "answer": "Invited them in and lodged them",
+  "wrong": [
+   "Sent them away",
+   "Took them fishing",
+   "Argued with them"
+  ]
+ },
+ {
+  "world": 4,
+  "ref": "10:23",
+  "prompt": "Who went with Peter the next day?",
+  "answer": "Some brethren from Joppa",
+  "wrong": [
+   "Simon the tanner only",
+   "Roman soldiers",
+   "No one"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:24",
+  "prompt": "Whom had Cornelius called together to hear Peter?",
+  "answer": "His relatives (kinsmen) and close friends",
+  "wrong": [
+   "The whole army",
+   "The priests of the temple",
+   "The people of Joppa"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:25",
+  "prompt": "What did Cornelius do when Peter came in?",
+  "answer": "Fell down at his feet and worshiped him",
+  "wrong": [
+   "Shook his hand",
+   "Gave him money",
+   "Ran away"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:26",
+  "prompt": "What did Peter say when he lifted Cornelius up?",
+  "answer": "“Stand up; I myself am also a man.”",
+  "wrong": [
+   "“You are forgiven.”",
+   "“Bring me food.”",
+   "“Bow lower.”"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:27",
+  "prompt": "What did Peter find when he went inside?",
+  "answer": "Many people who had come together",
+  "wrong": [
+   "An empty house",
+   "Only Cornelius",
+   "A great feast"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:28",
+  "prompt": "Peter said it was unlawful for a Jew to keep company with whom?",
+  "answer": "Someone of another nation",
+  "wrong": [
+   "Fishermen",
+   "Children",
+   "Widows"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:28",
+  "prompt": "God had shown Peter that he should not call any man what?",
+  "answer": "Common or unclean",
+  "wrong": [
+   "Foolish",
+   "Rich",
+   "Brother"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:29",
+  "prompt": "How did Peter come when he was sent for?",
+  "answer": "Without objecting (without gainsaying)",
+  "wrong": [
+   "After a long argument",
+   "With soldiers",
+   "After a month"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:30",
+  "prompt": "Cornelius said he had been fasting how many days ago?",
+  "answer": "Four days ago",
+  "wrong": [
+   "Three days ago",
+   "Seven days ago",
+   "Forty days ago"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:30",
+  "prompt": "At what hour did Cornelius pray in his house?",
+  "answer": "The ninth hour",
+  "wrong": [
+   "The sixth hour",
+   "The third hour",
+   "Midnight"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:30",
+  "prompt": "How was the man who stood before Cornelius dressed?",
+  "answer": "In bright clothing",
+  "wrong": [
+   "In armor",
+   "In rags",
+   "In black"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:31",
+  "prompt": "The man told Cornelius that his alms were remembered where?",
+  "answer": "In the sight of God",
+  "wrong": [
+   "In Rome",
+   "In the temple",
+   "In the synagogue"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:33",
+  "prompt": "Cornelius said they were all present before God to do what?",
+  "answer": "Hear all the things God commanded Peter",
+  "wrong": [
+   "Eat a feast",
+   "Choose a new leader",
+   "Pray for rain"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:34",
+  "prompt": "Peter said, “In truth I perceive that God shows no ___.”",
+  "answer": "partiality (is no respecter of persons)",
+  "wrong": [
+   "mercy",
+   "anger",
+   "patience"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:35",
+  "prompt": "Who is accepted by God in every nation?",
+  "answer": "Whoever fears Him and works righteousness",
+  "wrong": [
+   "Only the Jews",
+   "Only the rich",
+   "Only the priests"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:36",
+  "prompt": "Peter said Jesus Christ is Lord of ___.",
+  "answer": "all",
+  "wrong": [
+   "Israel only",
+   "the Sabbath",
+   "the sea"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:36",
+  "prompt": "God sent His word to the children of Israel, preaching what by Jesus Christ?",
+  "answer": "Peace",
+  "wrong": [
+   "War",
+   "Riches",
+   "Law"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:37",
+  "prompt": "The word spread through Judea, beginning from which region after John's baptism?",
+  "answer": "Galilee",
+  "wrong": [
+   "Samaria",
+   "Egypt",
+   "Rome"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:38",
+  "prompt": "God anointed Jesus of Nazareth with what?",
+  "answer": "The Holy Spirit (Holy Ghost) and with power",
+  "wrong": [
+   "Oil and wine",
+   "Gold and silver",
+   "A crown"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:38",
+  "prompt": "Jesus went about doing good and healing all who were oppressed by whom?",
+  "answer": "The devil",
+  "wrong": [
+   "The Romans",
+   "The Pharisees",
+   "The kings"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:39",
+  "prompt": "According to Peter, how was Jesus killed?",
+  "answer": "They hanged Him on a tree",
+  "wrong": [
+   "He was stoned",
+   "With a sword",
+   "By lions"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:40",
+  "prompt": "On which day did God raise Jesus up?",
+  "answer": "The third day",
+  "wrong": [
+   "The first day",
+   "The seventh day",
+   "The fortieth day"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:41",
+  "prompt": "To whom was Jesus shown after He rose?",
+  "answer": "Witnesses chosen before by God",
+  "wrong": [
+   "All the people",
+   "Only the Romans",
+   "Only the priests"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:41",
+  "prompt": "What did the witnesses do with Jesus after He rose from the dead?",
+  "answer": "Ate and drank with Him",
+  "wrong": [
+   "Went fishing in Rome",
+   "Built a temple",
+   "Fought a battle"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:42",
+  "prompt": "Jesus was ordained by God to be Judge of whom?",
+  "answer": "The living and the dead (quick and dead)",
+  "wrong": [
+   "Only the Jews",
+   "Only the angels",
+   "Only the Romans"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:43",
+  "prompt": "Who gave witness about Jesus?",
+  "answer": "All the prophets",
+  "wrong": [
+   "Only Moses",
+   "The Romans",
+   "The angels only"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:43",
+  "prompt": "Whoever believes in Jesus will receive what through His name?",
+  "answer": "Remission (forgiveness) of sins",
+  "wrong": [
+   "Gold",
+   "Land",
+   "A long life"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:44",
+  "prompt": "When did the Holy Spirit fall on those who heard the word?",
+  "answer": "While Peter was still speaking",
+  "wrong": [
+   "After they were baptized",
+   "The next day",
+   "After Peter left"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:45",
+  "prompt": "Who was astonished when the Holy Spirit fell on the Gentiles?",
+  "answer": "The believers of the circumcision who came with Peter",
+  "wrong": [
+   "The Roman soldiers",
+   "Cornelius's servants",
+   "The angels"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:45",
+  "prompt": "On whom was the gift of the Holy Spirit poured out?",
+  "answer": "The Gentiles also",
+  "wrong": [
+   "Only the Jews",
+   "Only Peter",
+   "Only the soldiers"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:46",
+  "prompt": "What did they hear the Gentiles do?",
+  "answer": "Speak with tongues and magnify God",
+  "wrong": [
+   "Sing old songs",
+   "Argue loudly",
+   "Cry and weep"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:47",
+  "prompt": "Peter asked, “Can anyone forbid ___, that these should not be baptized?”",
+  "answer": "water",
+  "wrong": [
+   "bread",
+   "fire",
+   "wine"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:48",
+  "prompt": "In whose name did Peter command them to be baptized?",
+  "answer": "The Lord",
+  "wrong": [
+   "Moses",
+   "Peter",
+   "Cornelius"
+  ]
+ },
+ {
+  "world": 5,
+  "ref": "10:48",
+  "prompt": "What did they ask Peter to do after they were baptized?",
+  "answer": "Stay a few days",
+  "wrong": [
+   "Leave immediately",
+   "Go to Rome",
+   "Write them a letter"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:1",
+  "prompt": "Who heard that the Gentiles had also received the word of God?",
+  "answer": "The apostles and brethren in Judea",
+  "wrong": [
+   "The Romans",
+   "King Herod",
+   "The Samaritans"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:2",
+  "prompt": "Where did Peter go up to?",
+  "answer": "Jerusalem",
+  "wrong": [
+   "Joppa",
+   "Antioch",
+   "Rome"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:2",
+  "prompt": "Who contended (argued) with Peter?",
+  "answer": "Those of the circumcision",
+  "wrong": [
+   "The Romans",
+   "The Gentiles",
+   "Barnabas"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:3",
+  "prompt": "What did they accuse Peter of?",
+  "answer": "Going in to uncircumcised men and eating with them",
+  "wrong": [
+   "Stealing money",
+   "Breaking the Sabbath",
+   "Telling lies"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:4",
+  "prompt": "How did Peter explain what had happened?",
+  "answer": "From the beginning, in order",
+  "wrong": [
+   "He refused to explain",
+   "In an angry letter",
+   "He only said a few words"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:5",
+  "prompt": "Where was Peter praying when he saw the vision?",
+  "answer": "In the city of Joppa",
+  "wrong": [
+   "In Jerusalem",
+   "In Caesarea",
+   "In Lydda"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:5",
+  "prompt": "How was the great sheet let down?",
+  "answer": "From heaven by four corners",
+  "wrong": [
+   "By a rope from a tower",
+   "By the wind",
+   "From a ship"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:6",
+  "prompt": "When Peter fixed his eyes on the sheet, what did he see?",
+  "answer": "Four-footed animals, wild beasts, creeping things, and birds",
+  "wrong": [
+   "Fish and bread",
+   "Gold coins",
+   "Fire and smoke"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:7",
+  "prompt": "In Peter's retelling, what did the voice say?",
+  "answer": "“Rise (Arise), Peter; kill (slay) and eat.”",
+  "wrong": [
+   "“Go to Antioch.”",
+   "“Pray more, Peter.”",
+   "“Feed My lambs.”"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:8",
+  "prompt": "Peter said nothing common or unclean had ever entered his ___.",
+  "answer": "mouth",
+  "wrong": [
+   "house",
+   "heart",
+   "boat"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:9",
+  "prompt": "From where did the voice answer Peter again?",
+  "answer": "From heaven",
+  "wrong": [
+   "From the sea",
+   "From the tanner's house",
+   "From a mountain"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:10",
+  "prompt": "How many times was this done?",
+  "answer": "Three times",
+  "wrong": [
+   "Once",
+   "Seven times",
+   "Twice"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:10",
+  "prompt": "What happened at the end of the vision?",
+  "answer": "All were drawn up again into heaven",
+  "wrong": [
+   "The animals ran away",
+   "Peter ate them",
+   "The sheet burned"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:11",
+  "prompt": "How many men came to the house where Peter was?",
+  "answer": "Three",
+  "wrong": [
+   "Two",
+   "Six",
+   "Twelve"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:11",
+  "prompt": "From which city were the three men sent?",
+  "answer": "Caesarea",
+  "wrong": [
+   "Joppa",
+   "Damascus",
+   "Tarsus"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:12",
+  "prompt": "Who told Peter to go with the men, doubting nothing?",
+  "answer": "The Spirit",
+  "wrong": [
+   "An angel",
+   "Cornelius",
+   "The apostles"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:12",
+  "prompt": "How many brethren went with Peter to Cornelius's house?",
+  "answer": "Six",
+  "wrong": [
+   "Three",
+   "Twelve",
+   "Two"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:13",
+  "prompt": "What had Cornelius seen in his house?",
+  "answer": "An angel",
+  "wrong": [
+   "A great sheet",
+   "A bright star",
+   "A burning bush"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:13",
+  "prompt": "Whom did the angel tell Cornelius to send for?",
+  "answer": "Simon, whose surname is Peter",
+  "wrong": [
+   "Saul",
+   "John",
+   "Barnabas"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:14",
+  "prompt": "Peter would tell words by which who would be saved?",
+  "answer": "Cornelius and all his household",
+  "wrong": [
+   "Only Cornelius",
+   "All of Rome",
+   "Only the soldiers"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:15",
+  "prompt": "When did the Holy Spirit fall on them?",
+  "answer": "As Peter began to speak",
+  "wrong": [
+   "After they were baptized",
+   "The next morning",
+   "When Peter left"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:15",
+  "prompt": "The Holy Spirit fell on them as on whom at the beginning?",
+  "answer": "On us (the apostles and believers)",
+  "wrong": [
+   "On the prophets",
+   "On Moses",
+   "On the angels"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:16",
+  "prompt": "Whose word did Peter remember?",
+  "answer": "The word of the Lord",
+  "wrong": [
+   "The word of Moses",
+   "The word of Ananias",
+   "The word of Barnabas"
+  ]
+ },
+ {
+  "world": 6,
+  "ref": "11:16",
+  "prompt": "“John indeed baptized with water, but you shall be baptized with ___.”",
+  "answer": "the Holy Spirit (Holy Ghost)",
+  "wrong": [
+   "fire only",
+   "oil",
+   "the sea"
+  ]
+ }
+]

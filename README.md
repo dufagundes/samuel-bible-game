@@ -1,70 +1,59 @@
-# 📖 Samuel's Bible Quest — Atos 9:8 – 11:16
+# 📖 Bible Quest — Adventurer Bible Game (Atos 1–16)
 
-Jogo de estudo para o Samuel se preparar para o **Adventurer Bible Game (ABG)**.
-A parte dele é **Atos 9:8 – 11:16** (100 versículos). Tudo roda no navegador: não precisa de servidor, de login nem de instalação.
+App de estudo gamificado para a equipe do **ABG 2026 (Dallas, 5 de dezembro)**.
+Cada criança faz o próprio cadastro, escolhe a sua passagem (100 versículos) e estuda só a sua parte.
 
-## Como abrir
+| # | Criança | Passagem |
+|---|---|---|
+| 1 | Alexandrea | Acts 1:1 – 4:1 |
+| 2 | Noah | Acts 4:2 – 7:7 |
+| 3 | Naomi Bate | Acts 7:8 – 9:7 |
+| 4 | Samuel | Acts 9:8 – 11:16 |
+| 5 | Edel | Acts 11:17 – 14:9 |
+| 6 | PB | Acts 14:10 – 16:40 |
 
-- **No computador:** abra o `index.html` no Chrome, Edge ou Safari.
-- **No tablet ou celular (recomendado):** publique no GitHub Pages em *Settings → Pages → Deploy from a branch*, escolhendo o branch e a pasta `/ (root)`. Depois é só abrir o link e "Adicionar à tela inicial".
+## Tecnologia
 
-O progresso fica salvo no navegador do aparelho. Para passar para outro aparelho, use a **Área dos pais → Export / Import progress**.
+- **Next.js 15** (hospedado no **Vercel**)
+- **Supabase**: login (email e senha), banco Postgres com Row Level Security
+- **Texto NKJV** guardado no banco. Ele **não** fica neste repositório, que é público: só quem fez login consegue ler.
+- **Vídeos NKJV do YouTube** (canal "23:59 TIME IS UP"), um por capítulo, tocados no player oficial do YouTube
 
-## Como o jogo funciona
+## O que o jogo tem
 
-| Parte | O que faz |
-|---|---|
-| 🗺️ **Mapa com 6 mundos + chefão final** | Cada mundo é um trecho da passagem (ver abaixo). Vencer o chefe libera o próximo mundo. |
-| 📖 **1. Estudar** | Leitura com **áudio**. O versículo atual fica destacado e **cada palavra acende** enquanto é lida. Tem velocidade (🐢/🙂/🐇), repetição 🔁, "tocar a partir deste versículo" e **modo memória** 🙈, que esconde as palavras para ele tentar recitar. |
-| ⚔️ **2. Treino (20 questões)** | Questões de múltipla escolha com A/B/C/D. Com **12/20** o chefe é liberado. |
-| 👹 **3. Chefe (20 questões)** | O chefe tem barra de vida e o Samuel tem **5 ❤️**. Precisa de **16/20** (80%) para vencer. Tem cronômetro de 30 s por questão, que pode ser desligado. Ganha ⭐ (16–17), ⭐⭐ (18–19) ou ⭐⭐⭐ (20). |
-| 🐲 **Chefão final** | 20 questões de toda a passagem, incluindo "em que capítulo está este versículo?". Vencer dá o título de **Bible Champion 🏆**. |
-| 🩹 **Corrigir erros** | Toda questão errada entra na lista de revisão. Na revisão ele **ouve e acompanha o versículo** primeiro e depois responde de novo. Acertando **2 vezes**, o erro some. Erros antigos também voltam nas rodadas normais. |
-| 🎁 **Missão diária** | 10 questões por dia, priorizando os erros. Mantém a sequência de dias 🔥. |
-| 📈 **Meu progresso** | Gráfico das últimas rodadas com a linha de meta de 80%, domínio por mundo e um **mapa dos 100 versículos** colorido por acerto (vermelho, amarelo, verde). Tocar em um quadrado abre aquele versículo. |
-| 🏅 **Medalhas, níveis, moedas e loja** | XP, níveis com títulos ("Little Lamb" até "Bible Champion"), combos 🔥, bônus de velocidade ⚡, 17 medalhas e uma loja de avatares comprados com moedas 🪙. |
+- **Mapa de mundos.** Cada passagem tem de 6 a 7 mundos, e cada mundo tem 3 etapas: Estudar, Treino (20 questões) e Chefe (20 questões, 5 ❤️, precisa de 16 acertos). No fim vem o chefão final.
+- **Leitura com vídeo.** O vídeo da NKJV toca e o versículo e a palavra que estão sendo lidos acendem.
+  - Para isso, os versículos precisam ser **sincronizados uma vez**: botão 🎯 *Sync verses*, tocando no início de cada versículo.
+  - A sincronização fica salva para todo mundo.
+  - Também existe o modo "robot voice", com a voz do aparelho.
+- **Revisão de erros** com repetição espaçada: ler e ouvir o versículo, depois responder de novo.
+- **XP, níveis, moedas, medalhas, loja de avatares**, sequência de dias seguidos e missão diária.
+- **My Team**: ranking pelo % da **própria passagem** dominada.
+- **Progresso salvo na nuvem**, então dá para continuar em qualquer aparelho.
 
-### Mundos
-
-1. **Darkness in Damascus** — Atos 9:8–19 (Saulo cego, Ananias)
-2. **Escape Over the Wall** — Atos 9:20–31 (o cesto, Barnabé)
-3. **Miracles of Peter** — Atos 9:32–43 (Eneias, Dorcas)
-4. **Two Visions** — Atos 10:1–23 (Cornélio, o lençol)
-5. **The Good News for All** — Atos 10:24–48 (Espírito Santo sobre os gentios)
-6. **Peter's Report** — Atos 11:1–16
-
-### Questões
-
-- **~170 questões escritas à mão**, cada uma com a referência do versículo, em `js/questions.js`. As respostas foram escritas para valer tanto na **KJV** quanto na **NKJV**. Quando a palavra muda entre as versões, as duas aparecem, por exemplo "Holy Spirit (Holy Ghost)" ou "Sharon (Saron)".
-- **Questões "complete o versículo"** geradas automaticamente a partir do texto, então cada rodada é diferente.
-- O jogo prioriza as questões que ele **nunca viu** ou nas quais **mais erra**.
-
-## ⚠️ KJV x NKJV
-
-O ABG usa a **NKJV**, mas a NKJV tem direitos autorais (Thomas Nelson) e não pode ser incluída no repositório. Por isso o app já vem com a **King James Version (KJV)**, que é de domínio público.
-
-Se vocês tiverem a NKJV, entrem em **⚙️ Parents area** (no fim do mapa), colem os versículos (um por linha, por exemplo `9:8 Then Saul arose from the ground...`) e cliquem em **Import text**. A partir daí a leitura, o áudio e as questões "complete o versículo" passam a usar o texto da NKJV.
-
-## Área dos pais
-
-Fica no fim do mapa e é protegida por uma continha de multiplicação. Lá dá para:
-
-- trocar o nome;
-- escolher a voz em inglês (as vozes "Google US English", "Samantha" e "Microsoft … Natural" são as melhores);
-- ligar ou desligar o cronômetro e os sons;
-- **liberar todos os mundos**;
-- importar o texto NKJV;
-- exportar, importar ou zerar o progresso.
-
-## Arquivos
+## Estrutura
 
 ```
-index.html        página principal
-css/style.css     visual
-js/verses.js      texto KJV de Atos 9:8–11:16
-js/questions.js   mundos, chefes e banco de questões (fácil de editar/adicionar)
-js/app.js         jogo: mapa, quiz, chefes, revisão, áudio, progresso, loja
+app/                      telas Next.js (login, cadastro, escolha da passagem, jogo)
+lib/engine.js             motor do jogo (mapa, quiz, chefes, revisão, leitura com vídeo)
+lib/content.ts            carrega a passagem do Supabase
+lib/supabase.ts           cliente Supabase (URL e chave pública)
+content/passages.json     passagens, mundos e vídeos do YouTube (sem texto bíblico)
+content/questions/*.json  perguntas escritas à mão (por passagem)
+supabase/migrations/      estrutura do banco + regras de acesso
+scripts/seed.py           gera o SQL para carregar passagens, mundos, perguntas e versículos
+legacy/                   versão 1 (HTML estático, KJV)
 ```
 
-Para adicionar questões, edite `js/questions.js` seguindo o formato
-`["9:11", "Pergunta?", "Resposta certa", "errada 1", "errada 2", "errada 3"]`.
+## Rodar localmente
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy no Vercel
+
+1. Em vercel.com, entre com o GitHub e clique em **Add New → Project**.
+2. Importe o repositório `samuel-bible-game`.
+3. Clique em **Deploy**. As variáveis do Supabase já têm valores padrão no código; se quiser, copie as do `.env.example`.
