@@ -392,3 +392,7 @@ textarea { min-height: 160px; font-family: ui-monospace, Menlo, Consolas, monosp
 .avatars button { font-size: 30px; width: 54px; height: 54px; border-radius: 14px; border: 3px solid var(--line); background: #fff; }
 .avatars button.on { border-color: var(--gold); background: #fff8e1; }
 .loading { color: #fff; text-align: center; margin-top: 30vh; font-family: var(--font-title); font-size: 22px; }
+.verse.heard .vn { background: var(--good-soft); color: #0f8a5e; }
+.verse.heard .vn::after { content: " ✓"; }
+.heard-pill { width: 100%; text-align: center; background: rgba(255,255,255,.92); color: var(--ink); border-radius: 16px; padding: 12px 14px; font-weight: 700; }
+.heard-pill.done { background: var(--good-soft); color: #0f6b49; }
