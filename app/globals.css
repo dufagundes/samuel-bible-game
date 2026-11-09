@@ -396,3 +396,4 @@ textarea { min-height: 160px; font-family: ui-monospace, Menlo, Consolas, monosp
 .verse.heard .vn::after { content: " ✓"; }
 .heard-pill { width: 100%; text-align: center; background: rgba(255,255,255,.92); color: var(--ink); border-radius: 16px; padding: 12px 14px; font-weight: 700; }
 .heard-pill.done { background: var(--good-soft); color: #0f6b49; }
+.btn.pop { animation: pop .45s ease; }
