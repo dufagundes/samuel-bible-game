@@ -422,3 +422,11 @@ textarea { min-height: 160px; font-family: ui-monospace, Menlo, Consolas, monosp
 .order-card { text-align: left; border: 3px solid var(--line); background: #fff; border-radius: 16px; padding: 14px; font-size: 17px; font-weight: 700; color: var(--ink); box-shadow: 0 4px 0 var(--line); }
 .order-row { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; }
 .order-row .n { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 10px; background: var(--good); color: #fff; display: grid; place-items: center; font-weight: 800; }
+.bubble { position: relative; background: #fff; border-radius: 26px; padding: 22px 22px; font-size: 21px; font-weight: 700; line-height: 1.5; box-shadow: var(--shadow); margin: 6px 0 26px; }
+.bubble-tail { position: absolute; left: 40px; bottom: -18px; width: 0; height: 0; border: 12px solid transparent; border-top: 16px solid #fff; border-bottom: 0; }
+.speakers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.speaker { display: flex; flex-direction: column; align-items: center; gap: 6px; border: 3px solid var(--line); background: #fff; border-radius: 18px; padding: 14px 8px; font-weight: 800; font-size: 15px; color: var(--ink); box-shadow: 0 4px 0 var(--line); }
+.speaker .e { font-size: 34px; }
+.speaker.right { border-color: var(--good); background: var(--good-soft); }
+.speaker.wrong { border-color: var(--bad); background: var(--bad-soft); animation: shake .4s; }
+.grid.three .game-tile { min-width: 0; }

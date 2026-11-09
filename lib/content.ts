@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import QUOTES from "@/content/quotes.json";
 
 export type Profile = {
   id: string; display_name: string; avatar: string; passage_id: string | null;
@@ -48,11 +49,14 @@ export async function loadContent(passageId: string) {
   const titles: Record<string, string> = {};
   (all.data || []).forEach((r) => { titles[r.id] = r.title; });
 
+  // "Who said it?" speakers for the quotes inside this passage (the quote text comes from the verses)
+  const quotes = (QUOTES as { c: number; v: number; n: number; speaker: string }[]).filter((x) => inRange(x.c, x.v));
+
   return {
     titles,
     content: {
       passage: { id: passage.id, title: passage.title },
-      verses, worlds, bank, videos, timings,
+      verses, worlds, bank, videos, timings, quotes,
       finalBoss: { name: "The Grand Champion of Acts", emoji: "🐲", taunt: "Only a true Bible Champion knows ALL of " + passage.title + "!" }
     }
   };

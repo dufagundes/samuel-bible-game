@@ -1,0 +1,740 @@
+[
+{
+"c": 1,
+"v": 4,
+"n": 1,
+"speaker": "Jesus"
+},
+{
+"c": 1,
+"v": 6,
+"n": 0,
+"speaker": "The apostles"
+},
+{
+"c": 1,
+"v": 7,
+"n": 0,
+"speaker": "Jesus"
+},
+{
+"c": 1,
+"v": 11,
+"n": 0,
+"speaker": "Two men in white"
+},
+{
+"c": 1,
+"v": 16,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 1,
+"v": 21,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 1,
+"v": 24,
+"n": 0,
+"speaker": "The disciples (praying)"
+},
+{
+"c": 2,
+"v": 7,
+"n": 0,
+"speaker": "The amazed crowd"
+},
+{
+"c": 2,
+"v": 12,
+"n": 0,
+"speaker": "The amazed crowd"
+},
+{
+"c": 2,
+"v": 13,
+"n": 0,
+"speaker": "The mockers"
+},
+{
+"c": 2,
+"v": 14,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 2,
+"v": 22,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 2,
+"v": 29,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 2,
+"v": 36,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 2,
+"v": 37,
+"n": 0,
+"speaker": "The people who heard Peter"
+},
+{
+"c": 2,
+"v": 38,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 2,
+"v": 40,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 3,
+"v": 4,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 3,
+"v": 6,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 3,
+"v": 12,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 3,
+"v": 17,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 4,
+"v": 7,
+"n": 0,
+"speaker": "The rulers and elders"
+},
+{
+"c": 4,
+"v": 8,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 4,
+"v": 16,
+"n": 0,
+"speaker": "The council"
+},
+{
+"c": 4,
+"v": 19,
+"n": 0,
+"speaker": "Peter and John"
+},
+{
+"c": 4,
+"v": 24,
+"n": 0,
+"speaker": "The believers (praying)"
+},
+{
+"c": 5,
+"v": 3,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 5,
+"v": 8,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 5,
+"v": 8,
+"n": 1,
+"speaker": "Sapphira"
+},
+{
+"c": 5,
+"v": 9,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 5,
+"v": 20,
+"n": 0,
+"speaker": "An angel of the Lord"
+},
+{
+"c": 5,
+"v": 23,
+"n": 0,
+"speaker": "The officers"
+},
+{
+"c": 5,
+"v": 25,
+"n": 0,
+"speaker": "A messenger"
+},
+{
+"c": 5,
+"v": 28,
+"n": 0,
+"speaker": "The high priest"
+},
+{
+"c": 5,
+"v": 29,
+"n": 0,
+"speaker": "Peter and the apostles"
+},
+{
+"c": 5,
+"v": 35,
+"n": 0,
+"speaker": "Gamaliel"
+},
+{
+"c": 6,
+"v": 2,
+"n": 0,
+"speaker": "The twelve apostles"
+},
+{
+"c": 6,
+"v": 11,
+"n": 0,
+"speaker": "Men stirred up against Stephen"
+},
+{
+"c": 6,
+"v": 13,
+"n": 0,
+"speaker": "False witnesses"
+},
+{
+"c": 7,
+"v": 1,
+"n": 0,
+"speaker": "The high priest"
+},
+{
+"c": 7,
+"v": 2,
+"n": 0,
+"speaker": "Stephen"
+},
+{
+"c": 7,
+"v": 33,
+"n": 0,
+"speaker": "The Lord (to Moses)"
+},
+{
+"c": 7,
+"v": 48,
+"n": 0,
+"speaker": "Stephen"
+},
+{
+"c": 7,
+"v": 51,
+"n": 0,
+"speaker": "Stephen"
+},
+{
+"c": 7,
+"v": 56,
+"n": 0,
+"speaker": "Stephen"
+},
+{
+"c": 7,
+"v": 59,
+"n": 0,
+"speaker": "Stephen"
+},
+{
+"c": 7,
+"v": 60,
+"n": 0,
+"speaker": "Stephen"
+},
+{
+"c": 8,
+"v": 10,
+"n": 0,
+"speaker": "The people of Samaria"
+},
+{
+"c": 8,
+"v": 19,
+"n": 0,
+"speaker": "Simon the sorcerer"
+},
+{
+"c": 8,
+"v": 20,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 8,
+"v": 24,
+"n": 0,
+"speaker": "Simon the sorcerer"
+},
+{
+"c": 8,
+"v": 26,
+"n": 0,
+"speaker": "An angel of the Lord"
+},
+{
+"c": 8,
+"v": 29,
+"n": 0,
+"speaker": "The Spirit"
+},
+{
+"c": 8,
+"v": 30,
+"n": 0,
+"speaker": "Philip"
+},
+{
+"c": 8,
+"v": 31,
+"n": 0,
+"speaker": "The Ethiopian eunuch"
+},
+{
+"c": 8,
+"v": 34,
+"n": 0,
+"speaker": "The Ethiopian eunuch"
+},
+{
+"c": 8,
+"v": 36,
+"n": 0,
+"speaker": "The Ethiopian eunuch"
+},
+{
+"c": 8,
+"v": 37,
+"n": 0,
+"speaker": "Philip"
+},
+{
+"c": 8,
+"v": 37,
+"n": 1,
+"speaker": "The Ethiopian eunuch"
+},
+{
+"c": 9,
+"v": 4,
+"n": 0,
+"speaker": "Jesus"
+},
+{
+"c": 9,
+"v": 5,
+"n": 0,
+"speaker": "Saul"
+},
+{
+"c": 9,
+"v": 5,
+"n": 1,
+"speaker": "Jesus"
+},
+{
+"c": 9,
+"v": 6,
+"n": 0,
+"speaker": "Saul"
+},
+{
+"c": 9,
+"v": 6,
+"n": 1,
+"speaker": "Jesus"
+},
+{
+"c": 9,
+"v": 10,
+"n": 1,
+"speaker": "Ananias"
+},
+{
+"c": 9,
+"v": 11,
+"n": 0,
+"speaker": "The Lord"
+},
+{
+"c": 9,
+"v": 13,
+"n": 0,
+"speaker": "Ananias"
+},
+{
+"c": 9,
+"v": 15,
+"n": 0,
+"speaker": "The Lord"
+},
+{
+"c": 9,
+"v": 17,
+"n": 0,
+"speaker": "Ananias"
+},
+{
+"c": 9,
+"v": 21,
+"n": 0,
+"speaker": "The people who heard Saul"
+},
+{
+"c": 9,
+"v": 34,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 9,
+"v": 40,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 10,
+"v": 4,
+"n": 0,
+"speaker": "Cornelius"
+},
+{
+"c": 10,
+"v": 4,
+"n": 1,
+"speaker": "An angel of God"
+},
+{
+"c": 10,
+"v": 13,
+"n": 0,
+"speaker": "A voice from heaven"
+},
+{
+"c": 10,
+"v": 14,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 10,
+"v": 15,
+"n": 0,
+"speaker": "A voice from heaven"
+},
+{
+"c": 10,
+"v": 19,
+"n": 0,
+"speaker": "The Spirit"
+},
+{
+"c": 10,
+"v": 21,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 10,
+"v": 22,
+"n": 0,
+"speaker": "The men sent by Cornelius"
+},
+{
+"c": 10,
+"v": 26,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 10,
+"v": 28,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 10,
+"v": 30,
+"n": 0,
+"speaker": "Cornelius"
+},
+{
+"c": 10,
+"v": 34,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 10,
+"v": 47,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 11,
+"v": 3,
+"n": 0,
+"speaker": "Those of the circumcision"
+},
+{
+"c": 11,
+"v": 5,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 11,
+"v": 18,
+"n": 0,
+"speaker": "The believers in Jerusalem"
+},
+{
+"c": 12,
+"v": 7,
+"n": 0,
+"speaker": "An angel of the Lord"
+},
+{
+"c": 12,
+"v": 8,
+"n": 0,
+"speaker": "An angel of the Lord"
+},
+{
+"c": 12,
+"v": 8,
+"n": 1,
+"speaker": "An angel of the Lord"
+},
+{
+"c": 12,
+"v": 11,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 12,
+"v": 15,
+"n": 0,
+"speaker": "The people praying at Mary's house"
+},
+{
+"c": 12,
+"v": 15,
+"n": 1,
+"speaker": "The people praying at Mary's house"
+},
+{
+"c": 12,
+"v": 17,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 12,
+"v": 22,
+"n": 0,
+"speaker": "The people listening to Herod"
+},
+{
+"c": 13,
+"v": 2,
+"n": 0,
+"speaker": "The Holy Spirit"
+},
+{
+"c": 13,
+"v": 10,
+"n": 0,
+"speaker": "Paul"
+},
+{
+"c": 13,
+"v": 15,
+"n": 0,
+"speaker": "The rulers of the synagogue"
+},
+{
+"c": 13,
+"v": 16,
+"n": 0,
+"speaker": "Paul"
+},
+{
+"c": 13,
+"v": 26,
+"n": 0,
+"speaker": "Paul"
+},
+{
+"c": 13,
+"v": 46,
+"n": 0,
+"speaker": "Paul and Barnabas"
+},
+{
+"c": 14,
+"v": 10,
+"n": 0,
+"speaker": "Paul"
+},
+{
+"c": 14,
+"v": 11,
+"n": 0,
+"speaker": "The people of Lystra"
+},
+{
+"c": 14,
+"v": 15,
+"n": 0,
+"speaker": "Barnabas and Paul"
+},
+{
+"c": 14,
+"v": 22,
+"n": 0,
+"speaker": "Paul and Barnabas"
+},
+{
+"c": 15,
+"v": 1,
+"n": 0,
+"speaker": "Men from Judea"
+},
+{
+"c": 15,
+"v": 5,
+"n": 0,
+"speaker": "Believing Pharisees"
+},
+{
+"c": 15,
+"v": 7,
+"n": 0,
+"speaker": "Peter"
+},
+{
+"c": 15,
+"v": 13,
+"n": 0,
+"speaker": "James"
+},
+{
+"c": 15,
+"v": 18,
+"n": 0,
+"speaker": "James"
+},
+{
+"c": 15,
+"v": 36,
+"n": 0,
+"speaker": "Paul"
+},
+{
+"c": 16,
+"v": 9,
+"n": 0,
+"speaker": "A man of Macedonia"
+},
+{
+"c": 16,
+"v": 15,
+"n": 0,
+"speaker": "Lydia"
+},
+{
+"c": 16,
+"v": 17,
+"n": 0,
+"speaker": "The slave girl"
+},
+{
+"c": 16,
+"v": 18,
+"n": 0,
+"speaker": "Paul"
+},
+{
+"c": 16,
+"v": 20,
+"n": 0,
+"speaker": "The girl's masters"
+},
+{
+"c": 16,
+"v": 28,
+"n": 0,
+"speaker": "Paul"
+},
+{
+"c": 16,
+"v": 30,
+"n": 0,
+"speaker": "The jailer"
+},
+{
+"c": 16,
+"v": 31,
+"n": 0,
+"speaker": "Paul and Silas"
+},
+{
+"c": 16,
+"v": 35,
+"n": 0,
+"speaker": "The magistrates"
+},
+{
+"c": 16,
+"v": 36,
+"n": 0,
+"speaker": "The jailer"
+},
+{
+"c": 16,
+"v": 37,
+"n": 0,
+"speaker": "Paul"
+}
+]

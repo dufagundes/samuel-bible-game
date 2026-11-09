@@ -1,0 +1,126 @@
+# Who said it? — speaker of each direct quote in Acts 1-16 (NKJV).
+# Format: chapter:verse|n|speaker   (n = which opening quote mark “ in the verse, starting at 0)
+# The quote text itself is read from the database at runtime, so no Bible text lives in this file.
+1:4|1|Jesus
+1:6|0|The apostles
+1:7|0|Jesus
+1:11|0|Two men in white
+1:16|0|Peter
+1:21|0|Peter
+1:24|0|The disciples (praying)
+2:7|0|The amazed crowd
+2:12|0|The amazed crowd
+2:13|0|The mockers
+2:14|0|Peter
+2:22|0|Peter
+2:29|0|Peter
+2:36|0|Peter
+2:37|0|The people who heard Peter
+2:38|0|Peter
+2:40|0|Peter
+3:4|0|Peter
+3:6|0|Peter
+3:12|0|Peter
+3:17|0|Peter
+4:7|0|The rulers and elders
+4:8|0|Peter
+4:16|0|The council
+4:19|0|Peter and John
+4:24|0|The believers (praying)
+5:3|0|Peter
+5:8|0|Peter
+5:8|1|Sapphira
+5:9|0|Peter
+5:20|0|An angel of the Lord
+5:23|0|The officers
+5:25|0|A messenger
+5:28|0|The high priest
+5:29|0|Peter and the apostles
+5:35|0|Gamaliel
+6:2|0|The twelve apostles
+6:11|0|Men stirred up against Stephen
+6:13|0|False witnesses
+7:1|0|The high priest
+7:2|0|Stephen
+7:33|0|The Lord (to Moses)
+7:48|0|Stephen
+7:51|0|Stephen
+7:56|0|Stephen
+7:59|0|Stephen
+7:60|0|Stephen
+8:10|0|The people of Samaria
+8:19|0|Simon the sorcerer
+8:20|0|Peter
+8:24|0|Simon the sorcerer
+8:26|0|An angel of the Lord
+8:29|0|The Spirit
+8:30|0|Philip
+8:31|0|The Ethiopian eunuch
+8:34|0|The Ethiopian eunuch
+8:36|0|The Ethiopian eunuch
+8:37|0|Philip
+8:37|1|The Ethiopian eunuch
+9:4|0|Jesus
+9:5|0|Saul
+9:5|1|Jesus
+9:6|0|Saul
+9:6|1|Jesus
+9:10|1|Ananias
+9:11|0|The Lord
+9:13|0|Ananias
+9:15|0|The Lord
+9:17|0|Ananias
+9:21|0|The people who heard Saul
+9:34|0|Peter
+9:40|0|Peter
+10:4|0|Cornelius
+10:4|1|An angel of God
+10:13|0|A voice from heaven
+10:14|0|Peter
+10:15|0|A voice from heaven
+10:19|0|The Spirit
+10:21|0|Peter
+10:22|0|The men sent by Cornelius
+10:26|0|Peter
+10:28|0|Peter
+10:30|0|Cornelius
+10:34|0|Peter
+10:47|0|Peter
+11:3|0|Those of the circumcision
+11:5|0|Peter
+11:18|0|The believers in Jerusalem
+12:7|0|An angel of the Lord
+12:8|0|An angel of the Lord
+12:8|1|An angel of the Lord
+12:11|0|Peter
+12:15|0|The people praying at Mary's house
+12:15|1|The people praying at Mary's house
+12:17|0|Peter
+12:22|0|The people listening to Herod
+13:2|0|The Holy Spirit
+13:10|0|Paul
+13:15|0|The rulers of the synagogue
+13:16|0|Paul
+13:26|0|Paul
+13:46|0|Paul and Barnabas
+14:10|0|Paul
+14:11|0|The people of Lystra
+14:15|0|Barnabas and Paul
+14:22|0|Paul and Barnabas
+15:1|0|Men from Judea
+15:5|0|Believing Pharisees
+15:7|0|Peter
+15:13|0|James
+15:18|0|James
+15:36|0|Paul
+16:9|0|A man of Macedonia
+16:15|0|Lydia
+16:17|0|The slave girl
+16:18|0|Paul
+16:20|0|The girl's masters
+16:28|0|Paul
+16:30|0|The jailer
+16:31|0|Paul and Silas
+16:35|0|The magistrates
+16:36|0|The jailer
+16:37|0|Paul
