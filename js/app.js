@@ -1,0 +1,1235 @@
+/* Samuel's Bible Quest — Acts 9:8 – 11:16
+ * A gamified study app for the Adventurer Bible Game (ABG).
+ * No build step, no server: everything runs in the browser and progress is saved in localStorage.
+ */
+(function () {
+  "use strict";
+
+  // ---------------------------------------------------------------------------
+  // Constants
+  // ---------------------------------------------------------------------------
+  const STORE_KEY = "abg-samuel-quest-v1";
+  const ROUND_SIZE = 20;
+  const DAILY_SIZE = 10;
+  const PRACTICE_PASS = 12;        // 60% to unlock the boss
+  const BOSS_PASS = 16;            // 80% to defeat a boss
+  const BOSS_HEARTS = 5;           // 5 wrong answers = defeat (so 16/20 is needed)
+  const QUESTION_TIME = 30;        // seconds per question in boss battles
+  const WORLDS = window.WORLDS;
+  const BANK = window.QUESTION_BANK;
+  const FINAL = window.FINAL_BOSS;
+
+  const AVATARS = [
+    { e: "🧒", price: 0, name: "Samuel" },
+    { e: "🐑", price: 40, name: "Little Lamb" },
+    { e: "🕊️", price: 60, name: "Dove" },
+    { e: "🐟", price: 60, name: "Fish" },
+    { e: "🦁", price: 100, name: "Lion of Judah" },
+    { e: "⛵", price: 100, name: "Sailor" },
+    { e: "🛡️", price: 150, name: "Shield of Faith" },
+    { e: "🦅", price: 150, name: "Eagle" },
+    { e: "🧺", price: 200, name: "Basket Escape" },
+    { e: "👑", price: 300, name: "Crown of Life" },
+    { e: "🦸", price: 400, name: "Bible Hero" },
+    { e: "🏆", price: 600, name: "Champion" }
+  ];
+
+  const RANKS = [
+    [1, "Little Lamb"], [3, "Young Disciple"], [5, "Scroll Seeker"], [8, "Bold Preacher"],
+    [11, "Faithful Witness"], [15, "Mighty Apostle"], [20, "Bible Champion"]
+  ];
+
+  const STOP = new Set(("the and that this with them they their there then than unto upon from into were have hath " +
+    "which when what whom whose shall will would should could been being also even said saith thee thou thy thine " +
+    "him his her hers she you your ye our ours for not but all any are was had did does doth one some such very " +
+    "after before while where wherefore therefore because came come went made make many much more most other " +
+    "these those every about against among through himself myself itself again how who why now let yet nor own " +
+    "until well same both each just only over under out off way").split(" "));
+
+  // ---------------------------------------------------------------------------
+  // Helpers
+  // ---------------------------------------------------------------------------
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const rand = (n) => Math.floor(Math.random() * n);
+  const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = rand(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const today = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+  const dayDiff = (a, b) => Math.round((new Date(b + "T12:00:00") - new Date(a + "T12:00:00")) / 86400000);
+  const vkey = (c, v) => c + ":" + v;
+  const clean = (w) => w.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9']+$/g, "");
+
+  // Parse "9:13-14" or "10:5" → {c, v1, v2}
+  function parseRef(ref) {
+    const m = /^(\d+):(\d+)(?:-(\d+))?$/.exec(ref);
+    return { c: +m[1], v1: +m[2], v2: m[3] ? +m[3] : +m[2] };
+  }
+  function refLabel(c, v1, v2) { return "Acts " + c + ":" + v1 + (v2 && v2 !== v1 ? "–" + v2 : ""); }
+
+  // ---------------------------------------------------------------------------
+  // State
+  // ---------------------------------------------------------------------------
+  function defaultState() {
+    const worlds = {};
+    WORLDS.forEach((w) => { worlds[w.id] = { studied: false, practiceBest: 0, bossBest: 0, stars: 0, beaten: false }; });
+    return {
+      name: "Samuel", avatar: "🧒", owned: ["🧒"],
+      xp: 0, coins: 0,
+      streak: { count: 0, last: null },
+      worlds, finalBeaten: false, finalBest: 0,
+      history: [], verseStats: {}, qStats: {}, mistakes: {},
+      badges: [], listened: 0, studyMinutes: 0, fixed: 0, perfects: 0, bossesBeaten: 0,
+      dailyDone: null, totalCorrect: 0, totalAnswered: 0, bestCombo: 0,
+      settings: { rate: 0.9, voice: "", timer: true, sound: true, unlockAll: false },
+      customText: {}
+    };
+  }
+
+  let S = load();
+  function load() {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (!raw) return defaultState();
+      const d = Object.assign(defaultState(), JSON.parse(raw));
+      d.settings = Object.assign(defaultState().settings, d.settings || {});
+      WORLDS.forEach((w) => { if (!d.worlds[w.id]) d.worlds[w.id] = defaultState().worlds[w.id]; });
+      return d;
+    } catch (e) { return defaultState(); }
+  }
+  function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(S)); } catch (e) { /* storage unavailable */ } }
+
+  // ---------------------------------------------------------------------------
+  // Verses
+  // ---------------------------------------------------------------------------
+  const VERSES = window.KJV_VERSES;
+  const VERSE_INDEX = {};
+  VERSES.forEach((x, i) => { VERSE_INDEX[vkey(x.c, x.v)] = i; });
+  function verseText(c, v) {
+    const k = vkey(c, v);
+    if (S.customText && S.customText[k]) return S.customText[k];
+    const i = VERSE_INDEX[k];
+    return i == null ? "" : VERSES[i].t;
+  }
+  function versionLabel() { return Object.keys(S.customText || {}).length ? "Your imported text" : "KJV"; }
+  function versesInRange(range) {
+    const [[c1, v1], [c2, v2]] = range;
+    const a = VERSE_INDEX[vkey(c1, v1)], b = VERSE_INDEX[vkey(c2, v2)];
+    return VERSES.slice(a, b + 1).map((x) => ({ c: x.c, v: x.v }));
+  }
+  function worldOfVerse(c, v) {
+    const i = VERSE_INDEX[vkey(c, v)];
+    return WORLDS.find((w) => i >= VERSE_INDEX[vkey(...w.range[0])] && i <= VERSE_INDEX[vkey(...w.range[1])]);
+  }
+  function rangeLabel(range) {
+    const [[c1, v1], [c2, v2]] = range;
+    return c1 === c2 ? "Acts " + c1 + ":" + v1 + "–" + v2 : "Acts " + c1 + ":" + v1 + " – " + c2 + ":" + v2;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Questions
+  // ---------------------------------------------------------------------------
+  function handQuestions(worldId) {
+    return (BANK[worldId] || []).map((row, i) => {
+      const [ref, prompt, answer, ...wrong] = row;
+      const r = parseRef(ref);
+      return { id: "h" + worldId + "-" + i, type: "mc", world: worldId, ref, c: r.c, v1: r.v1, v2: r.v2, prompt, answer, wrong };
+    });
+  }
+
+  function keywords(c, v) {
+    const text = verseText(c, v);
+    const out = [];
+    const re = /\S+/g; let m;
+    while ((m = re.exec(text))) {
+      const w = clean(m[0]);
+      if (w.length < 4 && !/^(six|two|ten)$/i.test(w)) continue;
+      if (STOP.has(w.toLowerCase())) continue;
+      if (/'/.test(w) && w.length < 6) continue;
+      const start = m.index + m[0].indexOf(w);
+      const prev = text.slice(0, start).replace(/\s+$/, "").slice(-1);
+      // a "name" is a capitalised word that is not just starting a sentence/quote
+      const name = /^[A-Z]/.test(w) && start > 0 && !/[.:;?!(]/.test(prev) && !/'s$/.test(w) && !/^(Behold|Arise|Rise|Stand|Brother|Saying|Not|Go|Send)$/.test(w);
+      out.push({ w, start, name });
+    }
+    return out;
+  }
+
+  // "Complete the verse" question generated from the verse text itself.
+  function blankQuestion(c, v, worldId) {
+    const kws = keywords(c, v);
+    if (!kws.length) return null;
+    // prefer names / capitalised words and numbers, they are the most "quizzable"
+    const strong = kws.filter((k) => k.name || /^(three|two|four|six|eight|ninth|sixth|third|night|basket|vessel|vision|tanner|centurion|sheet|scales|water|prayers|alms|widows|garments)$/i.test(k.w));
+    const src = strong.length && Math.random() < 0.75 ? strong : kws;
+    const pick = src[rand(src.length)];
+    const answer = pick.w;
+    const cap = pick.name;
+    const world = WORLDS.find((w) => w.id === worldId);
+    const poolVerses = versesInRange(world.range);
+    let pool = [];
+    const okWord = (k) => k.w.toLowerCase() !== answer.toLowerCase() && !/'s$/.test(k.w) && (cap ? k.name : !/^[A-Z]/.test(k.w));
+    poolVerses.forEach((pv) => keywords(pv.c, pv.v).forEach((k) => { if (okWord(k)) pool.push(k.w); }));
+    pool = Array.from(new Set(pool));
+    if (pool.length < 3) {
+      VERSES.forEach((x) => keywords(x.c, x.v).forEach((k) => { if (okWord(k)) pool.push(k.w); }));
+      pool = Array.from(new Set(pool));
+    }
+    // Prefer distractors of similar length so the answer doesn't stand out.
+    pool = shuffle(pool).sort((a, b) => Math.abs(a.length - answer.length) - Math.abs(b.length - answer.length));
+    let wrong = shuffle(pool.slice(0, 8)).slice(0, 3);
+    // Numbers get number distractors ("three" → "two", "seven", "four"...)
+    const NUMS = ["two", "three", "four", "six", "seven", "eight", "twelve", "forty"];
+    const ORDS = ["first", "third", "sixth", "ninth", "twelfth"];
+    const lower = answer.toLowerCase();
+    const fam = NUMS.includes(lower) ? NUMS : ORDS.includes(lower) ? ORDS : null;
+    if (fam) wrong = shuffle(fam.filter((x) => x !== lower)).slice(0, 3);
+    const text = verseText(c, v);
+    const before = text.slice(0, pick.start), after = text.slice(pick.start + answer.length);
+    return {
+      id: "b" + c + ":" + v + "-" + answer.toLowerCase(), type: "blank", world: worldId,
+      ref: c + ":" + v, c, v1: v, v2: v, before, after, answer, wrong,
+      prompt: "Complete the verse"
+    };
+  }
+
+  function chapterQuestion(c, v) {
+    const text = verseText(c, v);
+    const words = text.split(/\s+/);
+    const snippet = words.length > 22 ? words.slice(0, 20).join(" ") + "…" : text;
+    return {
+      id: "c" + c + ":" + v, type: "chapter", world: worldOfVerse(c, v).id, ref: c + ":" + v, c, v1: v, v2: v,
+      prompt: "In which chapter of Acts is this verse?", quote: snippet,
+      answer: "Acts " + c, wrong: [9, 10, 11].filter((x) => x !== c).map((x) => "Acts " + x)
+    };
+  }
+
+  function withOptions(q) {
+    q.options = shuffle([q.answer].concat(q.wrong));
+    return q;
+  }
+
+  function weight(q) {
+    const st = S.qStats[q.id];
+    let w = Math.random();
+    if (!st) w -= 0.6;                         // never seen → first
+    else w += (st.correct / Math.max(1, st.seen)) - 0.5;   // weakest next
+    if (S.mistakes[q.id]) w -= 0.8;            // missed questions come back
+    return w;
+  }
+  function pickWeighted(list, n) { return list.map((q) => [weight(q), q]).sort((a, b) => a[0] - b[0]).slice(0, n).map((x) => x[1]); }
+
+  function blanksFor(worldIds, n, used) {
+    const verses = shuffle([].concat(...worldIds.map((id) => versesInRange(WORLDS.find((w) => w.id === id).range).map((x) => [x, id]))));
+    const out = [];
+    for (const [x, id] of verses) {
+      if (out.length >= n) break;
+      const q = blankQuestion(x.c, x.v, id);
+      if (q && !used.has(q.id)) { used.add(q.id); out.push(q); }
+    }
+    return out;
+  }
+
+  function buildRound(mode, worldIds) {
+    const used = new Set();
+    let qs = [];
+    if (mode === "final") {
+      worldIds.forEach((id) => qs.push(...pickWeighted(handQuestions(id), 2)));
+      const taken = new Set(qs.map((q) => q.id));
+      const rest = shuffle([].concat(...worldIds.map(handQuestions)).filter((q) => !taken.has(q.id)));
+      qs.push(...pickWeighted(rest, 14 - qs.length));
+      qs.forEach((q) => used.add(q.id));
+      qs.push(...blanksFor(worldIds, 4, used));
+      const allV = shuffle(VERSES).slice(0, 2);
+      allV.forEach((x) => qs.push(chapterQuestion(x.c, x.v)));
+    } else if (mode === "daily") {
+      const missed = Object.values(S.mistakes).map((m) => m.q).filter((q) => worldIds.includes(q.world));
+      qs.push(...shuffle(missed).slice(0, 4));
+      qs.forEach((q) => used.add(q.id));
+      const pool = [].concat(...worldIds.map(handQuestions)).filter((q) => !used.has(q.id));
+      qs.push(...pickWeighted(pool, DAILY_SIZE - qs.length - 2));
+      qs.forEach((q) => used.add(q.id));
+      qs.push(...blanksFor(worldIds, DAILY_SIZE - qs.length, used));
+    } else {
+      const handCount = mode === "boss" ? 16 : 14;
+      const pool = [].concat(...worldIds.map(handQuestions));
+      qs = pickWeighted(pool, Math.min(handCount, pool.length));
+      qs.forEach((q) => used.add(q.id));
+      qs.push(...blanksFor(worldIds, ROUND_SIZE - qs.length, used));
+      if (qs.length < ROUND_SIZE) {   // tiny world: top up with any remaining hand questions
+        qs.push(...shuffle(pool.filter((q) => !qs.includes(q))).slice(0, ROUND_SIZE - qs.length));
+      }
+    }
+    return shuffle(qs).map((q) => withOptions(Object.assign({}, q)));
+  }
+
+  // ---------------------------------------------------------------------------
+  // Sound effects (WebAudio, no files needed)
+  // ---------------------------------------------------------------------------
+  let actx = null;
+  function tone(freq, dur, type = "sine", when = 0, vol = 0.18) {
+    if (!S.settings.sound) return;
+    try {
+      actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+      const t = actx.currentTime + when;
+      const o = actx.createOscillator(), g = actx.createGain();
+      o.type = type; o.frequency.setValueAtTime(freq, t);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(vol, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(actx.destination);
+      o.start(t); o.stop(t + dur + 0.05);
+    } catch (e) { /* ignore */ }
+  }
+  const SFX = {
+    good() { tone(660, 0.12, "triangle"); tone(990, 0.18, "triangle", 0.1); },
+    combo() { tone(784, 0.1, "square", 0, 0.08); tone(1047, 0.1, "square", 0.08, 0.08); tone(1319, 0.2, "square", 0.16, 0.08); },
+    bad() { tone(200, 0.25, "sawtooth", 0, 0.12); tone(150, 0.3, "sawtooth", 0.12, 0.1); },
+    click() { tone(520, 0.05, "triangle", 0, 0.08); },
+    win() { [523, 659, 784, 1047, 784, 1047].forEach((f, i) => tone(f, 0.22, "triangle", i * 0.13)); },
+    lose() { [392, 330, 262, 196].forEach((f, i) => tone(f, 0.3, "sine", i * 0.2)); },
+    hit() { tone(120, 0.15, "square", 0, 0.12); tone(80, 0.2, "sawtooth", 0.05, 0.1); },
+    coin() { tone(988, 0.08, "square", 0, 0.06); tone(1319, 0.2, "square", 0.07, 0.06); }
+  };
+
+  // ---------------------------------------------------------------------------
+  // Text-to-speech with word-by-word highlighting
+  // ---------------------------------------------------------------------------
+  const TTS = {
+    ok: "speechSynthesis" in window && "SpeechSynthesisUtterance" in window,
+    items: [], idx: 0, playing: false, paused: false, timers: [], utter: null,
+    boundaryWorks: false, onEnd: null, onState: null, repeat: false,
+    voices() {
+      if (!this.ok) return [];
+      return speechSynthesis.getVoices().filter((v) => /^en(-|_|$)/i.test(v.lang));
+    },
+    voice() {
+      const vs = this.voices();
+      if (!vs.length) return null;
+      return vs.find((v) => v.name === S.settings.voice) ||
+        vs.find((v) => /en-US/i.test(v.lang) && /(Samantha|Google US|Aria|Jenny|Natural)/i.test(v.name)) ||
+        vs.find((v) => /en-US/i.test(v.lang)) || vs[0];
+    },
+    // items: [{ el, text }]
+    play(items, opts = {}) {
+      if (!this.ok) { toast("Audio is not supported on this browser 😢"); return; }
+      this.stop(true);
+      this.items = items; this.idx = opts.start || 0; this.onEnd = opts.onEnd || null; this.onState = opts.onState || null;
+      this.playing = true; this.paused = false;
+      this._emit();
+      this._speak();
+    },
+    _emit() { if (this.onState) this.onState(this.playing, this.paused); },
+    _speak() {
+      if (!this.playing) return;
+      if (this.idx >= this.items.length) {
+        if (this.repeat && this.items.length) { this.idx = 0; } else { this._finish(); return; }
+      }
+      const it = this.items[this.idx];
+      $$(".verse.active").forEach((e) => e.classList.remove("active"));
+      if (it.el) {
+        it.el.classList.add("active");
+        it.el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      const u = new SpeechSynthesisUtterance(it.text);
+      const v = this.voice();
+      if (v) u.voice = v;
+      u.lang = (v && v.lang) || "en-US";
+      u.rate = S.settings.rate;
+      let gotBoundary = false;
+      u.onboundary = (e) => {
+        if (this.utter !== u) return;
+        if (e.name && e.name !== "word") return;
+        gotBoundary = true; this.boundaryWorks = true;
+        this._clearTimers();
+        markWord(it.el, e.charIndex);
+      };
+      u.onstart = () => {
+        if (this.utter !== u) return;
+        // Some voices never send word events: fall back to an estimated timing.
+        this.timers.push(setTimeout(() => { if (!gotBoundary && this.utter === u) this._fallback(it, 0); }, 450));
+      };
+      u.onend = () => {
+        if (this.utter !== u) return;
+        this._clearTimers(); markWord(it.el, -1);
+        this.idx++;
+        setTimeout(() => this._speak(), 250);
+      };
+      u.onerror = (e) => {
+        if (this.utter !== u) return;
+        if (e.error === "interrupted" || e.error === "canceled") return;
+        this._clearTimers(); this.idx++; this._speak();
+      };
+      this.utter = u;
+      speechSynthesis.speak(u);
+    },
+    _fallback(it, fromChar) {
+      if (!it.el) return;
+      const cps = 14.5 * S.settings.rate;  // characters per second (approximation)
+      $$(".w", it.el).forEach((span) => {
+        const s = +span.dataset.s;
+        if (s < fromChar) return;
+        this.timers.push(setTimeout(() => markWord(it.el, s), ((s - fromChar) / cps) * 1000));
+      });
+    },
+    _clearTimers() { this.timers.forEach(clearTimeout); this.timers = []; },
+    pause() {
+      if (!this.playing || this.paused) return;
+      this.paused = true; this._clearTimers();
+      speechSynthesis.pause(); this._emit();
+    },
+    resume() {
+      if (!this.playing || !this.paused) return;
+      this.paused = false;
+      speechSynthesis.resume();
+      const it = this.items[this.idx];
+      if (it && !this.boundaryWorks && it.el) {
+        const cur = $(".w.hl", it.el);
+        this._fallback(it, cur ? +cur.dataset.s : 0);
+      }
+      this._emit();
+    },
+    stop(silent) {
+      this.utter = null; this._clearTimers();
+      if (this.ok) speechSynthesis.cancel();
+      const was = this.playing;
+      this.playing = false; this.paused = false;
+      $$(".w.hl").forEach((e) => e.classList.remove("hl"));
+      $$(".verse.active").forEach((e) => e.classList.remove("active"));
+      if (!silent) this._emit();
+      return was;
+    },
+    _finish() {
+      this.playing = false; this.utter = null;
+      $$(".verse.active").forEach((e) => e.classList.remove("active"));
+      this._emit();
+      if (this.onEnd) this.onEnd();
+    }
+  };
+  if (TTS.ok) { speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => {}; }
+
+  function markWord(el, charIndex) {
+    if (!el) return;
+    const spans = $$(".w", el);
+    spans.forEach((s) => s.classList.remove("hl"));
+    if (charIndex < 0) return;
+    let cur = null;
+    for (const s of spans) { if (+s.dataset.s <= charIndex) cur = s; else break; }
+    if (cur) cur.classList.add("hl");
+  }
+
+  // Render a verse as clickable word spans (data-s = char index used by speech boundaries).
+  function verseHTML(c, v, extraClass = "") {
+    const text = verseText(c, v);
+    let html = "", last = 0; const re = /\S+/g; let m;
+    while ((m = re.exec(text))) {
+      html += esc(text.slice(last, m.index)) + '<span class="w" data-s="' + m.index + '">' + esc(m[0]) + "</span>";
+      last = m.index + m[0].length;
+    }
+    return '<div class="verse ' + extraClass + '" data-c="' + c + '" data-v="' + v + '"><span class="vn">' + c + ":" + v + '</span><div class="vt">' + html + "</div></div>";
+  }
+
+  // ---------------------------------------------------------------------------
+  // Rewards, levels, badges
+  // ---------------------------------------------------------------------------
+  const xpForLevel = (L) => 50 * L * (L - 1);
+  function levelInfo() {
+    let L = 1; while (S.xp >= xpForLevel(L + 1)) L++;
+    const a = xpForLevel(L), b = xpForLevel(L + 1);
+    let rank = RANKS[0][1]; RANKS.forEach(([lv, r]) => { if (L >= lv) rank = r; });
+    return { L, rank, into: S.xp - a, need: b - a, pct: Math.round(((S.xp - a) / (b - a)) * 100) };
+  }
+  function addXP(n) {
+    const before = levelInfo().L;
+    S.xp += n;
+    const after = levelInfo();
+    if (after.L > before) {
+      setTimeout(() => {
+        SFX.win(); confetti(50);
+        modal("⭐", "Level " + after.L + "!", "You are now a <b>" + esc(after.rank) + "</b>. Keep going, " + esc(S.name) + "!");
+      }, 600);
+    }
+  }
+  function addCoins(n) { S.coins += n; }
+  function touchStreak() {
+    const t = today();
+    if (S.streak.last === t) return;
+    if (S.streak.last && dayDiff(S.streak.last, t) === 1) S.streak.count++;
+    else S.streak.count = 1;
+    S.streak.last = t;
+  }
+
+  const BADGES = [
+    { id: "first", e: "🎉", name: "First Steps", desc: "Finish your first round", test: () => S.history.length >= 1 },
+    { id: "study1", e: "📖", name: "Bible Reader", desc: "Study your first passage", test: () => WORLDS.some((w) => S.worlds[w.id].studied) },
+    { id: "listen10", e: "🎧", name: "Good Listener", desc: "Listen to 10 passages", test: () => S.listened >= 10 },
+    { id: "perfect", e: "💯", name: "Perfect Round", desc: "Get 20 out of 20", test: () => S.perfects >= 1 },
+    { id: "combo10", e: "🔥", name: "On Fire", desc: "10 right answers in a row", test: () => S.bestCombo >= 10 },
+    { id: "combo20", e: "☄️", name: "Unstoppable", desc: "20 right answers in a row", test: () => S.bestCombo >= 20 },
+    { id: "boss1", e: "⚔️", name: "Boss Slayer", desc: "Defeat your first boss", test: () => S.bossesBeaten >= 1 },
+    { id: "boss3", e: "🛡️", name: "Brave Warrior", desc: "Defeat 3 different bosses", test: () => WORLDS.filter((w) => S.worlds[w.id].beaten).length >= 3 },
+    { id: "allboss", e: "🗺️", name: "World Explorer", desc: "Defeat all 6 world bosses", test: () => WORLDS.every((w) => S.worlds[w.id].beaten) },
+    { id: "final", e: "🏆", name: "Bible Champion", desc: "Defeat the Grand Champion", test: () => S.finalBeaten },
+    { id: "fix10", e: "🩹", name: "Mistake Fixer", desc: "Master 10 missed questions", test: () => S.fixed >= 10 },
+    { id: "fix50", e: "🧠", name: "Super Memory", desc: "Master 50 missed questions", test: () => S.fixed >= 50 },
+    { id: "streak3", e: "📅", name: "3-Day Streak", desc: "Study 3 days in a row", test: () => S.streak.count >= 3 },
+    { id: "streak7", e: "🌟", name: "7-Day Streak", desc: "Study 7 days in a row", test: () => S.streak.count >= 7 },
+    { id: "stars18", e: "✨", name: "Star Collector", desc: "Collect 12 boss stars", test: () => WORLDS.reduce((a, w) => a + S.worlds[w.id].stars, 0) >= 12 },
+    { id: "q500", e: "🎯", name: "500 Answers", desc: "Answer 500 questions right", test: () => S.totalCorrect >= 500 },
+    { id: "shop", e: "🛍️", name: "New Look", desc: "Buy a new avatar", test: () => S.owned.length >= 2 }
+  ];
+  function checkBadges() {
+    const fresh = [];
+    BADGES.forEach((b) => { if (!S.badges.includes(b.id) && b.test()) { S.badges.push(b.id); fresh.push(b); } });
+    return fresh;
+  }
+  function announceBadges() {
+    const fresh = checkBadges();
+    fresh.forEach((b, i) => setTimeout(() => { toast(b.e + " New badge: " + b.name + "!", "gold"); SFX.coin(); }, 400 + i * 1200));
+    if (fresh.length) save();
+    return fresh;
+  }
+
+  // ---------------------------------------------------------------------------
+  // UI helpers
+  // ---------------------------------------------------------------------------
+  const app = $("#app");
+  function toast(msg, kind = "") {
+    const t = document.createElement("div");
+    t.className = "toast " + kind; t.innerHTML = msg;
+    $("#toast-layer").appendChild(t);
+    setTimeout(() => t.remove(), 2800);
+  }
+  function confetti(n = 70) {
+    const layer = $("#fx-layer");
+    const bits = ["🎉", "⭐", "✨", "🎊", "💛", "💜", "🟣", "🟡", "🟢"];
+    for (let i = 0; i < n; i++) {
+      const s = document.createElement("span");
+      s.className = "confetti";
+      s.textContent = bits[rand(bits.length)];
+      s.style.left = Math.random() * 100 + "vw";
+      s.style.animationDuration = 1.6 + Math.random() * 1.8 + "s";
+      s.style.animationDelay = Math.random() * 0.5 + "s";
+      s.style.fontSize = 16 + rand(20) + "px";
+      layer.appendChild(s);
+      setTimeout(() => s.remove(), 4200);
+    }
+  }
+  function floatXP(text, x, y) {
+    const f = document.createElement("div");
+    f.className = "float-xp"; f.textContent = text;
+    f.style.left = x + "px"; f.style.top = y + "px";
+    document.body.appendChild(f);
+    setTimeout(() => f.remove(), 1200);
+  }
+  function modal(emoji, title, body, buttons) {
+    const back = document.createElement("div");
+    back.className = "modal-back";
+    back.innerHTML = '<div class="modal"><span class="e">' + emoji + "</span><h2>" + title + '</h2><p class="muted">' + body + '</p><div class="row" style="justify-content:center;margin-top:14px"></div></div>';
+    const row = $(".row", back);
+    (buttons || [{ label: "Awesome!", cls: "good" }]).forEach((b) => {
+      const btn = document.createElement("button");
+      btn.className = "btn " + (b.cls || ""); btn.innerHTML = b.label;
+      btn.onclick = () => { back.remove(); if (b.onClick) b.onClick(); };
+      row.appendChild(btn);
+    });
+    document.body.appendChild(back);
+  }
+
+  function renderTopbar() {
+    const li = levelInfo();
+    $("#topbar").innerHTML =
+      '<button class="me" data-go="home" aria-label="Home"><span class="avatar">' + S.avatar + '</span><span class="who"><b>' + esc(S.name) + "</b><small>" + esc(li.rank) + "</small></span></button>" +
+      '<div class="xpbar"><div class="lbl"><span>Level ' + li.L + "</span><span>" + li.into + " / " + li.need + ' XP</span></div><div class="bar"><i style="width:' + li.pct + '%"></i></div></div>' +
+      '<div class="pills"><button class="pill" data-go="shop" title="Coins">🪙 ' + S.coins + '</button><span class="pill" title="Days in a row">🔥 ' + (S.streak.count || 0) + "</span></div>";
+    $("[data-go=home]", $("#topbar")).onclick = () => go("home");
+    $("[data-go=shop]", $("#topbar")).onclick = () => go("shop");
+  }
+
+  // ---------------------------------------------------------------------------
+  // Router
+  // ---------------------------------------------------------------------------
+  let cleanup = null;
+  function go(screen, params = {}) {
+    if (cleanup) { cleanup(); cleanup = null; }
+    TTS.stop(true);
+    window.scrollTo(0, 0);
+    renderTopbar();
+    (SCREENS[screen] || SCREENS.home)(params);
+  }
+
+  function worldUnlocked(id) {
+    if (S.settings.unlockAll || id === 1) return true;
+    return !!S.worlds[id - 1] && S.worlds[id - 1].beaten;
+  }
+  function bossUnlocked(id) { return S.settings.unlockAll || S.worlds[id].practiceBest >= PRACTICE_PASS || S.worlds[id].beaten; }
+  function finalUnlocked() { return S.settings.unlockAll || WORLDS.every((w) => S.worlds[w.id].beaten); }
+  function unlockedWorldIds() {
+    const ids = WORLDS.filter((w) => worldUnlocked(w.id)).map((w) => w.id);
+    return ids.length ? ids : [1];
+  }
+  const starStr = (n) => "⭐".repeat(n) + '<span style="opacity:.25">' + "⭐".repeat(3 - n) + "</span>";
+
+  // ---------------------------------------------------------------------------
+  // Screens
+  // ---------------------------------------------------------------------------
+  const SCREENS = {};
+
+  SCREENS.home = function () {
+    const mistakes = Object.keys(S.mistakes).length;
+    const dailyDone = S.dailyDone === today();
+    const currentId = (WORLDS.find((w) => worldUnlocked(w.id) && !S.worlds[w.id].beaten) || {}).id;
+    let nodes = "";
+    WORLDS.forEach((w, i) => {
+      const st = S.worlds[w.id], un = worldUnlocked(w.id);
+      const status = !un ? "🔒 Locked" : st.beaten ? "Boss defeated!" : st.practiceBest >= PRACTICE_PASS ? "Boss is waiting! 👊" : st.studied ? "Practice time ⚔️" : "Start by studying 📖";
+      if (i) nodes += '<div class="connector"></div>';
+      nodes += '<div class="node-wrap"><button class="node ' + (un ? "" : "locked ") + (w.id === currentId ? "current" : "") + '" data-world="' + w.id + '">' +
+        '<span class="orb" style="background:' + w.color + '">' + (un ? w.icon : "🔒") + "</span>" +
+        '<span class="info"><small>World ' + w.id + " · " + rangeLabel(w.range) + "</small><b>" + esc(w.name) + "</b><small>" + status + '</small><span class="stars">' + starStr(st.stars) + "</span></span></button></div>";
+    });
+    const fu = finalUnlocked();
+    nodes += '<div class="connector"></div><div class="node-wrap"><button class="node final ' + (fu ? "" : "locked ") + (fu && !S.finalBeaten ? "current" : "") + '" data-final="1">' +
+      '<span class="orb">' + (fu ? FINAL.emoji : "🔒") + '</span><span class="info"><small>FINAL BOSS · Acts 9:8 – 11:16</small><b>' + esc(FINAL.name) + "</b><small>" +
+      (S.finalBeaten ? "🏆 You are a Bible Champion! Best: " + S.finalBest + "/20" : fu ? "Ready for the final test?" : "Defeat all 6 bosses to unlock") + "</small></span></button></div>";
+
+    app.innerHTML =
+      '<div class="hero"><div><h1>Hi, ' + esc(S.name) + "! 👋</h1><p>Your quest: Acts 9:8 – 11:16 for the Adventurer Bible Game.</p></div></div>" +
+      '<div class="quick">' +
+      '<button class="tile ' + (dailyDone ? "done" : "") + '" data-act="daily"><span class="ico">🎁</span><b>Daily Quest</b><small>' + (dailyDone ? "Done today! ✅" : "10 questions · +30 🪙") + "</small></button>" +
+      '<button class="tile" data-act="review"><span class="ico">🩹</span><b>Fix Mistakes</b><small>Read, listen, retry</small>' + (mistakes ? '<span class="badge">' + mistakes + "</span>" : "") + "</button>" +
+      '<button class="tile" data-act="read"><span class="ico">🎧</span><b>Read &amp; Listen</b><small>All chapters</small></button>' +
+      '<button class="tile" data-act="progress"><span class="ico">📈</span><b>My Progress</b><small>See how you improve</small></button>' +
+      '<button class="tile" data-act="badges"><span class="ico">🏅</span><b>Badges</b><small>' + S.badges.length + " / " + BADGES.length + "</small></button>" +
+      '<button class="tile" data-act="shop"><span class="ico">🛍️</span><b>Avatar Shop</b><small>Spend your coins</small></button>' +
+      "</div>" +
+      '<h2 class="title-white">🗺️ Quest Map</h2><div class="map"><div class="map-path">' + nodes + "</div></div>" +
+      '<div class="center"><button class="back" data-act="settings">⚙️ Parents area</button></div>';
+
+    $$("[data-world]").forEach((b) => b.onclick = () => {
+      const id = +b.dataset.world;
+      if (!worldUnlocked(id)) { SFX.bad(); toast("🔒 Defeat the boss of World " + (id - 1) + " first!"); return; }
+      SFX.click(); go("world", { id });
+    });
+    $("[data-final]").onclick = () => {
+      if (!finalUnlocked()) { SFX.bad(); toast("🔒 Defeat all 6 world bosses first!"); return; }
+      go("finalIntro");
+    };
+    $$("[data-act]").forEach((b) => b.onclick = () => {
+      SFX.click();
+      const a = b.dataset.act;
+      if (a === "daily") startQuiz({ mode: "daily", worlds: unlockedWorldIds() });
+      else if (a === "review") go("reviewHub");
+      else if (a === "read") go("reader", { range: [[9, 8], [11, 16]], title: "Acts 9:8 – 11:16" });
+      else go(a);
+    });
+  };
+
+  SCREENS.world = function ({ id }) {
+    const w = WORLDS.find((x) => x.id === id), st = S.worlds[id];
+    const bu = bossUnlocked(id);
+    app.innerHTML =
+      '<button class="back" data-back>← Map</button>' +
+      '<div class="world-head"><span class="orb" style="background:' + w.color + '">' + w.icon + '</span><div><small>World ' + w.id + " · " + rangeLabel(w.range) + '</small><h1 class="title-white">' + esc(w.name) + "</h1><div>" + esc(w.story) + "</div></div></div>" +
+      '<div class="card steps">' +
+      step(st.studied, false, "📖", "1. Study", "Read and listen to " + rangeLabel(w.range) + ". The words light up while you listen!", '<button class="btn" data-study>' + (st.studied ? "Study again" : "Start") + "</button>") +
+      step(st.practiceBest >= PRACTICE_PASS, false, "⚔️", "2. Training Round", "20 questions. Get " + PRACTICE_PASS + " right to unlock the boss. Best: " + st.practiceBest + "/20", '<button class="btn" data-practice>Train</button>') +
+      step(st.beaten, !bu, w.boss.emoji, "3. Boss: " + esc(w.boss.name), bu ? "20 questions, " + BOSS_HEARTS + " hearts. Get " + BOSS_PASS + " right to win! Best: " + st.bossBest + "/20 " + starStr(st.stars) : "🔒 Get " + PRACTICE_PASS + "/20 in training first", '<button class="btn bad" data-boss ' + (bu ? "" : "disabled") + ">Fight!</button>") +
+      "</div>";
+    function step(done, locked, ico, title, txt, btn) {
+      return '<div class="step ' + (done ? "done " : "") + (locked ? "locked" : "") + '"><span class="num">' + (done ? "✅" : ico) + '</span><div class="txt"><b>' + title + '</b><div class="muted">' + txt + "</div></div>" + btn + "</div>";
+    }
+    $("[data-back]").onclick = () => go("home");
+    $("[data-study]").onclick = () => go("reader", { range: w.range, title: w.name, worldId: id });
+    $("[data-practice]").onclick = () => startQuiz({ mode: "practice", worlds: [id] });
+    $("[data-boss]").onclick = () => bu && go("bossIntro", { id });
+  };
+
+  SCREENS.bossIntro = function ({ id }) {
+    const w = WORLDS.find((x) => x.id === id);
+    app.innerHTML =
+      '<button class="back" data-back>← Back</button>' +
+      '<div class="card center"><div style="font-size:110px">' + w.boss.emoji + "</div><h1>" + esc(w.boss.name) + '</h1><p class="taunt">“' + esc(w.boss.taunt) + '”</p>' +
+      "<p>Answer <b>20 questions</b> about " + rangeLabel(w.range) + ". Every right answer hits the boss! 💥<br>You have <b>" + BOSS_HEARTS + " ❤️</b>. " + (S.settings.timer ? "You have <b>" + QUESTION_TIME + " seconds</b> per question. ⏱️" : "") + "</p>" +
+      '<p class="muted">Win with ' + BOSS_PASS + "+ right · ⭐ 16–17 · ⭐⭐ 18–19 · ⭐⭐⭐ 20</p>" +
+      '<button class="btn big bad" data-go>⚔️ Battle!</button></div>';
+    $("[data-back]").onclick = () => go("world", { id });
+    $("[data-go]").onclick = () => startQuiz({ mode: "boss", worlds: [id] });
+  };
+
+  SCREENS.finalIntro = function () {
+    app.innerHTML =
+      '<button class="back" data-back>← Map</button>' +
+      '<div class="card center"><div style="font-size:120px">' + FINAL.emoji + "</div><h1>" + esc(FINAL.name) + '</h1><p class="taunt">“' + esc(FINAL.taunt) + '”</p>' +
+      "<p>The FINAL TEST: <b>20 questions</b> from all of Acts 9:8 – 11:16, including which chapter each verse is in.<br>" + BOSS_HEARTS + " ❤️ · " + BOSS_PASS + " right answers to become a <b>Bible Champion</b> 🏆</p>" +
+      '<button class="btn big gold" data-go>👑 Final Battle!</button></div>';
+    $("[data-back]").onclick = () => go("home");
+    $("[data-go]").onclick = () => startQuiz({ mode: "final", worlds: WORLDS.map((w) => w.id) });
+  };
+
+  // ---------------- Reader ----------------
+  SCREENS.reader = function ({ range, title, worldId, focus, back }) {
+    const verses = versesInRange(range);
+    let html = "", lastC = null;
+    verses.forEach((x) => {
+      if (x.c !== lastC) { html += '<div class="chap-title">Acts ' + x.c + "</div>"; lastC = x.c; }
+      html += verseHTML(x.c, x.v, focus && focus.c === x.c && x.v >= focus.v1 && x.v <= focus.v2 ? "focus" : "");
+    });
+    const rates = [[0.7, "🐢 Slow"], [0.9, "🙂 Normal"], [1.1, "🐇 Fast"]];
+    app.innerHTML =
+      '<button class="back" data-back>← Back</button>' +
+      '<h1 class="title-white">📖 ' + esc(title || rangeLabel(range)) + '</h1><p class="title-white" style="margin-top:-6px;opacity:.85">' + rangeLabel(range) + " · tap any verse to listen from there</p>" +
+      '<div class="reader-controls">' +
+      '<button class="btn small good" data-play>▶ Play</button>' +
+      '<button class="btn small ghost" data-stop>⏹ Stop</button>' +
+      '<span class="seg" data-rates>' + rates.map(([r, l]) => '<button data-rate="' + r + '" class="' + (Math.abs(S.settings.rate - r) < 0.01 ? "on" : "") + '">' + l + "</button>").join("") + "</span>" +
+      '<button class="toggle" data-repeat>🔁 Repeat</button>' +
+      '<button class="toggle" data-hide>🙈 Memory mode</button>' +
+      '<span class="spacer"></span><span class="version-tag">' + esc(versionLabel()) + "</span></div>" +
+      '<div class="card" data-verses>' + html + "</div>" +
+      '<div class="reader-foot">' + (worldId ? '<button class="btn big good" data-done>✅ I finished studying!</button>' : "") +
+      (worldId ? '<button class="btn big" data-train>⚔️ Go to training</button>' : "") + "</div>";
+
+    const box = $("[data-verses]");
+    const items = () => $$(".verse", box).map((el) => ({ el, text: verseText(+el.dataset.c, +el.dataset.v) }));
+    const playBtn = $("[data-play]");
+    let listenedAll = false;
+    const onState = (playing, paused) => {
+      playBtn.innerHTML = playing && !paused ? "⏸ Pause" : playing && paused ? "▶ Resume" : "▶ Play";
+    };
+    const onEnd = () => {
+      listenedAll = true;
+      S.listened++; addXP(10); save(); renderTopbar();
+      toast("🎧 Great listening! +10 XP");
+      announceBadges();
+      if (worldId && !S.worlds[worldId].studied) markStudied();
+    };
+    playBtn.onclick = () => {
+      if (TTS.playing && !TTS.paused) TTS.pause();
+      else if (TTS.playing && TTS.paused) TTS.resume();
+      else {
+        const all = items();
+        const startEl = $(".verse.focus", box);
+        TTS.play(all, { start: startEl ? all.findIndex((i) => i.el === startEl) : 0, onEnd, onState });
+      }
+    };
+    $("[data-stop]").onclick = () => TTS.stop();
+    $$("[data-rate]").forEach((b) => b.onclick = () => {
+      S.settings.rate = +b.dataset.rate; save();
+      $$("[data-rate]").forEach((x) => x.classList.toggle("on", x === b));
+      if (TTS.playing) { const i = TTS.idx; TTS.play(items(), { start: i, onEnd, onState }); }
+    });
+    $("[data-repeat]").onclick = (e) => { TTS.repeat = !TTS.repeat; e.currentTarget.classList.toggle("on", TTS.repeat); };
+    TTS.repeat = false;
+    $("[data-hide]").onclick = (e) => {
+      const on = !e.currentTarget.classList.contains("on");
+      e.currentTarget.classList.toggle("on", on);
+      $$(".verse", box).forEach((v) => v.classList.toggle("hide", on));
+      if (on) toast("🙈 Memory mode: try to say the verse, tap words to peek!");
+    };
+    box.addEventListener("click", (e) => {
+      const verse = e.target.closest(".verse");
+      if (!verse) return;
+      if (verse.classList.contains("hide") && e.target.classList.contains("w")) { e.target.classList.add("peek"); return; }
+      const all = items();
+      TTS.play(all, { start: all.findIndex((i) => i.el === verse), onEnd, onState });
+    });
+    function markStudied() {
+      if (!S.worlds[worldId].studied) {
+        S.worlds[worldId].studied = true; addXP(30); addCoins(10); touchStreak(); save(); renderTopbar();
+        SFX.coin(); toast("📖 Study complete! +30 XP +10 🪙", "gold");
+        announceBadges();
+      }
+    }
+    if (worldId) {
+      $("[data-done]").onclick = () => { markStudied(); if (!listenedAll) toast("Tip: press ▶ Play to listen too! 🎧"); };
+      $("[data-train]").onclick = () => { markStudied(); startQuiz({ mode: "practice", worlds: [worldId] }); };
+    }
+    $("[data-back]").onclick = () => back ? back() : worldId ? go("world", { id: worldId }) : go("home");
+    const f = $(".verse.focus", box);
+    if (f) setTimeout(() => f.scrollIntoView({ behavior: "smooth", block: "center" }), 150);
+  };
+
+  // ---------------- Quiz ----------------
+  function startQuiz({ mode, worlds, questions, onDone }) {
+    const qs = questions || buildRound(mode, worlds);
+    if (!qs.length) { toast("No questions yet!"); return; }
+    go("quiz", { mode, worlds, qs, onDone });
+  }
+
+  SCREENS.quiz = function ({ mode, worlds, qs, onDone }) {
+    const isBoss = mode === "boss" || mode === "final";
+    const boss = mode === "final" ? FINAL : mode === "boss" ? WORLDS.find((w) => w.id === worlds[0]).boss : null;
+    const st = { i: 0, correct: 0, combo: 0, bestCombo: 0, hearts: BOSS_HEARTS, xp: 0, coins: 0, missed: [], answered: false, timer: null, t0: 0 };
+    const modeName = { practice: "Training", boss: "Boss Battle", final: "Final Battle", daily: "Daily Quest", review: "Fix Mistakes" }[mode];
+
+    function header() {
+      const pct = Math.round((st.i / qs.length) * 100);
+      let h = '<div class="quiz-top"><button class="back" data-quit style="margin:0">✕</button><div class="prog"><div style="font-weight:800;margin-bottom:4px">' + modeName + " · " + (st.i + 1) + " / " + qs.length + '</div><div class="bar"><i style="width:' + pct + '%"></i></div></div>' +
+        '<span class="combo ' + (st.combo >= 3 ? "hot" : "") + '">🔥 x' + st.combo + '</span><span class="combo">✅ ' + st.correct + "</span></div>";
+      if (isBoss) {
+        const hp = Math.max(0, 100 - Math.round((st.correct / BOSS_PASS) * 100));
+        h += '<div class="boss-arena"><span class="boss-emoji" data-boss>' + boss.emoji + '</span><div class="boss-info"><b>' + esc(boss.name) + '</b><div class="hp"><i style="width:' + hp + '%"></i></div>' +
+          '<div class="hearts">' + Array.from({ length: BOSS_HEARTS }, (_, k) => '<span class="' + (k < st.hearts ? "" : "lost") + '">❤️</span>').join("") + "</div></div><span style='font-size:44px'>" + S.avatar + "</span></div>";
+      }
+      return h;
+    }
+
+    function render() {
+      const q = qs[st.i];
+      st.answered = false;
+      let body;
+      if (q.type === "blank") {
+        body = '<div class="q-text verseish">' + esc(q.before) + '<span class="blank">?</span>' + esc(q.after) + "</div>";
+      } else if (q.type === "chapter") {
+        body = '<div class="q-text">' + esc(q.prompt) + '</div><div class="q-text verseish">“' + esc(q.quote) + "”</div>";
+      } else {
+        body = '<div class="q-text">' + esc(q.prompt) + "</div>";
+      }
+      const kind = q.type === "blank" ? "Complete the verse" : q.type === "chapter" ? "Where is it?" : "";
+      app.innerHTML = header() +
+        (isBoss && S.settings.timer ? '<div class="timer"><i data-timer></i></div>' : "") +
+        '<div class="card q-card"><span class="q-ref">' + (q.type === "chapter" ? "Acts ?:?" : refLabel(q.c, q.v1, q.v2)) + '</span><span class="q-kind">' + kind + "</span>" + body +
+        '<div class="options">' + q.options.map((o, k) => '<button class="opt" data-k="' + k + '"><span class="key">' + "ABCD"[k] + "</span><span>" + esc(o) + "</span></button>").join("") + "</div>" +
+        '<div data-fb></div></div>';
+      $("[data-quit]").onclick = quit;
+      $$(".opt").forEach((b) => b.onclick = (e) => answer(+b.dataset.k, e));
+      st.t0 = Date.now();
+      if (isBoss && S.settings.timer) startTimer();
+    }
+
+    function startTimer() {
+      const bar = $("[data-timer]");
+      bar.style.transition = "none"; bar.style.width = "100%";
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        bar.style.transition = "width " + QUESTION_TIME + "s linear"; bar.style.width = "0%";
+      }));
+      clearTimeout(st.timer);
+      st.timer = setTimeout(() => { if (!st.answered) answer(-1); }, QUESTION_TIME * 1000);
+    }
+
+    function answer(k, ev) {
+      if (st.answered) return;
+      st.answered = true;
+      clearTimeout(st.timer);
+      const tb = $("[data-timer]"); if (tb) { const w = getComputedStyle(tb).width; tb.style.transition = "none"; tb.style.width = w; }
+      const q = qs[st.i];
+      const chosen = k >= 0 ? q.options[k] : null;
+      const right = chosen === q.answer;
+      $$(".opt").forEach((b, j) => {
+        b.disabled = true;
+        if (q.options[j] === q.answer) b.classList.add("right");
+        else if (j === k) b.classList.add("wrong");
+        else b.classList.add("dim");
+      });
+      recordAnswer(q, right);
+      const fb = $("[data-fb]");
+      if (right) {
+        st.correct++; st.combo++; st.bestCombo = Math.max(st.bestCombo, st.combo);
+        const fast = Date.now() - st.t0 < 8000;
+        let gain = 10 + (st.combo >= 3 ? 5 : 0) + (fast && isBoss ? 5 : 0);
+        st.xp += gain; st.coins += 1;
+        if (st.combo >= 3 && st.combo % 5 === 0) SFX.combo(); else SFX.good();
+        const r = (ev && ev.currentTarget || $(".opt.right")).getBoundingClientRect();
+        floatXP("+" + gain + " XP" + (fast && isBoss ? " ⚡" : ""), r.left + r.width / 2 - 40, r.top);
+        if (isBoss) {
+          SFX.hit();
+          const be = $("[data-boss]"); be.classList.remove("hit"); void be.offsetWidth; be.classList.add("hit");
+          const hp = Math.max(0, 100 - Math.round((st.correct / BOSS_PASS) * 100));
+          $(".hp > i").style.width = hp + "%";
+        }
+        const praise = ["Great job!", "Awesome!", "You got it!", "Super!", "Amazing!", "Well done!", "Excellent!"][rand(7)];
+        fb.innerHTML = '<div class="feedback good"><h3>✅ ' + praise + (st.combo >= 3 ? " 🔥 " + st.combo + " in a row!" : "") + "</h3></div>";
+        $$(".combo")[0].textContent = "🔥 x" + st.combo; $$(".combo")[0].classList.toggle("hot", st.combo >= 3);
+        $$(".combo")[1].textContent = "✅ " + st.correct;
+        setTimeout(next, 1100);
+      } else {
+        st.combo = 0;
+        st.missed.push(q);
+        SFX.bad();
+        if (isBoss) {
+          st.hearts--;
+          const hs = $$(".hearts span"); if (hs[st.hearts]) hs[st.hearts].classList.add("lost");
+        }
+        $$(".combo")[0].textContent = "🔥 x0"; $$(".combo")[0].classList.remove("hot");
+        const verses = [];
+        for (let v = q.v1; v <= q.v2; v++) verses.push(verseHTML(q.c, v));
+        fb.innerHTML = '<div class="feedback bad"><h3>' + (k < 0 ? "⏰ Time's up!" : "❌ Not quite!") + " The answer is: " + esc(q.answer) + '</h3><div class="muted" style="font-weight:700">Let\'s learn it — ' + refLabel(q.c, q.v1, q.v2) + ":</div>" +
+          '<div data-fbverses>' + verses.join("") + "</div>" +
+          '<div class="row"><button class="btn small good" data-listen>🔊 Listen</button><span class="spacer"></span><button class="btn" data-next>Next ➜</button></div></div>';
+        const listen = () => TTS.play($$("[data-fbverses] .verse").map((el) => ({ el, text: verseText(+el.dataset.c, +el.dataset.v) })));
+        $("[data-listen]").onclick = listen;
+        $("[data-next]").onclick = () => { TTS.stop(true); next(); };
+        if (isBoss && st.hearts <= 0) { $("[data-next]").textContent = "See results"; }
+        setTimeout(() => fb.scrollIntoView({ behavior: "smooth", block: "nearest" }), 50);
+      }
+    }
+
+    function next() {
+      if (isBoss && st.hearts <= 0) return finish(false);
+      st.i++;
+      if (st.i >= qs.length) return finish(true);
+      render();
+    }
+
+    function quit() {
+      clearTimeout(st.timer);
+      modal("🤔", "Leave this round?", "Your answers so far are saved, but this round won't count.", [
+        { label: "Keep playing", cls: "good", onClick: () => { if (isBoss && S.settings.timer && !st.answered) startTimer(); } },
+        { label: "Leave", cls: "ghost", onClick: () => go(mode === "review" ? "reviewHub" : mode === "practice" || mode === "boss" ? "world" : "home", { id: worlds && worlds[0] }) }
+      ]);
+    }
+
+    function finish(completed) {
+      clearTimeout(st.timer);
+      const total = qs.length, score = st.correct;
+      const won = isBoss ? completed && st.hearts > 0 && score >= BOSS_PASS : true;
+      const stars = isBoss && won ? (score >= 20 ? 3 : score >= 18 ? 2 : 1) : 0;
+      let bonusXP = 0, bonusCoins = 0, unlockMsg = "";
+      if (mode === "practice") {
+        const w = S.worlds[worlds[0]];
+        const firstPass = w.practiceBest < PRACTICE_PASS && score >= PRACTICE_PASS;
+        w.practiceBest = Math.max(w.practiceBest, score);
+        if (firstPass) { bonusXP += 50; unlockMsg = "👊 The boss is unlocked!"; }
+      }
+      if (mode === "boss") {
+        const w = S.worlds[worlds[0]];
+        w.bossBest = Math.max(w.bossBest, completed ? score : 0);
+        if (won) {
+          const first = !w.beaten;
+          w.beaten = true; w.stars = Math.max(w.stars, stars);
+          S.bossesBeaten++;
+          bonusXP += first ? 150 : 50; bonusCoins += first ? 40 : 15;
+          const nextW = WORLDS.find((x) => x.id === worlds[0] + 1);
+          if (first) unlockMsg = nextW ? "🗺️ World " + nextW.id + " — " + nextW.name + " is unlocked!" : "🐲 The FINAL BOSS is unlocked!";
+        }
+      }
+      if (mode === "final") {
+        S.finalBest = Math.max(S.finalBest, completed ? score : 0);
+        if (won) { const first = !S.finalBeaten; S.finalBeaten = true; bonusXP += first ? 400 : 100; bonusCoins += first ? 150 : 30; }
+      }
+      if (mode === "daily" && S.dailyDone !== today()) { S.dailyDone = today(); bonusCoins += 30; bonusXP += 20; }
+      if (score === total && total >= ROUND_SIZE) { S.perfects++; bonusXP += 50; }
+      S.bestCombo = Math.max(S.bestCombo, st.bestCombo);
+      touchStreak();
+      if (mode !== "review") S.history.push({ d: today(), t: Date.now(), mode, w: worlds && worlds.length === 1 ? worlds[0] : 0, s: score, n: total, won });
+      if (S.history.length > 300) S.history = S.history.slice(-300);
+      addXP(st.xp + bonusXP); addCoins(st.coins + bonusCoins);
+      save();
+      const fresh = announceBadges();
+      if (onDone) return onDone({ score, total, missed: st.missed, xp: st.xp + bonusXP, coins: st.coins + bonusCoins });
+      go("results", { mode, worlds, score, total, won, stars, missed: st.missed, xp: st.xp + bonusXP, coins: st.coins + bonusCoins, unlockMsg, completed, freshBadges: fresh });
+    }
+
+    cleanup = () => clearTimeout(st.timer);
+    render();
+  };
+
+  function recordAnswer(q, right) {
+    S.totalAnswered++; if (right) S.totalCorrect++;
+    const qs = S.qStats[q.id] || (S.qStats[q.id] = { seen: 0, correct: 0 });
+    qs.seen++; if (right) qs.correct++;
+    for (let v = q.v1; v <= q.v2; v++) {
+      const k = vkey(q.c, v);
+      const vs = S.verseStats[k] || (S.verseStats[k] = { r: 0, w: 0 });
+      if (right) vs.r++; else vs.w++;
+    }
+    const m = S.mistakes[q.id];
+    if (!right) {
+      const stored = Object.assign({}, q); delete stored.options;
+      S.mistakes[q.id] = { q: stored, box: 0, added: today() };
+    } else if (m) {
+      m.box++;
+      if (m.box >= 2) { delete S.mistakes[q.id]; S.fixed++; toast("🩹 Mistake fixed forever! Great memory!"); }
+    }
+    save();
+  }
+
+  // ---------------- Results ----------------
+  SCREENS.results = function (r) {
+    const pct = Math.round((r.score / r.total) * 100);
+    const isBoss = r.mode === "boss" || r.mode === "final";
+    let emoji, title;
+    if (isBoss) { emoji = r.won ? "🏆" : "💔"; title = r.won ? (r.mode === "final" ? "YOU ARE A BIBLE CHAMPION!" : "Boss defeated!") : "The boss won this time..."; }
+    else { emoji = pct >= 90 ? "🌟" : pct >= 70 ? "😄" : pct >= 50 ? "🙂" : "💪"; title = pct >= 90 ? "Amazing!" : pct >= 70 ? "Great work!" : pct >= 50 ? "Good try!" : "Keep practicing!"; }
+    const missedHTML = r.missed.map((q, i) =>
+      '<div class="miss"><div class="q"><small>' + refLabel(q.c, q.v1, q.v2) + "</small>" +
+      (q.type === "blank" ? esc(q.before) + "<b>____</b>" + esc(q.after) : q.type === "chapter" ? "“" + esc(q.quote) + "”" : esc(q.prompt)) +
+      '<div class="ok">✔ ' + esc(q.answer) + '</div></div><button class="btn small ghost" data-revq="' + i + '">📖 Read</button></div>').join("");
+    app.innerHTML =
+      '<div class="result-hero"><span class="big-emoji">' + emoji + "</span><h1>" + title + '</h1><div class="score">' + r.score + " / " + r.total + "</div>" +
+      (isBoss && r.won ? '<div class="stars">' + "⭐".repeat(r.stars) + '<span style="opacity:.25">' + "⭐".repeat(3 - r.stars) + "</span></div>" : "") +
+      (isBoss && !r.won ? "<p>You need " + BOSS_PASS + " right answers. " + (r.completed ? "" : "You ran out of hearts! ") + "Fix your mistakes and try again — you can do it! 💪</p>" : "") +
+      "</div>" +
+      '<div class="rewards"><span class="reward">+' + r.xp + ' XP</span><span class="reward">+' + r.coins + " 🪙</span>" + (r.unlockMsg ? '<span class="reward">' + r.unlockMsg + "</span>" : "") + "</div>" +
+      '<div class="card">' +
+      (r.missed.length ? "<h2>🩹 Let's fix " + r.missed.length + " mistake" + (r.missed.length > 1 ? "s" : "") + '</h2><p class="muted">Read and listen to each verse, then answer again. Answer a mistake right 2 times and it is fixed forever!</p>' +
+        '<button class="btn big good wide" data-fix>🎧 Fix my mistakes now</button><div style="margin-top:12px">' + missedHTML + "</div>"
+        : "<h2>🎯 No mistakes! Perfect!</h2>") +
+      "</div>" +
+      '<div class="row" style="justify-content:center"><button class="btn big" data-again>🔄 Play again</button><button class="btn big ghost" data-home>🗺️ Map</button></div>';
+    if ((isBoss && r.won) || pct >= 90) { SFX.win(); confetti(r.mode === "final" ? 140 : 80); }
+    else if (isBoss) SFX.lose();
+    $$("[data-revq]").forEach((b) => b.onclick = () => {
+      const q = r.missed[+b.dataset.revq];
+      go("reader", { range: [[q.c, Math.max(q.v1 - 1, firstV(q.c))], [q.c, Math.min(q.v2 + 1, lastV(q.c))]], title: "Review " + refLabel(q.c, q.v1, q.v2), focus: q, back: () => go("results", r) });
+    });
+    const fix = $("[data-fix]"); if (fix) fix.onclick = () => go("reviewSession", { list: r.missed.map((q) => q.id) });
+    $("[data-again]").onclick = () => {
+      if (r.mode === "boss") go("bossIntro", { id: r.worlds[0] });
+      else if (r.mode === "final") go("finalIntro");
+      else startQuiz({ mode: r.mode, worlds: r.worlds });
+    };
+    $("[data-home]").onclick = () => go(r.mode === "practice" || r.mode === "boss" ? "world" : "home", { id: r.worlds && r.worlds[0] });
+  };
+  function firstV(c) { return VERSES.find((x) => x.c === c).v; }
+  function lastV(c) { return VERSES.filter((x) => x.c === c).pop().v; }
+
+  // ---------------- Review ----------------
+  SCREENS.reviewHub = function () {
+    const list = Object.values(S.mistakes);
+    const byWorld = {};
+    list.forEach((m) => { (byWorld[m.q.world] = byWorld[m.q.world] || []).push(m); });
+    app.innerHTML =
+      '<button class="back" data-back>← Map</button><h1 class="title-white">🩹 Fix Mistakes</h1>' +
+      '<div class="card">' + (list.length
+        ? "<p>You have <b>" + list.length + "</b> question" + (list.length > 1 ? "s" : "") + " to fix. For each one you will <b>read and listen</b> to the verse first, then answer again. Get it right <b>2 times</b> and it's fixed forever! 💪</p>" +
+          '<button class="btn big good wide" data-all>🎧 Fix up to 10 now</button>' +
+          WORLDS.filter((w) => byWorld[w.id]).map((w) => '<div class="step" style="margin-top:14px"><span class="num" style="background:' + w.color + ';color:#fff">' + w.icon + '</span><div class="txt"><b>' + esc(w.name) + '</b><div class="muted">' + byWorld[w.id].length + ' to fix</div></div><button class="btn small" data-w="' + w.id + '">Fix</button></div>').join("")
+        : '<div class="center"><div style="font-size:70px">🎉</div><h2>No mistakes to fix!</h2><p class="muted">Play a round and any wrong answers will show up here for review.</p></div>') +
+      "</div>";
+    $("[data-back]").onclick = () => go("home");
+    const all = $("[data-all]");
+    if (all) all.onclick = () => go("reviewSession", { list: shuffle(list).slice(0, 10).map((m) => m.q.id) });
+    $$("[data-w]").forEach((b) => b.onclick = () => go("reviewSession", { list: shuffle(byWorld[+b.dataset.w]).slice(0, 10).map((m) => m.q.id) }));
+  };
+
+  SCREENS.reviewSession = function ({ list }) {
+    const items = list.map((id) => S.mistakes[id]).filter(Boolean).map((m) => m.q);
+    if (!items.length) { go("reviewHub"); return; }
+    let i = 0, right = 0;
+    const missedAgain = [];
+    function showVerse() {
+      const q = items[i];
+      const verses = [];
+      for (let v = q.v1; v <= q.v2; v++) verses.push(verseHTML(q.c, v, "focus"));
+      app.innerHTML =
+        '<div class="quiz-top"><button class="back" data-quit style="margin:0">✕</button><div class="prog"><div style="font-weight:800;margin-bottom:4px">Fix Mistakes · ' + (i + 1) + " / " + items.length + '</div><div class="bar"><i style="width:' + Math.round((i / items.length) * 100) + '%"></i></div></div></div>' +
+        '<div class="card"><span class="q-ref">' + refLabel(q.c, q.v1, q.v2) + '</span><h2>👂 Step 1: Listen and follow the words</h2>' +
+        '<div data-rv>' + verses.join("") + "</div>" +
+        '<div class="row" style="margin-top:14px"><button class="btn good" data-listen>🔊 Listen again</button><button class="btn small ghost" data-ctx>📖 Read the whole story</button><span class="spacer"></span><button class="btn big" data-ready>I\'m ready! ➜</button></div></div>';
+      const play = () => TTS.play($$("[data-rv] .verse").map((el) => ({ el, text: verseText(+el.dataset.c, +el.dataset.v) })));
+      $("[data-listen]").onclick = play;
+      $("[data-ready]").onclick = () => { TTS.stop(true); ask(); };
+      $("[data-quit]").onclick = () => go("reviewHub");
+      $("[data-ctx]").onclick = () => {
+        const w = worldOfVerse(q.c, q.v1);
+        go("reader", { range: w.range, title: w.name, focus: q, back: () => { showVerseAgain(); } });
+      };
+      setTimeout(play, 400);
+    }
+    function showVerseAgain() { if (cleanup) { cleanup(); cleanup = null; } TTS.stop(true); renderTopbar(); showVerse(); }
+    function ask() {
+      const q = withOptions(Object.assign({}, items[i]));
+      startQuiz({
+        mode: "review", worlds: [q.world], questions: [q],
+        onDone: (res) => {
+          if (res.score) right++; else missedAgain.push(q);
+          i++;
+          if (i < items.length) { if (cleanup) { cleanup(); cleanup = null; } renderTopbar(); showVerse(); }
+          else done();
+        }
+      });
+    }
+    function done() {
+      addXP(right * 5); save(); renderTopbar();
+      app.innerHTML =
+        '<div class="result-hero"><span class="big-emoji">🩹</span><h1>Review complete!</h1><div class="score">' + right + " / " + items.length + "</div><p>" +
+        (missedAgain.length ? "Some still need practice. They will come back later!" : "You remembered them all! 🎉") + "</p></div>" +
+        '<div class="rewards"><span class="reward">+' + right * 5 + ' bonus XP</span><span class="reward">🩹 ' + Object.keys(S.mistakes).length + " left to fix</span></div>" +
+        '<div class="row" style="justify-content:center"><button class="btn big good" data-more>Fix more</button><button class="btn big ghost" data-home>🗺️ Map</button></div>';
+      if (!missedAgain.length) { SFX.win(); confetti(60); }
+      $("[data-more]").onclick = () => go("reviewHub");
+      $("[data-home]").onclick = () => go("home");
+      announceBadges();
+    }
+    showVerse();
+  };
+
+  // ---------------- Progress ----------------
+  SCREENS.progress = function () {
+    const li = levelInfo();
+    const acc = S.totalAnswered ? Math.round((S.totalCorrect / S.totalAnswered) * 100) : 0;
+    const hist = S.history.slice(-20);
+    const chart = lineChart(hist.map((h) => Math.round((h.s / h.n) * 100)), hist.map((h) => h.mode));
+    const worldBars = WORLDS.map((w) => {
+      const vs = versesInRange(w.range);
+      let r = 0, t = 0;
+      vs.forEach((x) => { const s = S.verseStats[vkey(x.c, x.v)]; if (s) { r += s.r; t += s.r + s.w; } });
+      const p = t ? Math.round((r / t) * 100) : 0;
+      return '<div class="wbar"><span class="name">' + w.icon + " " + esc(w.name) + '</span><span class="bar"><i style="width:' + p + '%"></i></span><span class="pct">' + (t ? p + "%" : "–") + "</span></div>";
+    }).join("");
+    const heat = VERSES.map((x) => {
+      const s = S.verseStats[vkey(x.c, x.v)];
+      let cls = "";
+      if (s && s.r + s.w) { const p = s.r / (s.r + s.w); cls = p >= 0.8 ? "l3" : p >= 0.5 ? "l2" : "l1"; }
+      return '<button class="' + cls + '" data-c="' + x.c + '" data-v="' + x.v + '" title="Acts ' + x.c + ":" + x.v + '">' + x.c + ":" + x.v + "</button>";
+    }).join("");
+    const mastered = VERSES.filter((x) => { const s = S.verseStats[vkey(x.c, x.v)]; return s && s.r + s.w >= 2 && s.r / (s.r + s.w) >= 0.8; }).length;
+    app.innerHTML =
+      '<button class="back" data-back>← Map</button><h1 class="title-white">📈 My Progress</h1>' +
+      '<div class="card"><div class="grid three">' +
+      '<div class="stat"><b>' + li.L + "</b><small>Level · " + esc(li.rank) + "</small></div>" +
+      '<div class="stat"><b>' + acc + '%</b><small>Correct answers</small></div>' +
+      '<div class="stat"><b>' + S.totalCorrect + '</b><small>Right answers</small></div>' +
+      '<div class="stat"><b>' + mastered + ' / 100</b><small>Verses mastered</small></div>' +
+      '<div class="stat"><b>' + WORLDS.filter((w) => S.worlds[w.id].beaten).length + (S.finalBeaten ? " + 🏆" : "") + '</b><small>Bosses defeated</small></div>' +
+      '<div class="stat"><b>' + (S.streak.count || 0) + ' 🔥</b><small>Days in a row</small></div>' +
+      "</div></div>" +
+      '<div class="card"><h2>📊 My last rounds</h2>' + (hist.length ? chart : '<p class="muted">Play some rounds to see your chart grow!</p>') + "</div>" +
+      '<div class="card"><h2>🗺️ How well I know each world</h2>' + worldBars + "</div>" +
+      '<div class="card"><h2>🧩 Verse map</h2><p class="muted">Each square is one verse. Tap a square to read and listen to it.</p><div class="heat">' + heat + "</div>" +
+      '<div class="legend"><span><i style="background:#c9c6dc"></i>Not tested yet</span><span><i style="background:#ef4b5c"></i>Needs practice</span><span><i style="background:#ffb020"></i>Getting there</span><span><i style="background:#19b37d"></i>Mastered</span></div></div>';
+    $("[data-back]").onclick = () => go("home");
+    $$(".heat button").forEach((b) => b.onclick = () => {
+      const c = +b.dataset.c, v = +b.dataset.v;
+      const w = worldOfVerse(c, v);
+      go("reader", { range: w.range, title: w.name, focus: { c, v1: v, v2: v }, back: () => go("progress") });
+    });
+  };
+
+  function lineChart(vals, modes) {
+    const W = 640, H = 220, P = 30;
+    const n = vals.length;
+    const x = (i) => P + (n === 1 ? (W - 2 * P) / 2 : (i * (W - 2 * P)) / (n - 1));
+    const y = (v) => H - P - (v / 100) * (H - 2 * P);
+    let grid = "";
+    [0, 50, 80, 100].forEach((g) => {
+      grid += '<line x1="' + P + '" x2="' + (W - P) + '" y1="' + y(g) + '" y2="' + y(g) + '" stroke="' + (g === 80 ? "#19b37d" : "#e6e3f7") + '" stroke-dasharray="' + (g === 80 ? "6 6" : "0") + '"/>' +
+        '<text x="4" y="' + (y(g) + 4) + '" font-size="12" fill="#6d6a93">' + g + "%</text>";
+    });
+    const pts = vals.map((v, i) => x(i) + "," + y(v)).join(" ");
+    const area = n > 1 ? '<polygon points="' + x(0) + "," + y(0) + " " + pts + " " + x(n - 1) + "," + y(0) + '" fill="rgba(108,76,255,.12)"/>' : "";
+    const dots = vals.map((v, i) => '<circle cx="' + x(i) + '" cy="' + y(v) + '" r="6" fill="' + (modes[i] === "boss" || modes[i] === "final" ? "#ef4b5c" : "#6c4cff") + '" stroke="#fff" stroke-width="2"><title>' + v + "%</title></circle>").join("");
+    return '<svg class="chart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Scores of the last rounds">' + grid + area +
+      '<polyline points="' + pts + '" fill="none" stroke="#6c4cff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>' + dots +
+      '<text x="' + (W - P) + '" y="' + (y(80) - 6) + '" text-anchor="end" font-size="12" fill="#19b37d" font-weight="700">Boss goal 80%</text></svg>' +
+      '<div class="legend"><span><i style="background:#6c4cff"></i>Training / Daily</span><span><i style="background:#ef4b5c"></i>Boss battles</span></div>';
+  }
+
+  // ---------------- Badges & Shop ----------------
+  SCREENS.badges = function () {
+    app.innerHTML = '<button class="back" data-back>← Map</button><h1 class="title-white">🏅 Badges (' + S.badges.length + "/" + BADGES.length + ")</h1>" +
+      '<div class="card"><div class="grid three">' + BADGES.map((b) => {
+        const has = S.badges.includes(b.id);
+        return '<div class="badge-card ' + (has ? "" : "locked") + '"><span class="e">' + b.e + "</span><b>" + esc(b.name) + "</b><small>" + esc(b.desc) + "</small></div>";
+      }).join("") + "</div></div>";
+    $("[data-back]").onclick = () => go("home");
+  };
+
+  SCREENS.shop = function () {
+    app.innerHTML = '<button class="back" data-back>← Map</button><h1 class="title-white">🛍️ Avatar Shop</h1><p class="title-white">You have <b>🪙 ' + S.coins + "</b> coins. Earn coins by answering questions and beating bosses!</p>" +
+      '<div class="card"><div class="grid three">' + AVATARS.map((a, i) => {
+        const owned = S.owned.includes(a.e), sel = S.avatar === a.e;
+        return '<div class="shop-item ' + (sel ? "sel" : "") + '"><span class="e">' + a.e + "</span><b>" + esc(a.name) + '</b><div style="margin-top:8px">' +
+          (sel ? '<button class="btn small good" disabled>Using</button>' : owned ? '<button class="btn small" data-use="' + i + '">Use</button>' :
+            '<button class="btn small gold" data-buy="' + i + '" ' + (S.coins < a.price ? "disabled" : "") + ">🪙 " + a.price + "</button>") + "</div></div>";
+      }).join("") + "</div></div>";
+    $("[data-back]").onclick = () => go("home");
+    $$("[data-use]").forEach((b) => b.onclick = () => { S.avatar = AVATARS[+b.dataset.use].e; save(); SFX.click(); go("shop"); });
+    $$("[data-buy]").forEach((b) => b.onclick = () => {
+      const a = AVATARS[+b.dataset.buy];
+      if (S.coins < a.price) return;
+      S.coins -= a.price; S.owned.push(a.e); S.avatar = a.e; save();
+      SFX.coin(); confetti(30); toast(a.e + " New avatar: " + a.name + "!", "gold");
+      announceBadges(); go("shop");
+    });
+  };
+
+  // ---------------- Parents area ----------------
+  SCREENS.settings = function ({ unlocked } = {}) {
+    if (!unlocked) {
+      const a = 6 + rand(4), b = 6 + rand(4);
+      app.innerHTML = '<button class="back" data-back>← Map</button><div class="card center"><div style="font-size:60px">👨‍👩‍👦</div><h2>Parents area</h2><p class="muted">Área dos pais — answer to continue:</p>' +
+        '<h2>' + a + " × " + b + ' = ?</h2><input type="number" inputmode="numeric" data-ans style="max-width:160px;text-align:center"><div style="margin-top:12px"><button class="btn" data-ok>Enter</button></div></div>';
+      $("[data-back]").onclick = () => go("home");
+      const ok = () => { if (+$("[data-ans]").value === a * b) go("settings", { unlocked: true }); else { SFX.bad(); toast("Not quite!"); } };
+      $("[data-ok]").onclick = ok;
+      $("[data-ans]").onkeydown = (e) => { if (e.key === "Enter") ok(); };
+      $("[data-ans]").focus();
+      return;
+    }
+    const voices = TTS.voices();
+    const cur = TTS.voice();
+    const customCount = Object.keys(S.customText || {}).length;
+    app.innerHTML =
+      '<button class="back" data-back>← Map</button><h1 class="title-white">⚙️ Parents area</h1>' +
+      '<div class="card"><h2>Player</h2>' +
+      '<label class="field"><span>Name</span><input type="text" data-name value="' + esc(S.name) + '"></label>' +
+      '<label class="switch"><input type="checkbox" data-timer ' + (S.settings.timer ? "checked" : "") + "> ⏱️ Timer in boss battles (" + QUESTION_TIME + "s per question)</label>" +
+      '<label class="switch"><input type="checkbox" data-sound ' + (S.settings.sound ? "checked" : "") + "> 🔊 Sound effects</label>" +
+      '<label class="switch"><input type="checkbox" data-unlock ' + (S.settings.unlockAll ? "checked" : "") + "> 🔓 Unlock all worlds and bosses</label></div>" +
+      '<div class="card"><h2>Reading voice</h2>' +
+      (TTS.ok ? '<label class="field"><span>Voice (English)</span><select data-voice>' + voices.map((v) => '<option value="' + esc(v.name) + '" ' + (cur && cur.name === v.name ? "selected" : "") + ">" + esc(v.name + " (" + v.lang + ")") + "</option>").join("") + "</select></label>" +
+        '<button class="btn small" data-test>🔊 Test voice</button><p class="muted">Tip: “Google US English”, “Samantha” or “Microsoft … Natural” voices sound best and highlight word by word.</p>'
+        : '<p class="muted">This browser does not support speech. Try Chrome, Edge or Safari.</p>') + "</div>" +
+      '<div class="card"><h2>Bible text (NKJV)</h2><p class="muted">The app comes with the <b>King James Version</b> (public domain). The ABG uses the <b>NKJV</b>, which is copyrighted, so it cannot be included. If you own an NKJV copy, paste the verses below — one verse per line, like <code>9:8 Then Saul arose from the ground…</code> — and the reader, the audio and the “complete the verse” questions will use your text.</p>' +
+      '<p><b>Currently using:</b> ' + (customCount ? customCount + " imported verses (others from KJV)" : "KJV") + "</p>" +
+      '<textarea data-import placeholder="9:8 Then Saul arose from the ground...&#10;9:9 And he was three days without sight..."></textarea>' +
+      '<div class="row" style="margin-top:10px"><button class="btn" data-doimport>Import text</button><button class="btn ghost" data-clearimport>Go back to KJV</button></div></div>' +
+      '<div class="card"><h2>Progress</h2><p class="muted">Progress is saved in this browser. Export it to move to another device.</p>' +
+      '<div class="row"><button class="btn" data-export>⬇️ Export progress</button><label class="btn ghost" style="cursor:pointer">⬆️ Import progress<input type="file" accept=".json,application/json" data-importfile hidden></label><button class="btn bad" data-reset>🗑️ Reset everything</button></div>' +
+      '<p class="muted" style="margin-top:14px">Rounds played: ' + S.history.length + " · Answers: " + S.totalAnswered + " · Accuracy: " + (S.totalAnswered ? Math.round((S.totalCorrect / S.totalAnswered) * 100) : 0) + "% · Mistakes waiting: " + Object.keys(S.mistakes).length + "</p></div>";
+
+    $("[data-back]").onclick = () => go("home");
+    $("[data-name]").onchange = (e) => { S.name = e.target.value.trim() || "Samuel"; save(); renderTopbar(); };
+    $("[data-timer]").onchange = (e) => { S.settings.timer = e.target.checked; save(); };
+    $("[data-sound]").onchange = (e) => { S.settings.sound = e.target.checked; save(); };
+    $("[data-unlock]").onchange = (e) => { S.settings.unlockAll = e.target.checked; save(); };
+    const vs = $("[data-voice]");
+    if (vs) vs.onchange = (e) => { S.settings.voice = e.target.value; save(); };
+    const tb = $("[data-test]");
+    if (tb) tb.onclick = () => TTS.play([{ el: null, text: "And the Lord said unto him, Arise, and go into the street which is called Straight." }]);
+    $("[data-doimport]").onclick = () => {
+      const lines = $("[data-import]").value.split(/\r?\n/);
+      let n = 0; const next = Object.assign({}, S.customText);
+      lines.forEach((line) => {
+        const m = /^\s*(?:Acts\s+)?(9|10|11):(\d{1,2})\s+(.+?)\s*$/i.exec(line);
+        if (m && VERSE_INDEX[vkey(+m[1], +m[2])] != null) { next[vkey(+m[1], +m[2])] = m[3]; n++; }
+      });
+      if (!n) { toast("No verses found. Use the format 9:8 verse text"); return; }
+      S.customText = next; save(); toast("✅ Imported " + n + " verses"); go("settings", { unlocked: true });
+    };
+    $("[data-clearimport]").onclick = () => { S.customText = {}; save(); toast("Using KJV"); go("settings", { unlocked: true }); };
+    $("[data-export]").onclick = () => {
+      const blob = new Blob([JSON.stringify(S, null, 1)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob); a.download = "samuel-bible-quest-" + today() + ".json";
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+    $("[data-importfile]").onchange = (e) => {
+      const f = e.target.files[0]; if (!f) return;
+      const rd = new FileReader();
+      rd.onload = () => {
+        try { const d = JSON.parse(rd.result); if (!d || typeof d.xp !== "number") throw 0; localStorage.setItem(STORE_KEY, JSON.stringify(d)); S = load(); toast("✅ Progress imported"); go("home"); }
+        catch (err) { toast("That file doesn't look right"); }
+      };
+      rd.readAsText(f);
+    };
+    $("[data-reset]").onclick = () => modal("⚠️", "Reset everything?", "All progress, coins and badges will be deleted.", [
+      { label: "Cancel", cls: "ghost" },
+      { label: "Reset", cls: "bad", onClick: () => { S = defaultState(); save(); go("home"); } }
+    ]);
+  };
+
+  // ---------------------------------------------------------------------------
+  // Boot
+  // ---------------------------------------------------------------------------
+  document.addEventListener("keydown", (e) => {
+    if (e.target.matches("input, textarea, select")) return;
+    const k = "1234abcd".indexOf(e.key.toLowerCase());
+    if (k >= 0) { const b = $$(".opt")[k % 4]; if (b && !b.disabled) b.click(); }
+    if (e.key === "Enter") { const n = $("[data-next]"); if (n) n.click(); }
+  });
+  window.__abg = { buildRound, blankQuestion, state: () => S };  // handy for debugging / tests
+  go("home");
+})();
