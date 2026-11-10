@@ -453,3 +453,4 @@ textarea { min-height: 160px; font-family: ui-monospace, Menlo, Consolas, monosp
 .boom { position: absolute; top: 0; font-size: 46px; animation: pop .5s ease; pointer-events: none; }
 .boss-arena.shake { animation: shake .45s; }
 .rules { display: grid; gap: 6px; background: #f7f5ff; border-radius: 14px; padding: 12px; margin: 10px 0 16px; text-align: left; font-size: 15px; }
+.btn.is-locked { filter: grayscale(.85); opacity: .75; }
