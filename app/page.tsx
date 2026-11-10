@@ -187,6 +187,9 @@ function Game({ session, profile, onChangePassage }: { session: Session; profile
             const { data } = await supabase.from("profiles").select("id,display_name,avatar,passage_id,xp,level,mastery,streak,bosses");
             return (data || []).map((r) => ({ ...r, passage_title: titles[r.passage_id as string] || "" }));
           },
+          reportError: (message: string, detail: string) => {
+            supabase.from("client_errors").insert({ user_id: userId, message, detail, user_agent: navigator.userAgent }).then(() => {});
+          },
           onSignOut: () => supabase.auth.signOut(),
           onChangePassage
         });
