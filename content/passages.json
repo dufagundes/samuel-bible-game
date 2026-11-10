@@ -1,88 +1,754 @@
 {
   "videos": {
-    "1": "7eAhBzVsK3Q", "2": "xhK7_TacQeg", "3": "7sHmp8Bl-vg", "5": "OGl36d3vP-I",
-    "6": "jukMMjtizVQ", "7": "aniPf371Yn8", "8": "K2Ub8C72Az8", "9": "qbN5HLSuDow",
-    "10": "NGX9qnNe8ro", "11": "Dr2Sy9u9pPA", "12": "gOkzgmsMSFk", "13": "Hl7B3AdFlSU",
-    "14": "eUT7Upg1xec", "15": "VUve6mN9srQ", "16": "WhCp5TJV3RY"
+    "1": "7eAhBzVsK3Q",
+    "2": "xhK7_TacQeg",
+    "3": "7sHmp8Bl-vg",
+    "5": "OGl36d3vP-I",
+    "6": "jukMMjtizVQ",
+    "7": "aniPf371Yn8",
+    "8": "K2Ub8C72Az8",
+    "9": "qbN5HLSuDow",
+    "10": "NGX9qnNe8ro",
+    "11": "Dr2Sy9u9pPA",
+    "12": "gOkzgmsMSFk",
+    "13": "Hl7B3AdFlSU",
+    "14": "eUT7Upg1xec",
+    "15": "VUve6mN9srQ",
+    "16": "WhCp5TJV3RY"
   },
   "passages": [
     {
-      "id": "acts-1-1", "title": "Acts 1:1 – 4:1", "range": [[1, 1], [4, 1]], "sort": 1,
+      "id": "acts-1-1",
+      "title": "Acts 1:1 – 4:1",
+      "range": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "sort": 1,
       "worlds": [
-        { "name": "The Promise of the Spirit", "range": [[1, 1], [1, 11]], "icon": "☁️", "story": "Jesus promises the Holy Spirit and is taken up into heaven." },
-        { "name": "A New Apostle", "range": [[1, 12], [1, 26]], "icon": "🎲", "story": "The disciples pray together and Matthias is chosen." },
-        { "name": "The Day of Pentecost", "range": [[2, 1], [2, 13]], "icon": "🔥", "story": "A rushing wind, tongues of fire, and many languages." },
-        { "name": "Peter's Great Sermon", "range": [[2, 14], [2, 36]], "icon": "📣", "story": "Peter explains Joel's prophecy and preaches Jesus." },
-        { "name": "The First Church", "range": [[2, 37], [2, 47]], "icon": "🍞", "story": "Three thousand are baptized and the believers share everything." },
-        { "name": "The Beautiful Gate", "range": [[3, 1], [4, 1]], "icon": "🚪", "story": "A lame man walks and Peter preaches at Solomon's Porch." }
+        {
+          "name": "The Promise of the Spirit",
+          "range": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              11
+            ]
+          ],
+          "icon": "☁️",
+          "story": "Jesus promises the Holy Spirit and is taken up into heaven."
+        },
+        {
+          "name": "A New Apostle",
+          "range": [
+            [
+              1,
+              12
+            ],
+            [
+              1,
+              26
+            ]
+          ],
+          "icon": "🎲",
+          "story": "The disciples pray together and Matthias is chosen."
+        },
+        {
+          "name": "The Day of Pentecost",
+          "range": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              13
+            ]
+          ],
+          "icon": "🔥",
+          "story": "A rushing wind, tongues of fire, and many languages."
+        },
+        {
+          "name": "Peter's Great Sermon",
+          "range": [
+            [
+              2,
+              14
+            ],
+            [
+              2,
+              36
+            ]
+          ],
+          "icon": "📣",
+          "story": "Peter explains Joel's prophecy and preaches Jesus."
+        },
+        {
+          "name": "The First Church",
+          "range": [
+            [
+              2,
+              37
+            ],
+            [
+              2,
+              47
+            ]
+          ],
+          "icon": "🍞",
+          "story": "Three thousand are baptized and the believers share everything."
+        },
+        {
+          "name": "The Beautiful Gate",
+          "range": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "icon": "🚪",
+          "story": "A lame man walks and Peter preaches at Solomon's Porch."
+        }
       ]
     },
     {
-      "id": "acts-4-2", "title": "Acts 4:2 – 7:7", "range": [[4, 2], [7, 7]], "sort": 2,
+      "id": "acts-4-2",
+      "title": "Acts 4:2 – 7:7",
+      "range": [
+        [
+          4,
+          2
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "sort": 2,
       "worlds": [
-        { "name": "Arrested for Jesus", "range": [[4, 2], [4, 22]], "icon": "⛓️", "story": "Peter and John stand boldly before the council." },
-        { "name": "Praying for Boldness", "range": [[4, 23], [4, 37]], "icon": "🙏", "story": "The place is shaken and the believers share all they have." },
-        { "name": "Ananias and Sapphira", "range": [[5, 1], [5, 16]], "icon": "⚖️", "story": "A lie to the Holy Spirit, and many signs and wonders." },
-        { "name": "Out of Prison", "range": [[5, 17], [5, 42]], "icon": "🗝️", "story": "An angel opens the prison and Gamaliel gives advice." },
-        { "name": "Seven Chosen Helpers", "range": [[6, 1], [6, 15]], "icon": "🤝", "story": "Seven men are chosen and Stephen is accused." },
-        { "name": "Stephen Tells the Story", "range": [[7, 1], [7, 7]], "icon": "📜", "story": "Stephen begins with God's call to Abraham." }
+        {
+          "name": "Arrested for Jesus",
+          "range": [
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              22
+            ]
+          ],
+          "icon": "⛓️",
+          "story": "Peter and John stand boldly before the council."
+        },
+        {
+          "name": "Praying for Boldness",
+          "range": [
+            [
+              4,
+              23
+            ],
+            [
+              4,
+              37
+            ]
+          ],
+          "icon": "🙏",
+          "story": "The place is shaken and the believers share all they have."
+        },
+        {
+          "name": "Ananias and Sapphira",
+          "range": [
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              16
+            ]
+          ],
+          "icon": "⚖️",
+          "story": "A lie to the Holy Spirit, and many signs and wonders."
+        },
+        {
+          "name": "Out of Prison",
+          "range": [
+            [
+              5,
+              17
+            ],
+            [
+              5,
+              42
+            ]
+          ],
+          "icon": "🗝️",
+          "story": "An angel opens the prison and Gamaliel gives advice."
+        },
+        {
+          "name": "Seven Chosen Helpers",
+          "range": [
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              15
+            ]
+          ],
+          "icon": "🤝",
+          "story": "Seven men are chosen and Stephen is accused."
+        },
+        {
+          "name": "Stephen Tells the Story",
+          "range": [
+            [
+              7,
+              1
+            ],
+            [
+              7,
+              7
+            ]
+          ],
+          "icon": "📜",
+          "story": "Stephen begins with God's call to Abraham."
+        }
       ]
     },
     {
-      "id": "acts-7-8", "title": "Acts 7:8 – 9:7", "range": [[7, 8], [9, 7]], "sort": 3,
+      "id": "acts-7-8",
+      "title": "Acts 7:8 – 9:7",
+      "range": [
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "sort": 3,
       "worlds": [
-        { "name": "Joseph and the Patriarchs", "range": [[7, 8], [7, 16]], "icon": "🌾", "story": "Joseph is sold into Egypt and God is with him." },
-        { "name": "Moses Is Born", "range": [[7, 17], [7, 29]], "icon": "👶", "story": "Moses grows up in Pharaoh's house and flees to Midian." },
-        { "name": "The Burning Bush", "range": [[7, 30], [7, 43]], "icon": "🌳", "story": "God calls Moses, and Israel turns away in the wilderness." },
-        { "name": "Stephen the Brave", "range": [[7, 44], [8, 3]], "icon": "🌟", "story": "Stephen sees heaven opened and forgives as he dies." },
-        { "name": "Philip in Samaria", "range": [[8, 4], [8, 25]], "icon": "🏞️", "story": "Philip preaches in Samaria and Simon the sorcerer believes." },
-        { "name": "The Ethiopian on the Road", "range": [[8, 26], [8, 40]], "icon": "🛞", "story": "Philip explains Isaiah to the Ethiopian official." },
-        { "name": "Light on the Damascus Road", "range": [[9, 1], [9, 7]], "icon": "💡", "story": "A light from heaven stops Saul on the road." }
+        {
+          "name": "Joseph and the Patriarchs",
+          "range": [
+            [
+              7,
+              8
+            ],
+            [
+              7,
+              16
+            ]
+          ],
+          "icon": "🌾",
+          "story": "Joseph is sold into Egypt and God is with him."
+        },
+        {
+          "name": "Moses Is Born",
+          "range": [
+            [
+              7,
+              17
+            ],
+            [
+              7,
+              29
+            ]
+          ],
+          "icon": "👶",
+          "story": "Moses grows up in Pharaoh's house and flees to Midian."
+        },
+        {
+          "name": "The Burning Bush",
+          "range": [
+            [
+              7,
+              30
+            ],
+            [
+              7,
+              43
+            ]
+          ],
+          "icon": "🌳",
+          "story": "God calls Moses, and Israel turns away in the wilderness."
+        },
+        {
+          "name": "Stephen the Brave",
+          "range": [
+            [
+              7,
+              44
+            ],
+            [
+              8,
+              3
+            ]
+          ],
+          "icon": "🌟",
+          "story": "Stephen sees heaven opened and forgives as he dies."
+        },
+        {
+          "name": "Philip in Samaria",
+          "range": [
+            [
+              8,
+              4
+            ],
+            [
+              8,
+              25
+            ]
+          ],
+          "icon": "🏞️",
+          "story": "Philip preaches in Samaria and Simon the sorcerer believes."
+        },
+        {
+          "name": "The Ethiopian on the Road",
+          "range": [
+            [
+              8,
+              26
+            ],
+            [
+              8,
+              40
+            ]
+          ],
+          "icon": "🛞",
+          "story": "Philip explains Isaiah to the Ethiopian official."
+        },
+        {
+          "name": "Light on the Damascus Road",
+          "range": [
+            [
+              9,
+              1
+            ],
+            [
+              9,
+              7
+            ]
+          ],
+          "icon": "💡",
+          "story": "A light from heaven stops Saul on the road."
+        }
       ]
     },
     {
-      "id": "acts-9-8", "title": "Acts 9:8 – 11:16", "range": [[9, 8], [11, 16]], "sort": 4, "questions": "samuel",
+      "id": "acts-9-8",
+      "title": "Acts 9:8 – 11:16",
+      "range": [
+        [
+          9,
+          8
+        ],
+        [
+          11,
+          16
+        ]
+      ],
+      "sort": 4,
+      "questions": "samuel",
       "worlds": [
-        { "name": "Darkness in Damascus", "range": [[9, 8], [9, 19]], "icon": "🌑", "story": "Saul is blind in Damascus. Ananias is sent by the Lord." },
-        { "name": "Escape Over the Wall", "range": [[9, 20], [9, 31]], "icon": "🧺", "story": "Saul preaches, escapes in a basket and meets Barnabas." },
-        { "name": "Miracles of Peter", "range": [[9, 32], [9, 43]], "icon": "✨", "story": "Peter heals Aeneas in Lydda and raises Dorcas in Joppa." },
-        { "name": "Two Visions", "range": [[10, 1], [10, 23]], "icon": "🕊️", "story": "Cornelius sees an angel. Peter sees a great sheet from heaven." },
-        { "name": "The Good News for All", "range": [[10, 24], [10, 48]], "icon": "🔥", "story": "Peter preaches at Cornelius's house and the Holy Spirit falls on the Gentiles." },
-        { "name": "Peter's Report", "range": [[11, 1], [11, 16]], "icon": "📜", "story": "Peter explains everything to the believers in Jerusalem." }
+        {
+          "name": "Darkness in Damascus",
+          "range": [
+            [
+              9,
+              8
+            ],
+            [
+              9,
+              19
+            ]
+          ],
+          "icon": "🌑",
+          "story": "Saul is blind in Damascus. Ananias is sent by the Lord."
+        },
+        {
+          "name": "Escape Over the Wall",
+          "range": [
+            [
+              9,
+              20
+            ],
+            [
+              9,
+              31
+            ]
+          ],
+          "icon": "🧺",
+          "story": "Saul preaches, escapes in a basket and meets Barnabas."
+        },
+        {
+          "name": "Miracles of Peter",
+          "range": [
+            [
+              9,
+              32
+            ],
+            [
+              9,
+              43
+            ]
+          ],
+          "icon": "✨",
+          "story": "Peter heals Aeneas in Lydda and raises Dorcas in Joppa."
+        },
+        {
+          "name": "Two Visions",
+          "range": [
+            [
+              10,
+              1
+            ],
+            [
+              10,
+              23
+            ]
+          ],
+          "icon": "🕊️",
+          "story": "Cornelius sees an angel. Peter sees a great sheet from heaven."
+        },
+        {
+          "name": "The Good News for All",
+          "range": [
+            [
+              10,
+              24
+            ],
+            [
+              10,
+              48
+            ]
+          ],
+          "icon": "🔥",
+          "story": "Peter preaches at Cornelius's house and the Holy Spirit falls on the Gentiles."
+        },
+        {
+          "name": "Peter's Report",
+          "range": [
+            [
+              11,
+              1
+            ],
+            [
+              11,
+              16
+            ]
+          ],
+          "icon": "📜",
+          "story": "Peter explains everything to the believers in Jerusalem."
+        }
       ]
     },
     {
-      "id": "acts-11-17", "title": "Acts 11:17 – 14:9", "range": [[11, 17], [14, 9]], "sort": 5,
+      "id": "acts-11-17",
+      "title": "Acts 11:17 – 14:9",
+      "range": [
+        [
+          11,
+          17
+        ],
+        [
+          14,
+          9
+        ]
+      ],
+      "sort": 5,
       "worlds": [
-        { "name": "Christians in Antioch", "range": [[11, 17], [11, 30]], "icon": "⛪", "story": "The church grows in Antioch and the disciples are first called Christians." },
-        { "name": "Peter's Prison Escape", "range": [[12, 1], [12, 19]], "icon": "🔓", "story": "An angel leads Peter out while the church prays." },
-        { "name": "Herod's Fall", "range": [[12, 20], [12, 25]], "icon": "👑", "story": "Herod does not give glory to God, but the word grows." },
-        { "name": "Sent Out by the Spirit", "range": [[13, 1], [13, 12]], "icon": "⛵", "story": "Barnabas and Saul are sent out; the sorcerer is blinded." },
-        { "name": "Paul Preaches in Antioch", "range": [[13, 13], [13, 41]], "icon": "📣", "story": "Paul tells Israel's story and preaches Jesus in the synagogue." },
-        { "name": "A Light to the Gentiles", "range": [[13, 42], [13, 52]], "icon": "💡", "story": "The Gentiles rejoice and the disciples shake off the dust." },
-        { "name": "Trouble in Iconium", "range": [[14, 1], [14, 9]], "icon": "🏃", "story": "Paul and Barnabas flee to Lystra and meet a crippled man." }
+        {
+          "name": "Christians in Antioch",
+          "range": [
+            [
+              11,
+              17
+            ],
+            [
+              11,
+              30
+            ]
+          ],
+          "icon": "⛪",
+          "story": "The church grows in Antioch and the disciples are first called Christians."
+        },
+        {
+          "name": "Peter's Prison Escape",
+          "range": [
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              19
+            ]
+          ],
+          "icon": "🔓",
+          "story": "An angel leads Peter out while the church prays."
+        },
+        {
+          "name": "Herod's Fall",
+          "range": [
+            [
+              12,
+              20
+            ],
+            [
+              12,
+              25
+            ]
+          ],
+          "icon": "👑",
+          "story": "Herod does not give glory to God, but the word grows."
+        },
+        {
+          "name": "Sent Out by the Spirit",
+          "range": [
+            [
+              13,
+              1
+            ],
+            [
+              13,
+              12
+            ]
+          ],
+          "icon": "⛵",
+          "story": "Barnabas and Saul are sent out; the sorcerer is blinded."
+        },
+        {
+          "name": "Paul Preaches in Antioch",
+          "range": [
+            [
+              13,
+              13
+            ],
+            [
+              13,
+              41
+            ]
+          ],
+          "icon": "📣",
+          "story": "Paul tells Israel's story and preaches Jesus in the synagogue."
+        },
+        {
+          "name": "A Light to the Gentiles",
+          "range": [
+            [
+              13,
+              42
+            ],
+            [
+              13,
+              52
+            ]
+          ],
+          "icon": "💡",
+          "story": "The Gentiles rejoice and the disciples shake off the dust."
+        },
+        {
+          "name": "Trouble in Iconium",
+          "range": [
+            [
+              14,
+              1
+            ],
+            [
+              14,
+              9
+            ]
+          ],
+          "icon": "🏃",
+          "story": "Paul and Barnabas flee to Lystra and meet a crippled man."
+        }
       ]
     },
     {
-      "id": "acts-14-10", "title": "Acts 14:10 – 16:40", "range": [[14, 10], [16, 40]], "sort": 6,
+      "id": "acts-14-10",
+      "title": "Acts 14:10 – 16:40",
+      "range": [
+        [
+          14,
+          10
+        ],
+        [
+          16,
+          40
+        ]
+      ],
+      "sort": 6,
       "worlds": [
-        { "name": "Gods in Lystra?", "range": [[14, 10], [14, 20]], "icon": "⚡", "story": "The crowd calls Paul and Barnabas gods, then Paul is stoned." },
-        { "name": "Strengthening the Churches", "range": [[14, 21], [14, 28]], "icon": "🏛️", "story": "Elders are appointed and the missionaries return to Antioch." },
-        { "name": "The Jerusalem Council", "range": [[15, 1], [15, 21]], "icon": "🗣️", "story": "The apostles and elders decide about the Gentiles." },
-        { "name": "The Letter to the Gentiles", "range": [[15, 22], [15, 41]], "icon": "✉️", "story": "A letter is sent, and Paul and Barnabas part ways." },
-        { "name": "The Macedonian Call", "range": [[16, 1], [16, 15]], "icon": "🌅", "story": "Timothy joins Paul, a vision calls them to Macedonia, and Lydia believes." },
-        { "name": "Midnight in Philippi", "range": [[16, 16], [16, 40]], "icon": "🎶", "story": "Paul and Silas sing in prison and the jailer is saved." }
+        {
+          "name": "Gods in Lystra?",
+          "range": [
+            [
+              14,
+              10
+            ],
+            [
+              14,
+              20
+            ]
+          ],
+          "icon": "⚡",
+          "story": "The crowd calls Paul and Barnabas gods, then Paul is stoned."
+        },
+        {
+          "name": "Strengthening the Churches",
+          "range": [
+            [
+              14,
+              21
+            ],
+            [
+              14,
+              28
+            ]
+          ],
+          "icon": "🏛️",
+          "story": "Elders are appointed and the missionaries return to Antioch."
+        },
+        {
+          "name": "The Jerusalem Council",
+          "range": [
+            [
+              15,
+              1
+            ],
+            [
+              15,
+              21
+            ]
+          ],
+          "icon": "🗣️",
+          "story": "The apostles and elders decide about the Gentiles."
+        },
+        {
+          "name": "The Letter to the Gentiles",
+          "range": [
+            [
+              15,
+              22
+            ],
+            [
+              15,
+              41
+            ]
+          ],
+          "icon": "✉️",
+          "story": "A letter is sent, and Paul and Barnabas part ways."
+        },
+        {
+          "name": "The Macedonian Call",
+          "range": [
+            [
+              16,
+              1
+            ],
+            [
+              16,
+              15
+            ]
+          ],
+          "icon": "🌅",
+          "story": "Timothy joins Paul, a vision calls them to Macedonia, and Lydia believes."
+        },
+        {
+          "name": "Midnight in Philippi",
+          "range": [
+            [
+              16,
+              16
+            ],
+            [
+              16,
+              40
+            ]
+          ],
+          "icon": "🎶",
+          "story": "Paul and Silas sing in prison and the jailer is saved."
+        }
       ]
     }
   ],
-  "colors": ["#5b6cff", "#ff8a3d", "#19b37d", "#e0457b", "#9b51e0", "#0fa3c4", "#d4a017"],
+  "colors": [
+    "#5b6cff",
+    "#ff8a3d",
+    "#19b37d",
+    "#e0457b",
+    "#9b51e0",
+    "#0fa3c4",
+    "#d4a017"
+  ],
   "bosses": [
-    { "name": "The Shadow Golem", "emoji": "🗿", "taunt": "You will forget everything in the dark!" },
-    { "name": "The Gate Watcher", "emoji": "👁️", "taunt": "Nobody gets past my gates!" },
-    { "name": "The Gloom Dragon", "emoji": "🐉", "taunt": "My gloom will cover your memory!" },
-    { "name": "The Storm Kraken", "emoji": "🦑", "taunt": "My storm will blow your answers away!" },
-    { "name": "The Wall Titan", "emoji": "🧱", "taunt": "I will keep everyone apart!" },
-    { "name": "The Doubt Giant", "emoji": "👹", "taunt": "You doubt yourself... you will fail!" },
-    { "name": "The Fog Phantom", "emoji": "👻", "taunt": "In my fog, every verse disappears!" }
+    {
+      "name": "Goliath the Giant",
+      "emoji": "💪",
+      "ref": "1 Samuel 17",
+      "taunt": "Choose a man to fight me! No one can beat the giant of Gath!",
+      "win": "Like David, you defeated the giant! The battle is the Lord's!"
+    },
+    {
+      "name": "Pharaoh of Egypt",
+      "emoji": "👑",
+      "ref": "Exodus 5",
+      "taunt": "Who is the Lord, that I should obey Him? I will not let the people go!",
+      "win": "Like Moses, you stood before Pharaoh — and God gave you the victory!"
+    },
+    {
+      "name": "The Roman Soldiers",
+      "emoji": "🛡️",
+      "ref": "Acts 16",
+      "taunt": "Beat them with rods and throw them in prison!",
+      "win": "Like Paul and Silas, you sang praises — and the prison doors opened!"
+    },
+    {
+      "name": "King Herod",
+      "emoji": "🤴",
+      "ref": "Acts 12",
+      "taunt": "I put Peter in prison with four squads of soldiers! He can never escape!",
+      "win": "The Lord sent His angel — King Herod is defeated!"
+    },
+    {
+      "name": "Haman",
+      "emoji": "🎩",
+      "ref": "Esther 3",
+      "taunt": "Everyone must bow down to me!",
+      "win": "Like Queen Esther, you were brave — Haman is defeated!"
+    },
+    {
+      "name": "King Nebuchadnezzar",
+      "emoji": "🔥",
+      "ref": "Daniel 3",
+      "taunt": "Bow down to my golden statue, or into the fiery furnace!",
+      "win": "Like Shadrach, Meshach and Abednego, you would not bow — God was with you!"
+    },
+    {
+      "name": "The Prophets of Baal",
+      "emoji": "🗿",
+      "ref": "1 Kings 18",
+      "taunt": "Baal will answer with fire! Your God cannot win!",
+      "win": "Like Elijah — the Lord sent the fire! You won!"
+    }
   ]
 }

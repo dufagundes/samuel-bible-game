@@ -57,7 +57,7 @@ export async function loadContent(passageId: string) {
     content: {
       passage: { id: passage.id, title: passage.title },
       verses, worlds, bank, videos, timings, quotes,
-      finalBoss: { name: "The Grand Champion of Acts", emoji: "🐲", taunt: "Only a true Bible Champion knows ALL of " + passage.title + "!" }
+      finalBoss: { name: "The Great Dragon", emoji: "🐉", ref: "Revelation 12", taunt: "I will make war on those who keep the commandments of God!", win: "They overcame him by the blood of the Lamb and by the word of their testimony! You are a Bible Champion!" }
     }
   };
 }
