@@ -739,3 +739,30 @@ input[type=text], input[type=number], input[type=email], input[type=password], s
 .chase-controls button[data-jump] { background: var(--lego-green); box-shadow: inset 0 -6px 0 var(--lego-green-d), 0 4px 0 rgba(0,0,0,.25); font-size: 20px; }
 .chase-controls button:active { transform: translateY(3px); }
 .chase-help { color: #fff; opacity: .8; text-align: center; font-size: 12px; margin: 0; }
+
+/* ---------- Boss Chase: full screen with a transparent UI on top ---------- */
+body.chase-mode { overflow: hidden; }
+body.chase-mode .topbar { display: none; }
+.chase { position: fixed; inset: 0; z-index: 40; display: block; gap: 0; background: #8fd3ff; overflow: hidden;
+  touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.chase.shake { animation: shake .45s; }
+.chase-canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; }
+.chase-hud { position: absolute; z-index: 3; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); top: calc(8px + env(safe-area-inset-top, 0px));
+  background: rgba(5, 25, 70, .42); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); border-radius: 12px; padding: 6px 8px; pointer-events: none; }
+.chase-hud button { pointer-events: auto; }
+.chase-hud .back { background: rgba(255,255,255,.22); padding: 6px 12px; }
+.chase-meter { top: calc(76px + env(safe-area-inset-top, 0px)); left: max(8px, env(safe-area-inset-left, 0px)); background: rgba(5,25,70,.42); pointer-events: none; }
+.chase-build { top: calc(76px + env(safe-area-inset-top, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); background: rgba(5,25,70,.42); pointer-events: none; }
+.chase-controls { position: absolute; z-index: 3; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: space-between; align-items: flex-end;
+  padding: 0 max(14px, env(safe-area-inset-left, 0px)); pointer-events: none; grid-template-columns: none; gap: 0; }
+.chase-controls button { pointer-events: auto; width: 64px; height: 64px; padding: 0; border-radius: 50%; font-size: 24px;
+  background: rgba(255,255,255,.22); border: 2px solid rgba(255,255,255,.55); box-shadow: none; color: #fff; text-shadow: 0 2px 0 rgba(0,0,0,.35);
+  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
+.chase-controls button[data-jump] { width: 72px; height: 72px; font-size: 30px; background: rgba(0,133,43,.35); box-shadow: none; }
+.chase-controls button:active { background: rgba(255,255,255,.45); transform: scale(.94); }
+.chase-help { position: absolute; z-index: 3; left: 50%; transform: translateX(-50%); bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+  width: min(90%, 420px); text-align: center; color: #fff; font-weight: 800; font-size: 13px; background: rgba(5,25,70,.5); border-radius: 10px; padding: 7px 10px;
+  pointer-events: none; transition: opacity .8s; opacity: 1; margin: 0; }
+.chase-help.fade { opacity: 0; }
+.chase-overlay { z-index: 10; }
+.chase-q { max-height: calc(100% - 20px); }
