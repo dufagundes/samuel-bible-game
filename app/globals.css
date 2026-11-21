@@ -787,3 +787,39 @@ body.chase-mode .topbar { display: none; }
 .chase-q .feedback { margin-top: 10px; padding: 10px 12px; }
 .chase-q .feedback .verse { font-size: 15px; }
 .mute { border: 0; border-radius: 99px; padding: 3px 9px; font-size: 14px; background: rgba(255,255,255,.2); pointer-events: auto; }
+
+/* =====================================================================
+   👑 Super Boss (final review)
+   ===================================================================== */
+.super-tag { display: inline-block; font-family: var(--font-body); font-weight: 800; font-size: 11px; letter-spacing: .08em; color: #3a2a00; background: var(--lego-yellow); border-radius: 6px; padding: 2px 7px; }
+.super-card { display: flex; align-items: center; gap: 12px; width: 100%; border: 0; text-align: left; margin: 4px 0 14px; padding: 12px 14px; border-radius: 12px; color: #fff;
+  background: linear-gradient(135deg, #0f5e5a, #0a3d3a 60%, #062a28); box-shadow: inset 0 -6px 0 rgba(0,0,0,.3), 0 6px 0 rgba(0,0,0,.25), 0 0 0 3px var(--lego-yellow); }
+.super-card .super-emoji { font-size: 46px; filter: drop-shadow(0 4px 0 rgba(0,0,0,.35)); }
+.super-card .super-txt { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.super-card b { font-family: var(--font-title); font-weight: 400; font-size: 24px; }
+.super-card small:not(.super-tag) { font-weight: 700; opacity: .9; }
+.super-card .super-go { width: 46px; height: 46px; border-radius: 10px; display: grid; place-items: center; font-size: 22px; background: var(--lego-yellow); color: #3a2a00; box-shadow: inset 0 -4px 0 var(--lego-yellow-d); }
+.super-intro h1 { margin-top: 6px; }
+.chase-controls.four { justify-content: space-between; }
+.chase-controls.four button[data-slide] { width: 64px; height: 64px; background: rgba(254,138,24,.35); }
+.chase-controls.four button[data-jump] { margin-left: auto; margin-right: 10px; }
+.chase-controls.four button[data-slide] { margin-right: auto; }
+.chase-boss b small.super-tag { font-size: 9px; vertical-align: middle; }
+.stage-dots { display: flex; gap: 4px; }
+.stage-dots i { width: 12px; height: 12px; border-radius: 3px; background: rgba(255,255,255,.25); box-shadow: inset 0 -2px 0 rgba(0,0,0,.2); }
+.stage-dots i.done { background: var(--lego-green); }
+.stage-dots i.now { background: var(--lego-yellow); animation: pulse .9s ease-in-out infinite; }
+.verse-ticker { position: absolute; z-index: 3; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); top: calc(78px + env(safe-area-inset-top, 0px));
+  background: rgba(255,255,255,.88); color: var(--ink); border-radius: 10px; padding: 8px 11px; font-size: 16px; font-weight: 700; line-height: 1.4;
+  box-shadow: 0 4px 0 rgba(0,0,0,.2); pointer-events: none; max-height: 34vh; overflow: hidden; }
+.verse-ticker .q-ref { margin: 0 4px 0 0; font-size: 12px; padding: 2px 7px; }
+.verse-ticker.new { animation: tickerin .45s ease; }
+@keyframes tickerin { from { transform: translateY(-10px); opacity: 0; } }
+.super-win { position: fixed; inset: 0; z-index: 40; overflow-y: auto; background: radial-gradient(circle at 50% 30%, #2c6be0, #0b2a66 70%); color: #fff; text-align: center; }
+.celebrate-stage { position: relative; height: 46vh; min-height: 260px; }
+.celebrate-canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
+.super-win-text { padding: 0 max(16px, env(safe-area-inset-left, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)); max-width: 620px; margin: 0 auto; }
+.super-win-text h1 { font-size: 34px; text-shadow: 0 4px 0 rgba(0,0,0,.35); margin: 10px 0 8px; }
+.super-win-msg { background: rgba(255,255,255,.12); border-radius: 10px; padding: 10px 12px; font-weight: 700; }
+.super-win .reward { color: var(--ink); }
+body.chase-mode .super-win ~ * { display: none; }
