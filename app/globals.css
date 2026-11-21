@@ -766,3 +766,6 @@ body.chase-mode .topbar { display: none; }
 .chase-help.fade { opacity: 0; }
 .chase-overlay { z-index: 10; }
 .chase-q { max-height: calc(100% - 20px); }
+
+/* Verse Catcher: each falling brick stays in its own lane (the LEGO "position: relative" rule must not apply here) */
+.arena .falling { position: absolute; top: 0; width: 30%; box-sizing: border-box; overflow-wrap: anywhere; line-height: 1.15; }
