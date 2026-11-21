@@ -583,3 +583,119 @@ h1, h2, h3 { font-weight: 400; }
 .shelf-item:not(.done) .shelf-plate { opacity: .9; }
 .boss-arena.rpg { border-radius: 12px; }
 @media (max-width: 400px) { .map-node, .map-node .label { width: 136px; } .plate { width: 84px; height: 84px; } }
+
+/* =====================================================================
+   🧱 LEGO THEME — part 2: games, reader, quiz, results and other screens
+   ===================================================================== */
+/* shared: coloured bricks with studs on top */
+.lc0 { --brick: var(--lego-red); --brick-d: var(--lego-red-d); }
+.lc1 { --brick: var(--lego-blue); --brick-d: var(--lego-blue-d); }
+.lc2 { --brick: var(--lego-green); --brick-d: var(--lego-green-d); }
+.lc3 { --brick: var(--lego-orange); --brick-d: #b85f05; }
+.falling, .piece, .order-card, .speaker, .step .num, .world-head .orb, .heat button, .badge-card, .shop-item,
+.reward, .team-row .avatar, .pick, .avatars button, .stat, .game-tile, .result-hero .big-emoji { position: relative; }
+.falling::before, .piece::before, .order-card::before, .speaker::before, .step .num::before, .world-head .orb::before,
+.badge-card::before, .shop-item::before, .reward::before, .pick::before, .stat::before {
+  content: ""; position: absolute; left: 10px; right: 10px; top: -7px; height: 8px; pointer-events: none;
+  background: radial-gradient(ellipse 8px 7px at 50% 100%, var(--stud, #fff) 0 96%, transparent 100%) 0 0 / 24px 8px repeat-x;
+  filter: drop-shadow(0 -1px 0 rgba(0,0,0,.15));
+}
+
+/* 🌠 Verse Catcher: bricks fall onto a dark baseplate */
+.arena { border-radius: 12px;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.10) 0 5px, rgba(0,0,0,.25) 6px, transparent 7px) 0 0 / 26px 26px, #0d2a5c; }
+.arena-floor { height: 26px; background: radial-gradient(circle at 50% 30%, #3fbf5a 0 5px, #006f23 6px, transparent 7px) 0 0 / 20px 26px, var(--lego-green); }
+.falling { border-radius: 6px; background: var(--brick, #fff); color: #fff; --stud: var(--brick, #fff);
+  box-shadow: inset 0 -6px 0 var(--brick-d, #ccc), 0 4px 0 rgba(0,0,0,.35); font-family: var(--font-title); font-weight: 400; font-size: 20px; padding: 14px 6px 16px; text-shadow: 0 2px 0 rgba(0,0,0,.25); }
+.falling.bad { background: #8a8f96; --stud: #8a8f96; box-shadow: inset 0 -6px 0 #5a5f66; opacity: .7; }
+.catcher-verse .got { background: #fff3c4; border-radius: 4px; padding: 0 3px; }
+.catcher-verse .got.new { background: var(--lego-yellow); }
+.gap { color: #9fb3d9; }
+
+/* 🧩 Verse Builder */
+.piece { border: 0; border-radius: 6px; background: var(--brick, #fff); color: #fff; --stud: var(--brick, #fff);
+  box-shadow: inset 0 -6px 0 var(--brick-d, #ccc), 0 4px 0 rgba(0,0,0,.3); padding: 14px 14px 18px; font-family: var(--font-title); font-weight: 400; font-size: 19px; margin-top: 8px; }
+.piece.bad { animation: shake .4s; box-shadow: inset 0 -6px 0 var(--brick-d), 0 0 0 4px #fff, 0 4px 0 rgba(0,0,0,.3); }
+.built .got { display: inline-block; background: var(--lego-yellow); color: #3a2a00; border-radius: 4px; padding: 1px 6px; margin: 3px 1px; box-shadow: inset 0 -3px 0 var(--lego-yellow-d); }
+.built .got.new { background: var(--lego-green); color: #fff; box-shadow: inset 0 -3px 0 var(--lego-green-d); }
+
+/* 📜 Story Order */
+.order-card { border: 0; border-radius: 8px; box-shadow: inset 0 -6px 0 #d8dde6, 0 4px 0 rgba(0,0,0,.25); margin-top: 8px; padding: 16px 14px 18px; }
+.order-row .n { border-radius: 6px; background: var(--lego-yellow); color: #3a2a00; box-shadow: inset 0 -3px 0 var(--lego-yellow-d); }
+
+/* 🗣️ Who Said It? */
+.bubble { border-radius: 14px; box-shadow: 0 6px 0 rgba(0,0,0,.2); }
+.speaker { border: 0; border-radius: 8px; box-shadow: inset 0 -6px 0 #d8dde6, 0 4px 0 rgba(0,0,0,.25); margin-top: 8px; }
+.speaker.right { background: #d9f5e1; box-shadow: inset 0 -6px 0 #9fd9b0, 0 0 0 3px var(--lego-green); }
+.speaker.wrong { background: #ffe1e1; box-shadow: inset 0 -6px 0 #f3a9a9, 0 0 0 3px var(--lego-red); }
+.speaker .e { width: 54px; height: 54px; border-radius: 10px; display: grid; place-items: center; background: var(--lego-yellow); box-shadow: inset 0 -4px 0 var(--lego-yellow-d); }
+
+/* game hub tiles */
+.game-tile { border-radius: 10px; }
+.grid.three .game-tile:nth-child(4n+1) .ico { color: var(--lego-red); }
+
+/* world screen */
+.world-head .orb { border-radius: 14px; --stud: var(--c, #fff); box-shadow: inset 0 -7px 0 rgba(0,0,0,.25), 0 5px 0 rgba(0,0,0,.25); }
+.world-head .orb::before { --stud: currentColor; display: none; }
+.step .num { border-radius: 10px; background: #fff3c4; box-shadow: inset 0 -5px 0 #ecd98a; --stud: #fff3c4; }
+.step.done .num { background: #d9f5e1; box-shadow: inset 0 -5px 0 #9fd9b0; --stud: #d9f5e1; }
+.step + .step { border-top: 2px dashed #e3e8f0; padding-top: 14px; }
+
+/* reader */
+.reader-controls { border-radius: 10px; }
+.verse { border-radius: 8px; }
+.verse .vn { border-radius: 6px; background: #e9eef7; color: var(--lego-blue-d); box-shadow: inset 0 -3px 0 #c8d3e6; }
+.verse.active { background: #fff3c4; box-shadow: inset 4px 0 0 var(--lego-yellow); }
+.verse.active .vn { background: var(--lego-blue); box-shadow: inset 0 -3px 0 var(--lego-blue-d); }
+.verse.heard .vn { background: #d9f5e1; box-shadow: inset 0 -3px 0 #9fd9b0; }
+.verse .w.hl { background: var(--lego-yellow); box-shadow: 0 0 0 2px var(--lego-yellow); }
+.chap-title { color: var(--lego-blue-d); }
+.heard-pill { border-radius: 10px; box-shadow: 0 4px 0 rgba(0,0,0,.2); }
+.mode-seg, .seg { border-radius: 10px; }
+.seg button.on, .toggle.on { border-radius: 8px; }
+
+/* quiz */
+.quiz-top .prog .bar > i { background: linear-gradient(90deg, var(--lego-yellow), var(--lego-orange)); }
+.combo { border-radius: 8px; }
+.combo.hot { background: linear-gradient(90deg, var(--lego-orange), var(--lego-red)); }
+.feedback { border-radius: 10px; }
+.timer { border-radius: 4px; }
+
+/* results, rewards, toasts, modals */
+.reward { border-radius: 8px; box-shadow: inset 0 -5px 0 #d8dde6, 0 4px 0 rgba(0,0,0,.25); margin-top: 8px; }
+.result-hero .score { font-family: var(--font-title); font-weight: 400; text-shadow: 0 4px 0 rgba(0,0,0,.3); }
+.toast { border-radius: 10px; background: #0b2a66; border: 3px solid var(--lego-yellow); }
+.toast.gold { background: var(--lego-yellow); border-color: #fff; }
+.modal { border-radius: 12px; }
+.modal-back { background: rgba(5, 25, 70, .65); }
+
+/* progress, badges, shop, team */
+.stat { border-radius: 8px; background: #f1f5fb; box-shadow: inset 0 -5px 0 #d8e1ef; --stud: #f1f5fb; margin-top: 8px; }
+.stat b { color: var(--lego-blue-d); font-weight: 400; }
+.heat { gap: 7px; padding-top: 6px; }
+.heat button { border-radius: 5px; box-shadow: inset 0 -4px 0 rgba(0,0,0,.22); background: #c3c9d4; }
+.heat button::before { content: ""; position: absolute; left: 50%; top: -5px; width: 14px; height: 6px; transform: translateX(-50%);
+  border-radius: 3px 3px 0 0; background: inherit; box-shadow: inset 0 2px 0 rgba(255,255,255,.25); }
+.heat button.l1 { background: var(--lego-red); }
+.heat button.l2 { background: var(--lego-yellow); color: #3a2a00; }
+.heat button.l3 { background: var(--lego-green); }
+.wbar .bar > i { background: linear-gradient(90deg, var(--lego-blue), var(--lego-green)); }
+.badge-card, .shop-item { border-radius: 8px; background: #f1f5fb; box-shadow: inset 0 -5px 0 #d8e1ef; --stud: #f1f5fb; margin-top: 8px; border: 0; }
+.shop-item.sel { background: #fff3c4; box-shadow: inset 0 -5px 0 #ecd98a, 0 0 0 3px var(--lego-yellow); --stud: #fff3c4; }
+.team-row .avatar { border-radius: 10px; }
+.team-row.mine { background: #fff3c4; border-radius: 8px; }
+.team-row .bar > i { background: linear-gradient(90deg, var(--lego-blue), var(--lego-green)); }
+.team-row .pct { color: var(--lego-blue-d); font-weight: 400; }
+
+/* sign-up / onboarding */
+.auth .logo h1 { font-size: 40px; font-weight: 400; text-shadow: 0 4px 0 rgba(0,0,0,.3); }
+.auth .tabs { border-radius: 10px; background: #e9eef7; }
+.auth .tabs button { border-radius: 8px; font-family: var(--font-title); font-weight: 400; font-size: 17px; }
+.auth .tabs button.on { background: var(--lego-blue); box-shadow: inset 0 -4px 0 var(--lego-blue-d); }
+.pick { border: 0; border-radius: 8px; background: #f1f5fb; box-shadow: inset 0 -5px 0 #d8e1ef; --stud: #f1f5fb; margin-top: 8px; }
+.pick.on { background: #fff3c4; box-shadow: inset 0 -5px 0 #ecd98a, 0 0 0 3px var(--lego-yellow); --stud: #fff3c4; }
+.pick .n { border-radius: 6px; background: var(--lego-red); box-shadow: inset 0 -3px 0 var(--lego-red-d); }
+.avatars button { border-radius: 8px; border: 0; background: #f1f5fb; box-shadow: inset 0 -4px 0 #d8e1ef; }
+.avatars button.on { background: var(--lego-yellow); box-shadow: inset 0 -4px 0 var(--lego-yellow-d); }
+input[type=text], input[type=number], input[type=email], input[type=password], select, textarea { border-radius: 8px; }
+.loading { font-family: var(--font-title); }
