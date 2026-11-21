@@ -454,3 +454,132 @@ textarea { min-height: 160px; font-family: ui-monospace, Menlo, Consolas, monosp
 .boss-arena.shake { animation: shake .45s; }
 .rules { display: grid; gap: 6px; background: #f7f5ff; border-radius: 14px; padding: 12px; margin: 10px 0 16px; text-align: left; font-size: 15px; }
 .btn.is-locked { filter: grayscale(.85); opacity: .75; }
+
+/* =====================================================================
+   🧱 LEGO THEME — bright brick colours, studs, baseplates, toy font
+   ===================================================================== */
+:root {
+  --lego-red: #d01012; --lego-red-d: #8f0a0b;
+  --lego-yellow: #ffcd03; --lego-yellow-d: #c79e00;
+  --lego-blue: #0055bf; --lego-blue-d: #003a85;
+  --lego-green: #00852b; --lego-green-d: #005a1c;
+  --lego-orange: #fe8a18;
+  --primary: var(--lego-blue); --primary-dark: var(--lego-blue-d);
+  --good: var(--lego-green); --bad: var(--lego-red); --gold: var(--lego-yellow); --gold-dark: var(--lego-yellow-d);
+  --font-title: "Lilita One", "Fredoka", system-ui, sans-serif;
+  --radius: 12px;
+  --shadow: 0 6px 0 rgba(0, 0, 0, .22), 0 14px 26px rgba(0, 20, 60, .25);
+}
+html { background: #0b3d91; }
+body {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.10) 0 5px, rgba(0,0,0,.10) 6px, transparent 7px) 0 0 / 26px 26px,
+    linear-gradient(180deg, #1565c8, #0b3d91);
+  background-attachment: fixed;
+}
+h1, h2, h3, .q-text, .btn, .tile b, .tool b { letter-spacing: .3px; }
+h1, h2, h3 { font-weight: 400; }
+.title-white { text-shadow: 0 3px 0 rgba(0,0,0,.35); }
+
+/* cards are white bricks with studs on top */
+.card, .tile, .tool, .modal { position: relative; border-radius: 10px; }
+.card::before, .tile::before, .tool::before, .modal::before {
+  content: ""; position: absolute; left: 14px; right: 14px; top: -8px; height: 9px; pointer-events: none;
+  background: radial-gradient(ellipse 9px 8px at 50% 100%, var(--stud, #fff) 0 96%, transparent 100%) 0 0 / 30px 9px repeat-x;
+  filter: drop-shadow(0 -1px 0 rgba(0,0,0,.12));
+}
+.card { margin-top: 12px; }
+
+/* chunky brick buttons */
+.btn { border-radius: 8px; box-shadow: 0 6px 0 var(--primary-dark); font-family: var(--font-title); font-weight: 400; font-size: 19px; }
+.btn:active { transform: translateY(5px); box-shadow: 0 1px 0 var(--primary-dark); }
+.btn.good { box-shadow: 0 6px 0 var(--lego-green-d); }
+.btn.bad { box-shadow: 0 6px 0 var(--lego-red-d); }
+.btn.gold { color: #3a2a00; box-shadow: 0 6px 0 var(--lego-yellow-d); }
+.btn.ghost { background: #e9eef7; color: var(--lego-blue-d); box-shadow: 0 5px 0 #b9c6dc; }
+.btn.big { font-size: 23px; }
+.back { border-radius: 8px; background: rgba(255,255,255,.18); font-family: var(--font-title); font-weight: 400; letter-spacing: .4px; }
+.topbar { background: rgba(8, 40, 100, .88); border-bottom: 4px solid var(--lego-yellow); }
+.bar > i { background: linear-gradient(90deg, #7be08f, var(--lego-green)); }
+.avatar { background: var(--lego-yellow); border-radius: 12px; box-shadow: 0 4px 0 var(--lego-yellow-d); }
+.pill { border-radius: 8px; }
+
+/* answer options look like flat 2x bricks */
+.opt { border-radius: 10px; border-width: 3px; }
+.opt:nth-child(1) .key { background: var(--lego-blue); }
+.opt:nth-child(2) .key { background: var(--lego-orange); }
+.opt:nth-child(3) .key { background: var(--lego-green); }
+.opt:nth-child(4) .key { background: var(--lego-red); }
+.opt .key { border-radius: 8px; box-shadow: inset 0 -4px 0 rgba(0,0,0,.25); }
+.q-ref { background: #fff3c4; color: #6b5200; border-radius: 6px; }
+
+/* toolbar: a row of coloured bricks */
+.toolbar { display: flex; gap: 12px; overflow-x: auto; padding: 14px 4px 14px; margin: 0 -4px 6px; scrollbar-width: none; }
+.toolbar::-webkit-scrollbar { display: none; }
+.tool { flex: 0 0 auto; width: 86px; border: 0; padding: 12px 6px 10px; color: #fff; text-align: center; box-shadow: inset 0 -6px 0 rgba(0,0,0,.22), 0 5px 0 rgba(0,0,0,.2); }
+.tool .ico { font-size: 28px; display: block; }
+.tool b { font-family: var(--font-title); font-weight: 400; font-size: 16px; display: block; }
+.tool small { font-size: 11px; opacity: .9; font-weight: 700; }
+.tool .badge { position: absolute; top: -6px; right: -4px; background: #fff; color: var(--lego-red); border-radius: 99px; padding: 1px 7px; font-weight: 800; font-size: 12px; }
+.tool:nth-child(4n+1) { background: var(--lego-red); --stud: var(--lego-red); }
+.tool:nth-child(4n+2) { background: var(--lego-blue); --stud: var(--lego-blue); border: 2px solid rgba(255,255,255,.25); }
+.tool:nth-child(4n+3) { background: var(--lego-green); --stud: var(--lego-green); }
+.tool:nth-child(4n+4) { background: var(--lego-orange); --stud: var(--lego-orange); }
+.tool.done { opacity: .7; }
+
+/* ---------- interactive map on a green baseplate ---------- */
+.lego-map { position: relative; margin: 8px 0 26px; border-radius: 16px; overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, #12a33e 0 6px, #006f23 7px, transparent 8px) 0 0 / 24px 24px, var(--lego-green);
+  box-shadow: inset 0 0 0 4px rgba(0,0,0,.12), var(--shadow); }
+.lego-map .road { position: absolute; inset: 0; width: 100%; height: 100%; }
+.road-base { fill: none; stroke: #6d7379; stroke-width: 30; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.road-bricks { fill: none; stroke: var(--lego-yellow); stroke-width: 6; stroke-dasharray: 16 12; vector-effect: non-scaling-stroke; }
+.map-node { position: absolute; transform: translate(-50%, -50%); border: 0; background: none; padding: 0; width: 150px;
+  display: flex; flex-direction: column; align-items: center; color: var(--ink); }
+.plate { position: relative; width: 92px; height: 92px; border-radius: 12px; display: grid; place-items: center;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.28) 0 5px, rgba(0,0,0,.18) 6px, transparent 7px) 0 0 / 23px 23px, var(--c);
+  box-shadow: inset 0 -7px 0 rgba(0,0,0,.25), 0 6px 0 rgba(0,0,0,.3); transition: transform .15s; }
+.plate.big { width: 116px; height: 116px; }
+.plate-ico { width: 62px; height: 62px; border-radius: 50%; background: rgba(255,255,255,.92); display: grid; place-items: center; font-size: 34px; box-shadow: 0 3px 0 rgba(0,0,0,.2); }
+.plate-build { background: rgba(10,30,70,.55); border-radius: 8px; padding: 6px 4px 2px; }
+.plate-build .build-svg { width: 74px; height: auto; }
+.map-node .label { margin-top: 8px; width: 150px; background: #fff; border-radius: 8px; padding: 6px 8px 7px; text-align: center; box-shadow: 0 4px 0 rgba(0,0,0,.25); display: flex; flex-direction: column; gap: 1px; }
+.map-node .label small { color: var(--muted); font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+.map-node .label b { font-family: var(--font-title); font-weight: 400; font-size: 16px; line-height: 1.1; }
+.map-node .label em { font-style: normal; font-size: 12px; font-weight: 700; color: var(--muted); }
+.map-node .mbar { height: 6px; border-radius: 99px; background: #e6e6e6; overflow: hidden; margin-top: 3px; }
+.map-node .mbar i { display: block; height: 100%; background: var(--lego-green); }
+.map-node .mpct { text-transform: none !important; letter-spacing: 0 !important; }
+.map-node.locked .plate { filter: grayscale(1); opacity: .85; }
+.map-node.locked .label { background: #eceff3; color: #6b7280; }
+.map-node.current .plate { outline: 4px solid var(--lego-yellow); outline-offset: 3px; animation: bob 1.8s ease-in-out infinite; }
+.map-node.done .plate { outline: 3px solid #fff; outline-offset: 2px; }
+.map-node:active .plate { transform: translateY(3px); }
+.map-node .you { position: absolute; top: -40px; font-size: 32px; z-index: 2; animation: bob 1.2s ease-in-out infinite; filter: drop-shadow(0 3px 0 rgba(0,0,0,.35)); }
+
+/* ---------- builds ---------- */
+.build-svg { display: block; margin: 0 auto; max-width: 100%; height: auto; overflow: visible; }
+.brick-drop { animation: brickdrop .5s cubic-bezier(.3, 1.5, .5, 1); transform-box: fill-box; }
+@keyframes brickdrop { from { transform: translateY(-46px); opacity: 0; } 60% { opacity: 1; } }
+.build-panel { background: rgba(10, 30, 70, .55); border-radius: 12px; padding: 8px 10px 10px; margin: -6px 0 14px; color: #fff; }
+.build-head { display: flex; gap: 6px; align-items: center; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+.build-head b { font-family: var(--font-title); font-weight: 400; font-size: 16px; }
+.build-head span { margin-left: auto; background: rgba(255,255,255,.16); padding: 2px 8px; border-radius: 6px; font-weight: 800; }
+.build-panel .build-svg { height: 104px; width: auto; }
+.build-big { background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.12) 0 4px, transparent 5px) 0 0 / 20px 20px, #12346e; border-radius: 10px; padding: 14px 10px 8px; }
+.build-big .build-svg { height: 150px; width: auto; }
+.result-build { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 10px auto 4px; max-width: 360px; }
+.result-build b { font-family: var(--font-title); font-weight: 400; font-size: 20px; }
+.world-build { display: flex; gap: 14px; align-items: center; }
+.world-build .build-big { flex: 0 0 auto; width: 150px; }
+.world-build .build-big .build-svg { height: 100px; }
+.shelf h2 small { font-family: var(--font-body); font-size: 15px; }
+.shelf-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+.shelf-item { text-align: center; display: flex; flex-direction: column; gap: 4px; }
+.shelf-plate { background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.12) 0 4px, transparent 5px) 0 0 / 20px 20px, #12346e; border-radius: 10px; padding: 10px 8px 6px; }
+.shelf-plate .build-svg { height: 78px; width: auto; }
+.shelf-item b { font-family: var(--font-title); font-weight: 400; font-size: 15px; }
+.shelf-item small { color: var(--muted); font-weight: 700; }
+.shelf-item:not(.done) .shelf-plate { opacity: .9; }
+.boss-arena.rpg { border-radius: 12px; }
+@media (max-width: 400px) { .map-node, .map-node .label { width: 136px; } .plate { width: 84px; height: 84px; } }
