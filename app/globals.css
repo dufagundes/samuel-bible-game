@@ -786,3 +786,4 @@ body.chase-mode .topbar { display: none; }
 .chase-q .opt .key { width: 28px; height: 28px; font-size: 14px; }
 .chase-q .feedback { margin-top: 10px; padding: 10px 12px; }
 .chase-q .feedback .verse { font-size: 15px; }
+.mute { border: 0; border-radius: 99px; padding: 3px 9px; font-size: 14px; background: rgba(255,255,255,.2); pointer-events: auto; }
