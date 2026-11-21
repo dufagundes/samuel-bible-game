@@ -699,3 +699,43 @@ h1, h2, h3 { font-weight: 400; }
 .avatars button.on { background: var(--lego-yellow); box-shadow: inset 0 -4px 0 var(--lego-yellow-d); }
 input[type=text], input[type=number], input[type=email], input[type=password], select, textarea { border-radius: 8px; }
 .loading { font-family: var(--font-title); }
+
+/* =====================================================================
+   🏃 Boss Chase (3D runner)
+   ===================================================================== */
+.chase { display: flex; flex-direction: column; gap: 10px; }
+.chase-hud { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; background: rgba(5, 25, 70, .6); border-radius: 12px; padding: 8px 10px; color: #fff; }
+.chase-boss { min-width: 0; }
+.chase-boss b { font-family: var(--font-title); font-weight: 400; font-size: 15px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chase-boss .hp { margin: 4px 0 2px; height: 12px; }
+.chase-boss small { font-weight: 800; opacity: .85; font-size: 12px; }
+.chase-me { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.chase-me .hearts { font-size: 14px; letter-spacing: 0; }
+.chase-me .hearts .lost { filter: grayscale(1); opacity: .3; }
+.chase-stage { position: relative; height: max(320px, calc(100vh - 330px)); height: max(320px, calc(100dvh - 330px)); border-radius: 12px; overflow: hidden;
+  background: #8fd3ff; box-shadow: 0 6px 0 rgba(0,0,0,.25); touch-action: none; user-select: none; -webkit-user-select: none; }
+.chase-stage canvas { display: block; width: 100% !important; height: 100% !important; }
+.chase-stage.shake { animation: shake .45s; }
+.chase-meter { position: absolute; left: 8px; top: 8px; z-index: 2; background: rgba(5,25,70,.72); color: #fff; border-radius: 8px; padding: 5px 9px; font-weight: 800; font-size: 12px; display: flex; flex-direction: column; gap: 3px; }
+.chase-meter i { display: inline-block; width: 14px; height: 10px; margin-left: 3px; border-radius: 2px; background: rgba(255,255,255,.25); vertical-align: middle; }
+.chase-meter i.on { background: var(--lego-yellow); box-shadow: inset 0 -2px 0 var(--lego-yellow-d); }
+.chase-build { position: absolute; right: 8px; top: 8px; z-index: 2; background: rgba(5,25,70,.72); border-radius: 8px; padding: 6px 6px 3px; text-align: center; color: #fff; }
+.chase-build .build-svg { height: 52px; width: auto; }
+.chase-build small { font-weight: 800; font-size: 11px; }
+.chase-overlay { position: absolute; inset: 0; z-index: 5; display: none; align-items: center; justify-content: center; padding: 10px; background: rgba(0, 20, 60, .35); overflow-y: auto; }
+.chase-overlay.show { display: flex; }
+.chase-banner { font-family: var(--font-title); color: #fff; font-size: 38px; text-align: center; text-shadow: 0 4px 0 rgba(0,0,0,.45); animation: pop .4s ease; line-height: 1.15; }
+.chase-banner small { font-family: var(--font-body); font-size: 15px; font-weight: 800; display: block; margin-top: 8px; }
+.chase-banner.big { font-size: 34px; }
+.chase-q { width: 100%; max-width: 560px; max-height: 100%; overflow-y: auto; margin: 0; padding: 14px; }
+.chase-q .q-text { font-size: 20px; margin-bottom: 12px; }
+.chase-q .q-text.verseish { font-size: 17px; }
+.chase-q .opt { font-size: 16px; padding: 10px 12px; }
+.chase-q .opt .key { width: 32px; height: 32px; font-size: 16px; }
+.chase-q-head { background: #fff3c4; border-radius: 8px; padding: 8px 10px; margin-bottom: 10px; font-weight: 700; }
+.chase-controls { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 10px; }
+.chase-controls button { border: 0; border-radius: 10px; padding: 16px 0; font-family: var(--font-title); font-size: 24px; color: #fff; background: var(--lego-blue);
+  box-shadow: inset 0 -6px 0 var(--lego-blue-d), 0 4px 0 rgba(0,0,0,.25); touch-action: manipulation; }
+.chase-controls button[data-jump] { background: var(--lego-green); box-shadow: inset 0 -6px 0 var(--lego-green-d), 0 4px 0 rgba(0,0,0,.25); font-size: 20px; }
+.chase-controls button:active { transform: translateY(3px); }
+.chase-help { color: #fff; opacity: .8; text-align: center; font-size: 12px; margin: 0; }
