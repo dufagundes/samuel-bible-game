@@ -769,3 +769,20 @@ body.chase-mode .topbar { display: none; }
 
 /* Verse Catcher: each falling brick stays in its own lane (the LEGO "position: relative" rule must not apply here) */
 .arena .falling { position: absolute; top: 0; width: 30%; box-sizing: border-box; overflow-wrap: anywhere; line-height: 1.15; }
+
+/* "new version" banner */
+.update-banner { position: fixed; z-index: 100; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  border: 3px solid #fff; border-radius: 12px; background: var(--lego-yellow); color: #3a2a00; font-family: var(--font-title); font-size: 18px;
+  padding: 12px 18px; box-shadow: 0 6px 0 var(--lego-yellow-d), 0 10px 24px rgba(0,0,0,.35); animation: pulse 1.2s ease-in-out infinite; white-space: nowrap; }
+
+/* chase question: compact so all 4 answers fit without scrolling */
+.chase-q { padding: 12px; }
+.chase-q-head { padding: 6px 9px; font-size: 14px; margin-bottom: 8px; }
+.chase-q .q-ref { margin-bottom: 6px; font-size: 13px; }
+.chase-q .q-text { font-size: 18px; margin-bottom: 10px; line-height: 1.25; }
+.chase-q .q-text.verseish { font-size: 15px; padding: 8px 10px; line-height: 1.45; }
+.chase-q .options { gap: 8px; }
+.chase-q .opt { font-size: 15px; padding: 8px 10px; border-width: 2px; }
+.chase-q .opt .key { width: 28px; height: 28px; font-size: 14px; }
+.chase-q .feedback { margin-top: 10px; padding: 10px 12px; }
+.chase-q .feedback .verse { font-size: 15px; }

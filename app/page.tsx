@@ -31,13 +31,35 @@ export default function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const updateReady = useUpdateCheck();
+  const banner = updateReady ? <button className="update-banner" onClick={() => location.reload()}>🆕 New version — tap to update</button> : null;
+
   if (stage === "loading") return <div className="loading">📖 Loading…</div>;
-  if (stage === "auth") return <Auth />;
+  if (stage === "auth") return <>{banner}<Auth /></>;
   if (stage === "onboarding" && session)
     return <Onboarding session={session} profile={profile} onDone={(p) => { setProfile(p); setStage("game"); }} />;
   if (stage === "game" && session && profile)
-    return <Game session={session} profile={profile} onChangePassage={changePassage} />;
+    return <>{banner}<Game session={session} profile={profile} onChangePassage={changePassage} /></>;
   return null;
+}
+
+// ---------------------------------------------------------------------------
+// Checks every few minutes (and when the app comes back to the screen) whether a newer
+// version was deployed, so a tab left open on a phone doesn't keep running old code.
+function useUpdateCheck() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const mine = process.env.NEXT_PUBLIC_BUILD_ID;
+    const check = () => fetch("/api/version", { cache: "no-store" }).then((r) => r.json()).then((d) => {
+      if (d && d.id && mine && d.id !== mine) setReady(true);
+    }).catch(() => {});
+    check();
+    const t = setInterval(check, 4 * 60 * 1000);
+    const onVis = () => { if (document.visibilityState === "visible") check(); };
+    document.addEventListener("visibilitychange", onVis);
+    return () => { clearInterval(t); document.removeEventListener("visibilitychange", onVis); };
+  }, []);
+  return ready;
 }
 
 // ---------------------------------------------------------------------------
